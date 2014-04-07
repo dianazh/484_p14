@@ -1,7 +1,7 @@
 #include "catalog.h"
 #include "query.h"
 #include "index.h"
-#include <string.h>  //Can I do this? 
+#include <string.h>  //Can I do this?
 
 /*
  * Inserts a record into the specified relation
@@ -26,7 +26,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
         error.print(status);
        return status;
     }
-    cout<<rel_info.attrCnt<<" "<<rel_info.indexCnt<<" "<<rel_info.relName<<endl; //test
+    cout<<rel_info.relName<<": "<<rel_info.attrCnt<<" index: "<<rel_info.indexCnt<<endl; //test
     if (rel_info.indexCnt != 0) has_index = true;
     if (rel_info.attrCnt != attrCnt){
         return NOTUSED2; //NOT SURE  //attr number doesn't match
@@ -45,11 +45,11 @@ Status Updates::Insert(const string& relation,      // Name of the relation
         delete[] match_num;
         return status;
     }
-    int i = 0;
+    /*int i = 0;
     while (i<t_attrCnt){
         cout<<(attrs_info+i)->attrName<<endl; //test
         i++;
-    }
+    }*/
     //get the order, size, index
     for (int i = 0; i < attrCnt; i++){
         for (int j = 0; j < attrCnt; j++){
@@ -57,54 +57,85 @@ Status Updates::Insert(const string& relation,      // Name of the relation
                 match_num[i] = j;
             }
         }
-        cout<<"after loop j "<<match_num[i]<<endl; //test
         if (match_num[i] == -1){
             delete[] match_num;
             return NOTUSED2;  //attr name not exist
         }
         entry_size += (attrs_info+i)->attrLen;
-        cout<<"size: "<<entry_size<<endl; //test
+        //cout<<"at loop: "<<i<<"entry_size: "<<entry_size<<endl; //test
     }
     //insert record
     Record new_rec;
     new_rec.length = entry_size;
-    cout<<"inserting "<<new_rec.data<<endl; //test
+    new_rec.data = operator new (entry_size);
     for (int i = 0; i < attrCnt; i++){
-        void* temp = (new_rec.data)+(attrs_info+i)->attrOffset;
-        cout<<"temp: "<<temp<<" "<<(attrs_info+i)->attrOffset<<" "<<(attrs_info+i)->attrLen<<endl; //test
+        void* temp = (void*)(((unsigned int long)new_rec.data)+(attrs_info+i)->attrOffset);
+        //cout<<"temp: "<<temp<<" "<<(attrs_info+i)->attrOffset<<" "<<(attrs_info+i)->attrLen<<endl; //test
         memcpy(temp, attrList[match_num[i]].attrValue, (attrs_info+i)->attrLen);
-        //cout<<(char*)new_rec.data<<endl; //test
     }
     RID new_rid;
-    cout<<"open file"<<endl; //test
+    //cout<<"open file"<<endl; //test
     HeapFile rel_heapfile(relation, status);  //create or open the file
-    cout<<"open file"<<endl; //test
     if (status != OK){
         error.print(status);   
         delete[] match_num;
+        operator delete (new_rec.data);
         return status;
     }
-    cout<<"insert entry"<<endl; //test
-    cout<<"new_rec: "<<new_rec.length<<endl<<(char*)new_rec.data<<endl; //test
+    //cout<<"insert entry"<<endl; //test
+    cout<<"new_rec: "<<new_rec.length<<endl; //test
+    for (int i =0; i<attrCnt; i++){
+        switch ((attrs_info+i)->attrType){
+            case INTEGER: 
+                cout<<(attrs_info+i)->attrName<<": "<<
+                    *((int*)(new_rec.data+(attrs_info+i)->attrOffset))<<endl; //test
+                break;
+            case DOUBLE:
+                cout<<(attrs_info+i)->attrName<<": "<<
+                    *((double*)(new_rec.data+(attrs_info+i)->attrOffset))<<endl; //test
+                break;
+            case STRING:
+                cout<<(attrs_info+i)->attrName<<": "<<
+                    (char*)(new_rec.data+(attrs_info+i)->attrOffset)<<endl; //test
+                break;
+        }
+    }
     status = rel_heapfile.insertRecord(new_rec, new_rid);  //insert new_rec
+    cout<<"record count: "<<rel_heapfile.getRecCnt()<<endl; //test
     if (status != OK){
         error.print(status);   
         delete[] match_num;
+        operator delete (new_rec.data);
         return status;
     }
     //insert index
-    cout<<"insert index"<<endl; //test
     if (has_index){
         for (int i=0; i < attrCnt; i++){
             AttrDesc temp = *(attrs_info+i);
             if (temp.indexed){
+                cout<<"insert index name: "<<temp.attrName<<endl; //test
                 Index rel_index(relation, temp.attrOffset, temp.attrLen, (Datatype)temp.attrType, 0, status);
                 //should unique?(1) or not?(0) 
-                rel_index.insertEntry(attrList[match_num[i]].attrValue, new_rid);
+                if (status != OK){
+                    error.print(status);   
+                    delete[] match_num;
+                    operator delete (new_rec.data);
+                    return status;
+                }
+                status = rel_index.insertEntry(attrList[match_num[i]].attrValue, new_rid);
+                if (status != OK){
+                    error.print(status);   
+                    delete[] match_num;
+                    operator delete (new_rec.data);
+                    return status;
+                }
+            } else {
+                cout<<"no index: "<<temp.attrName<<endl; //test
             }
         }
     }
+    
     delete[] match_num;
-
+    operator delete (new_rec.data);
     return OK;
 }
