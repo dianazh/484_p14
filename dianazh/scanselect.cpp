@@ -2,8 +2,6 @@
 #include "query.h"
 #include "index.h"
 #include <cstring>
-//#include <algorithm>
-//using std::lexicographical_compare;
 
 
 /* 
@@ -63,32 +61,27 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
                              const void* attrValue,      // Pointer to the literal value in the predicate
                              const int reclen)           // Length of a tuple in the result relation
 {
-    cout << "Algorithm: File Scan" << endl;
     Status status_old;
     RID rid_old;
     Record rec_old;
-    cout<<"relname: "<<projNames[0].relName<<endl; //test
     string relation(projNames[0].relName);
     HeapFileScan old_hf(relation, status_old);
-    cout<<"here2"<<endl; //test
-    if (status_old) return status_old;
+    if (status_old != OK) return status_old;
     
-    cout<<"init old"<<endl; //test
     Status status_new;
     RID rid_new;
     Record rec_new;
     rec_new.length = reclen;
     rec_new.data = operator new (reclen);
     HeapFile new_hf(result, status_new);
-    if (status_new) return status_new;
-    cout<<"init new"<<endl; //test
+    if (status_new != OK) return status_new;
+    
 
-    if (!attrDesc){  //no filter
-        cout<<"in no filter"<<endl; //test
-        int i = 0; //test
-        do {
+    if (attrDesc == NULL){  //no filter
+        int recnum = old_hf.getRecCnt();
+        for (int i=0; i < recnum; i++){
             status_old = old_hf.scanNext(rid_old, rec_old);
-            cout<<"after old_hf "<<i++<<endl; //test
+            if (status_old != OK) return status_old;
             //copy in the data needed
             int offset = 0;
             for (int i=0; i<projCnt; i++){
@@ -98,15 +91,14 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
             }
             status_new = new_hf.insertRecord(rec_new, rid_new);
             if (status_new != OK) return status_new;
-            RelDesc test; //test
-            relCat->getInfo(result, test); //test
-            cout<<"after new_hf"<<test.attrCnt<<" "<<test.relName<<endl; //test
-            if (status_new) return status_new;
-        } while (status_old == OK);
+            
+        }
         old_hf.endScan();
     } else {  //has filter
-        do {
+        int recnum = old_hf.getRecCnt();
+        for (int i=0; i < recnum; i++){
             status_old = old_hf.scanNext(rid_old, rec_old);
+            if (status_old != OK) return status_old;
             switch (attrDesc->attrType){
                 case INTEGER:
                 {
@@ -121,8 +113,9 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
                             offset += projNames[i].attrLen;
                         }
                         status_new = new_hf.insertRecord(rec_new, rid_new);
-                        if (status_new) return status_new;    
+                        if (status_new != OK) return status_new;    
                     }
+                    break;
                 }
                 case DOUBLE:
                 {
@@ -137,15 +130,16 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
                             offset += projNames[i].attrLen;
                         }
                         status_new = new_hf.insertRecord(rec_new, rid_new);
-                        if (status_new) return status_new;
+                        if (status_new != OK) return status_new;
                     }
+                    break;
                 }
                 case STRING:
                 {
                     char* value3 = (char*)attrValue;
-                    char* inrel3; 
+                    void* inrel3 = operator new (attrDesc->attrLen); 
                     memcpy(inrel3, rec_old.data+attrDesc->attrOffset, attrDesc->attrLen);
-                    if (comp_str(inrel3, value3,op)){
+                    if (comp_str((char*)inrel3, value3,op)){
                         int offset = 0;
                         for (int i=0; i<projCnt; i++){
                             memcpy(rec_new.data+offset, rec_old.data+projNames[i].attrOffset,
@@ -153,12 +147,12 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
                             offset += projNames[i].attrLen;
                         }
                         status_new = new_hf.insertRecord(rec_new, rid_new);
-                        if (status_new) return status_new;
+                        if (status_new != OK) return status_new;
                     }
-
+                    break;
                 }
             }
-        } while (status_old);
+        };
         old_hf.endScan();
     }
     return OK;

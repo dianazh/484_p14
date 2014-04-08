@@ -21,13 +21,13 @@ Status Operators::Select(const string & result,      // name of the output relat
     attrInfo sample = projNames[0];
     RelDesc rel_info;
     status = relCat->getInfo(sample.relName, rel_info);
-    if (status)   return status;
+    if (status != OK)   return status;
     //get attrdesc for projs & reclen of projs
     AttrDesc proj_info[projCnt];
     int reclen = 0;
     for (int i=0; i<projCnt; i++){
         status = attrCat->getInfo(rel_info.relName, projNames[i].attrName, proj_info[i]);
-        if (status)   return status;
+        if (status != OK)   return status;
         reclen += proj_info[i].attrLen;
     }
 
@@ -37,15 +37,15 @@ Status Operators::Select(const string & result,      // name of the output relat
         //get attrDesc
         AttrDesc attr_info;
         status = attrCat->getInfo(rel_info.relName, attr->attrName, attr_info);
-        if (status)   return status;
+        if (status != OK)   return status;
 
-        if ((attr_info.indexed) && (op == EQ)){  //use index select
-            status = ScanSelect(result, projCnt, proj_info, &attr_info, op, attrValue, reclen);
-            if (status) return status;  
-        } else {  //use scan
+        /*if ((attr_info.indexed) && (op == EQ)){  //use index select
             status = IndexSelect(result, projCnt, proj_info, &attr_info, op, attrValue, reclen);
-            if (status) return status; 
-        }
+            if (status != OK) return status;  
+        } else {  //use scan*/
+            status = ScanSelect(result, projCnt, proj_info, &attr_info, op, attrValue, reclen);
+            if (status != OK) return status; 
+        //}
     }
     return OK;
 }
