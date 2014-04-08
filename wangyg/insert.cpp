@@ -2,6 +2,7 @@
 #include "query.h"
 #include "index.h"
 #include <string.h>  //Can I do this?
+#include <algorithm>
 
 /*
  * Inserts a record into the specified relation
@@ -10,6 +11,15 @@
  * 	OK on success
  * 	an error code otherwise
  */
+
+ struct MyComp{
+     bool operator() (AttrDesc& attrdesc_L, AttrDesc& attrdesc_R){
+         return std::std::lexicographical_compare(attrdesc_L.attrName,attrdesc_L.attrName+MAXNAME,
+                                                  attrdesc_R.attrName,attrdesc_R.attrName+MAXNAME);
+     }
+ } mycomp;
+
+
 typedef struct match_t{
     int* match_num;
     match_t(int attrCnt){
@@ -26,112 +36,21 @@ Status Updates::Insert(const string& relation,      // Name of the relation
                        const int attrCnt,           // Number of attributes specified in INSERT statement
                        const attrInfo attrList[])   // Value of attributes specified in INSERT statement
 {
-    Status status;
-    //lookup relcat
-    int attrCnt_copy = attrCnt; //const int -> int
-    bool has_index = false;
-    RelDesc rel_info;
-    status = relCat->getInfo(relation, rel_info);
-    if (status != OK){
-        error.print(status);
-       return status;
+    RelDesc insert2which;
+    relCat->getInfo(relation ,insert2which);
+    if (attrCnt != insert2which.attrCnt || attrCnt == 0){
+        Error::print(ATTRNOTFOUND);
+        return ATTRNOTFOUND;
     }
-    //cout<<rel_info.relName<<": "<<rel_info.attrCnt<<" index: "<<rel_info.indexCnt<<endl; //test
-    //attr number doesn't match
-    if (rel_info.attrCnt != attrCnt){
-        return NOTUSED2; //NOT SURE
-    }
-    if (rel_info.indexCnt != 0) has_index = true;
-    //lookup attrcat
-    AttrDesc* attrs_info;
-    int entry_size = 0;
-    status = attrCat->getRelInfo(relation, attrCnt_copy, attrs_info);
-    if (status != OK){
-        error.print(status);
-        //delete[] match_num;
-        return status;
-    }
-    /*int i = 0;
-    while (i<attrCnt_copy){
-        cout<<(attrs_info+i)->attrName<<endl; //test
-        i++;
-    }*/
-    //get the order, size, index
-    /*int* match_num;
-    match_num = new int [attrCnt];   //in case not in order, prefilled with -1;
-    for (int i = 0; i < attrCnt; i++){
-        match_num[i] = -1;
-    }*/
-    match match_arr(attrCnt);
-    for (int i = 0; i < attrCnt; i++){
-        for (int j = 0; j < attrCnt; j++){
-            if (!strcmp((attrs_info+i)->attrName,attrList[j].attrName)){
-                match_arr.match_num[i] = j;
-            }
-        }
-        //attr name not exist
-        if (match_arr.match_num[i] == -1){
-            //delete[] match_num;
-            return NOTUSED2;
-        }
-        entry_size += (attrs_info+i)->attrLen;
-        //cout<<"at loop: "<<i<<"entry_size: "<<entry_size<<endl; //test
-    }
-    //insert record
-    Record new_rec;
-    new_rec.length = entry_size;
-    new_rec.data = operator new (entry_size);
-    for (int i = 0; i < attrCnt; i++){
-        void* temp = (void*)(((unsigned int long)new_rec.data)+(attrs_info+i)->attrOffset);
-        //cout<<"temp: "<<temp<<" "<<(attrs_info+i)->attrOffset<<" "<<(attrs_info+i)->attrLen<<endl; //test
-        memcpy(temp, attrList[match_arr.match_num[i]].attrValue, (attrs_info+i)->attrLen);
-    }
-    RID new_rid;
-    //cout<<"open file"<<endl; //test
-    HeapFile rel_heapfile(relation, status);  //create or open the file
-    if (status != OK){
-        error.print(status);
-        //delete[] match_num;
-        operator delete (new_rec.data);
-        return status;
-    }
+    AttrDesc* attrDescList;
+    attrCat->getRelInfo(relation, attrCnt, attrDescList);
+    std::sort(attrDescList, attrDescList+attrCnt, mycomp);
+    unsigned int i = 0;
+    AttrDesc* it;
+    for (i = 0; i < attrCnt; i++){
+        it = std::lower_bound(attrDescList, attrDescList+attrCnt, mycomp);
+        if (it->indexed != 0){
 
-    status = rel_heapfile.insertRecord(new_rec, new_rid);  //insert new_rec
-    //cout<<"record count: "<<rel_heapfile.getRecCnt()<<endl; //test
-    if (status != OK){
-        error.print(status);
-        //delete[] match_num;
-        operator delete (new_rec.data);
-        return status;
-    }
-    //insert index
-    if (has_index){
-        for (int i=0; i < attrCnt; i++){
-            AttrDesc temp = *(attrs_info+i);
-            if (temp.indexed){
-                //cout<<"insert index name: "<<temp.attrName<<endl; //test
-                Index rel_index(relation, temp.attrOffset, temp.attrLen, (Datatype)temp.attrType, 0, status);
-                //should unique?(1) or not?(0)
-                if (status != OK){
-                    error.print(status);
-                    //delete[] match_num;
-                    operator delete (new_rec.data);
-                    return status;
-                }
-                status = rel_index.insertEntry(attrList[match_arr.match_num[i]].attrValue, new_rid);
-                if (status != OK){
-                    error.print(status);
-                    //delete[] match_num;
-                    operator delete (new_rec.data);
-                    return status;
-                }
-            } /*else {
-                cout<<"no index: "<<temp.attrName<<endl; //test
-            }*/
         }
     }
-
-    //delete[] match_num;
-    operator delete (new_rec.data);
-    return OK;
 }
