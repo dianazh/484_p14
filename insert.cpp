@@ -21,7 +21,7 @@ typedef struct match_t{
     ~match_t(){
         delete[] match_num;
     }
-} match; 
+} match;
 Status Updates::Insert(const string& relation,      // Name of the relation
                        const int attrCnt,           // Number of attributes specified in INSERT statement
                        const attrInfo attrList[])   // Value of attributes specified in INSERT statement
@@ -39,7 +39,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     //cout<<rel_info.relName<<": "<<rel_info.attrCnt<<" index: "<<rel_info.indexCnt<<endl; //test
     //attr number doesn't match
     if (rel_info.attrCnt != attrCnt){
-        return NOTUSED2; //NOT SURE  
+        return NOTUSED2; //NOT SURE
     }
     if (rel_info.indexCnt != 0) has_index = true;
     //lookup attrcat
@@ -72,7 +72,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
         //attr name not exist
         if (match_arr.match_num[i] == -1){
             //delete[] match_num;
-            return NOTUSED2;  
+            return NOTUSED2;
         }
         entry_size += (attrs_info+i)->attrLen;
         //cout<<"at loop: "<<i<<"entry_size: "<<entry_size<<endl; //test
@@ -90,33 +90,16 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     //cout<<"open file"<<endl; //test
     HeapFile rel_heapfile(relation, status);  //create or open the file
     if (status != OK){
-        error.print(status);   
+        error.print(status);
         //delete[] match_num;
         operator delete (new_rec.data);
         return status;
     }
-    //cout<<"insert entry"<<endl; //test
-    /*cout<<"new_rec: "<<new_rec.length<<endl; //test
-    for (int i =0; i<attrCnt; i++){
-        switch ((attrs_info+i)->attrType){
-            case INTEGER: 
-                cout<<(attrs_info+i)->attrName<<": "<<
-                    *((int*)((unsigned int long)new_rec.data+(attrs_info+i)->attrOffset))<<endl; //test
-                break;
-            case DOUBLE:
-                cout<<(attrs_info+i)->attrName<<": "<<
-                    *((double*)((unsigned int long)new_rec.data+(attrs_info+i)->attrOffset))<<endl; //test
-                break;
-            case STRING:
-                cout<<(attrs_info+i)->attrName<<": "<<
-                    (char*)((unsigned int long)new_rec.data+(attrs_info+i)->attrOffset)<<endl; //test
-                break;
-        }
-    }*/
+
     status = rel_heapfile.insertRecord(new_rec, new_rid);  //insert new_rec
     //cout<<"record count: "<<rel_heapfile.getRecCnt()<<endl; //test
     if (status != OK){
-        error.print(status);   
+        error.print(status);
         //delete[] match_num;
         operator delete (new_rec.data);
         return status;
@@ -128,16 +111,16 @@ Status Updates::Insert(const string& relation,      // Name of the relation
             if (temp.indexed){
                 //cout<<"insert index name: "<<temp.attrName<<endl; //test
                 Index rel_index(relation, temp.attrOffset, temp.attrLen, (Datatype)temp.attrType, 0, status);
-                //should unique?(1) or not?(0) 
+                //should unique?(1) or not?(0)
                 if (status != OK){
-                    error.print(status);   
+                    error.print(status);
                     //delete[] match_num;
                     operator delete (new_rec.data);
                     return status;
                 }
                 status = rel_index.insertEntry(attrList[match_arr.match_num[i]].attrValue, new_rid);
                 if (status != OK){
-                    error.print(status);   
+                    error.print(status);
                     //delete[] match_num;
                     operator delete (new_rec.data);
                     return status;
@@ -147,7 +130,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
             }*/
         }
     }
-    
+
     //delete[] match_num;
     operator delete (new_rec.data);
     return OK;
