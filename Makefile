@@ -71,10 +71,6 @@ dbdestroyEC:	dbdestroyEC.o
 #
 #dbcreate.pure:	dbcreate.o $(DBOBJS) $(LIBS)
 #		$(PURIFY) $(CXX) -o $@ dbcreate.o $(DBOBJS) $(LDFLAGS) -lm
-clean_i:	insert.o
-		rm insert.o
-insert: 	insert.cpp catalog.h query.h index.h
-		g++ -g -Wall -DDEBUG -c -o index.o index.cpp
 
 .C.o:
 		$(CXX) $(CXXFLAGS) -c $<

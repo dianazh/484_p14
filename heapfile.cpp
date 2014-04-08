@@ -19,12 +19,10 @@ HeapFile::HeapFile(const string & name, Status& returnStatus)
 
     // try to open the file
     status = db.openFile(name, file);
-	cout<<"a"<<endl; //test
     if (status != OK)
     {
 	// file doesn't exist. First create it.
 	status = db.createFile(name);
-	cout<<"b"<<endl; //test
 	if (status != OK) 
 	{
 		cerr << "createfile failed\n";
@@ -33,7 +31,6 @@ HeapFile::HeapFile(const string & name, Status& returnStatus)
 	}
 	// then open it
         status = db.openFile(name, file);
-	cout<<"c"<<endl; //test
 	if (status != OK) 
 	{
 		cerr << "openfile failed\n";
@@ -42,14 +39,12 @@ HeapFile::HeapFile(const string & name, Status& returnStatus)
 	}
 	// allocate and initialize the header page  
 	status = bufMgr->allocPage(file, headerPageNo, pagePtr);
-	cout<<"d"<<endl; //test
 	if (status != OK) 
 	{
 		cerr << "allocation of header page failed\n";
 		returnStatus = status;
 		return;
 	}
-	cout<<"e"<<endl; //test
 	headerPage = (HeaderPage*) pagePtr;
         strncpy(headerPage->fileName, name.c_str(), MAXNAMESIZE); // copy in file name
 	headerPage->firstPage = -1;
@@ -61,22 +56,18 @@ HeapFile::HeapFile(const string & name, Status& returnStatus)
     {
 	// file already exists.  get header page into the buffer pool
 	status = file->getFirstPage(headerPageNo);
-	cout<<"f"<<endl; //test
 	if (status != OK) 
 	{
 		cerr << "fetch of first page failed\n";
 		returnStatus = status;
 	}
-	cout<<"ff"<<endl; //test
 	status = bufMgr->readPage(file, headerPageNo, pagePtr);
-	cout<<"g"<<endl; //test
 	if (status != OK) 
 	{
 		cerr << "read of first page failed\n";
 		returnStatus = status;
 	}
 	headerPage = (HeaderPage*) pagePtr;
-	cout<<"h"<<endl; //test
     }
 
     returnStatus = OK;

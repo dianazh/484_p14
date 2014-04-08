@@ -8,7 +8,6 @@ const int DIRSIZE = PAGESIZE - MAXNAMESIZE - 3*sizeof(int) - sizeof(Datatype);
 const int UNIQUE  = 1;
 const int NONUNIQUE = 0;
 
-
 // #define BTREE_INDEX
 #ifdef  BTREE_INDEX 
 
