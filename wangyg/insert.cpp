@@ -39,13 +39,20 @@ Status Updates::Insert(const string& relation,      // Name of the relation
 {
     RelDesc insert2which;
     int i = 0;
+    Status isOK;
 
     int attrCnt_cp = attrCnt;
     string relation_cp = relation;
     AttrDesc* attrDescList;
     unsigned int totalLen = 0;
 
-    relCat->getInfo(relation ,insert2which);
+    isOK = relCat->getInfo(relation ,insert2which);
+
+    if (isOK != OK){
+        Error::print(isOK);
+        return isOK;
+    }
+
     if (attrCnt != insert2which.attrCnt || attrCnt == 0){
         Error::print(ATTRNOTFOUND);
         return ATTRNOTFOUND;
@@ -58,7 +65,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     }
 
     char* newRecordData = new char [totalLen];
-    Status isOK;
+
     HeapFile relationFile(relation, isOK);
 
     if (isOK != OK){
