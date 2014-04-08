@@ -17,16 +17,14 @@ Status Operators::Select(const string & result,      // name of the output relat
 		         const void *attrValue)     // literal value in the predicate
 {
     Status status;
-    //get rel_info
-    attrInfo sample = projNames[0];
-    RelDesc rel_info;
-    status = relCat->getInfo(sample.relName, rel_info);
+    //get rel_name
+    string relation (projNames[0].relName);
     if (status != OK)   return status;
     //get attrdesc for projs & reclen of projs
     AttrDesc proj_info[projCnt];
     int reclen = 0;
     for (int i=0; i<projCnt; i++){
-        status = attrCat->getInfo(rel_info.relName, projNames[i].attrName, proj_info[i]);
+        status = attrCat->getInfo(relation, projNames[i].attrName, proj_info[i]);
         if (status != OK)   return status;
         reclen += proj_info[i].attrLen;
     }
@@ -36,16 +34,16 @@ Status Operators::Select(const string & result,      // name of the output relat
     } else {
         //get attrDesc
         AttrDesc attr_info;
-        status = attrCat->getInfo(rel_info.relName, attr->attrName, attr_info);
+        status = attrCat->getInfo(relation, attr->attrName, attr_info);
         if (status != OK)   return status;
 
-        /*if ((attr_info.indexed) && (op == EQ)){  //use index select
+        if ((attr_info.indexed) && (op == EQ)){  //use index select
             status = IndexSelect(result, projCnt, proj_info, &attr_info, op, attrValue, reclen);
             if (status != OK) return status;  
-        } else {  //use scan*/
+        } else {  //use scan
             status = ScanSelect(result, projCnt, proj_info, &attr_info, op, attrValue, reclen);
             if (status != OK) return status; 
-        //}
+        }
     }
     return OK;
 }
