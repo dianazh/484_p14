@@ -34,13 +34,14 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     AttrDesc* attrs_info;
     int entry_size = 0;
     status = attrCat->getRelInfo(relation, attrCnt_copy, attrs_info);
-    if (status != OK){
-        return status;
-    }
+    if (status != OK) return status;
     //get the order, size
     vector<int> match_num(attrCnt, -1);
     for (int i = 0; i < attrCnt; i++){
         for (int j = 0; j < attrCnt; j++){
+            if (attrList[j].attrValue == NULL){
+                return NOTUSED2; //NOT SURE
+            }
             if (!strcmp((attrs_info+i)->attrName,attrList[j].attrName)){
                 match_num[i] = j;
             }
