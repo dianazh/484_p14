@@ -1,0 +1,125 @@
+Welcome to Minirel
+1 --> Query:  create table soaps(soapid integer, name char(32), network char(4), rating double);
+4
+4
+2 --> Query:  create table stars(starid integer, real_name char(20), plays char(12), soapid integer);
+4
+4
+3 --> Query:  insert into stars(starid, real_name, plays, soapid) values (100, Posey, Parker, Tess, 6);
+4
+4 --> Query:  insert into stars (real_name, soapid, starid, plays) values (Bonarrigo, Laura, 3, 101, Cassie);
+4
+5 --> Query:  select * from stars;
+4
+4
+4
+4
+4
+projCnt: 4 attrCnt: 4
+proj: starid real: starid
+i: 0match: 0
+4
+proj: starid real: real_name
+proj: starid real: plays
+proj: starid real: soapid
+proj: real_name real: starid
+proj: real_name real: real_name
+i: 1match: 1
+24
+proj: real_name real: plays
+proj: real_name real: soapid
+proj: plays real: starid
+proj: plays real: real_name
+proj: plays real: plays
+i: 2match: 2
+36
+proj: plays real: soapid
+proj: soapid real: starid
+proj: soapid real: real_name
+proj: soapid real: plays
+proj: soapid real: soapid
+i: 3match: 3
+40
+newrec length: 40
+status is ok: 0
+status is ok: 1
+status is ok: 2
+4
+4
+starid.  real_name.1      plays.2       soapid.  
+-------  ---------------  ------------  -------  
+4
+Buf Stats: accesses = 49, disk reads = 7, disk writes = 4
+
+6 --> Query:  create index soaps (soapid);
+2
+4
+7 --> Query:  create index soaps (network);
+8 --> Query:  create index soaps (rating);
+2
+4
+9 --> Query:  insert into soaps (soapid, name, network, rating) values (100, Dallas, CBS, 8.67);
+4
+10 --> Query:  insert into soaps (network, rating, name, soapid) values (ABC, 3.35, Loving, 101);
+4
+11 --> Query:  select soaps.network, soaps.rating from soaps where soaps.soapid = 101;
+4
+4
+4
+4
+4
+projCnt: 2 attrCnt: 4
+proj: network real: soapid
+proj: network real: name
+proj: network real: network
+i: 0match: 2
+4
+proj: network real: rating
+proj: rating real: soapid
+proj: rating real: name
+proj: rating real: network
+proj: rating real: rating
+i: 1match: 3
+12
+newrec length: 12
+4
+network.0  rating.  
+---------  -------  
+4
+Buf Stats: accesses = 32, disk reads = 0, disk writes = 0
+
+12 --> Query:  select stars.soapid, stars.real_name from stars;
+4
+4
+4
+4
+4
+projCnt: 2 attrCnt: 4
+proj: soapid real: starid
+proj: soapid real: real_name
+proj: soapid real: plays
+proj: soapid real: soapid
+i: 0match: 3
+4
+proj: real_name real: starid
+proj: real_name real: real_name
+i: 1match: 1
+24
+proj: real_name real: plays
+proj: real_name real: soapid
+newrec length: 24
+status is ok: 0
+status is ok: 1
+status is ok: 2
+4
+4
+soapid.  real_name.1      
+-------  ---------------  
+4
+Buf Stats: accesses = 37, disk reads = 3, disk writes = 1
+
+13 --> Query:  drop table soaps;
+4
+14 --> Query:  drop table stars;
+4
+15 --> 

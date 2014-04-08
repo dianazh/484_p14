@@ -439,7 +439,7 @@ const Status HeapFileScan::scanNext(RID& outRid)
     	       curPageNo = -1; // in case, called again
 	       curPage = NULL; // for endScan()
 	       curRec.reset();  // reset the curRec
-	       return FILEEOF;  // first page had no records
+               return FILEEOF;  // first page had no records
 	    }
 	}
 	// curRec points at a valid record
