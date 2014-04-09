@@ -19,7 +19,6 @@ Status Operators::Select(const string & result,      // name of the output relat
     Status status;
     //get rel_name
     string relation (projNames[0].relName);
-    if (status != OK)   return status;
     //get attrdesc for projs & reclen of projs
     AttrDesc proj_info[projCnt];
     int reclen = 0;
@@ -31,6 +30,7 @@ Status Operators::Select(const string & result,      // name of the output relat
 
     if (!attr){ //no filter, use scan
         status = ScanSelect(result, projCnt, proj_info, NULL, op, attrValue, reclen);
+        if (status != OK)   return status;
     } else {
         //get attrDesc
         AttrDesc attr_info;

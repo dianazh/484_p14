@@ -18,6 +18,9 @@ INSERT INTO stars (real_name, soapid, starid, plays)
 	VALUES ('Bonarrigo, Laura', 3, 101, 'Cassie');
 
 SELECT * FROM stars;
+SELECT stars.soapid, stars.real_name FROM stars WHERE stars.real_name = 'Bonarrigo, Laura';
+SELECT stars.soapid, stars.real_name FROM stars WHERE stars.real_name <> 'Bonarrigo, Laura';
+SELECT * FROM stars WHERE stars.plays <= 'G';
 
 --
 -- test Insert with indices
@@ -38,8 +41,7 @@ SELECT * FROM soaps;
 SELECT soaps.network, soaps.rating FROM soaps WHERE soaps.soapid = 101;
 SELECT soaps.network, soaps.rating FROM soaps WHERE soaps.soapid <= 101;
 SELECT soaps.network, soaps.rating FROM soaps WHERE soaps.rating = 3.35;
-SELECT stars.soapid, stars.real_name FROM stars WHERE stars.real_name = 'Bonarrigo, Laura';
-SELECT stars.soapid, stars.real_name FROM stars WHERE stars.real_name <> 'Bonarrigo, Laura';
+
 
 DROP TABLE soaps;
 DROP TABLE stars;

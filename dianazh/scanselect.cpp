@@ -75,10 +75,10 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
     rec_new.data = operator new (reclen);
     HeapFile new_hf(result, status_new);
     if (status_new != OK) return status_new;
-    
+   
+    int recnum = old_hf.getRecCnt();
 
     if (attrDesc == NULL){  //no filter
-        int recnum = old_hf.getRecCnt();
         for (int i=0; i < recnum; i++){
             status_old = old_hf.scanNext(rid_old, rec_old);
             if (status_old != OK) return status_old;
@@ -95,7 +95,6 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
         }
         old_hf.endScan();
     } else {  //has filter
-        int recnum = old_hf.getRecCnt();
         for (int i=0; i < recnum; i++){
             status_old = old_hf.scanNext(rid_old, rec_old);
             if (status_old != OK) return status_old;
