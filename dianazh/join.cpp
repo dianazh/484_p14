@@ -24,8 +24,41 @@ Status Operators::Join(const string& result,           // Name of the output rel
     	               const attrInfo* attr2)          // Right attr in the join predicate
 {
     /* Your solution goes here */
+    /*static Status SNL(const string & result,          // output relation name
+	             const int projCnt,              // number of attributes in the projection
+                     const AttrDesc attrDescArray[], // The projection list (as AttrDesc)
+                     const AttrDesc & attrDesc1,     // The left attribute in the join predicate
+                     const Operator op,              // The join operation
+                     const AttrDesc & attrDesc2,     // The left attribute in the join predicate
+                     const int reclen);*/
+    Status status;
+    string rel1 (attr1->relName);
+    string rel2 (attr2->relName);
+    AttrDesc attrdesc1;
+    AttrDesc attrdesc2;
+    status = attrCat->getInfo(rel1, attr1->attrName, attrdesc1);
+    if (status != OK) return status;
+    status = attrCat->getInfo(rel2, attr2->attrName, attrdesc2);
+    if (status != OK) return status;
+    AttrDesc proj_info[projCnt];
+    int reclen = 0;
+    for (int i=0; i<projCnt; i++){
+        status = attrCat->getInfo(projNames[i].relName, projNames[i].attrName, proj_info[i]);
+        if (status != OK)   return status;
+        reclen += proj_info[i].attrLen;
+    }
+    if (op != EQ){
+        status = SNL(result, projCnt, proj_info, attrdesc1, op, attrdesc2, reclen);
+        if (status != OK)   return status;
+    } else if ((attrdesc1.indexed == 1)||(attrdesc2.indexed == 1)){
+        status = INL(result, projCnt, proj_info, attrdesc1, op, attrdesc2, reclen);
+        if (status != OK)   return status;
+    } else {
+        status = SMJ(result, projCnt, proj_info, attrdesc1, op, attrdesc2, reclen);
+        if (status != OK)   return status;
+    }
 
-	return OK;
+    return OK;
 }
 
 // Function to compare two record based on the predicate. Returns 0 if the two attributes 
