@@ -23,14 +23,6 @@ Status Operators::Join(const string& result,           // Name of the output rel
     	               const Operator op,              // Predicate operator
     	               const attrInfo* attr2)          // Right attr in the join predicate
 {
-    /* Your solution goes here */
-    /*static Status SNL(const string & result,          // output relation name
-	             const int projCnt,              // number of attributes in the projection
-                     const AttrDesc attrDescArray[], // The projection list (as AttrDesc)
-                     const AttrDesc & attrDesc1,     // The left attribute in the join predicate
-                     const Operator op,              // The join operation
-                     const AttrDesc & attrDesc2,     // The left attribute in the join predicate
-                     const int reclen);*/
     Status status;
     string rel1 (attr1->relName);
     string rel2 (attr2->relName);
