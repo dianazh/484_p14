@@ -42,10 +42,13 @@ Status Operators::Join(const string& result,           // Name of the output rel
     if (op != EQ){
         status = SNL(result, projCnt, proj_info, attrdesc1, op, attrdesc2, reclen);
         if (status != OK)   return status;
-    } else if ((attrdesc1.indexed == 1)||(attrdesc2.indexed == 1)){
+    } else if ((attrdesc1.indexed == 1)){
+        status = INL(result, projCnt, proj_info, attrdesc2, op, attrdesc1, reclen);
+        if (status != OK)   return status;
+    } else if (attrdesc2.indexed == 1){
         status = INL(result, projCnt, proj_info, attrdesc1, op, attrdesc2, reclen);
         if (status != OK)   return status;
-    } else {
+    }else {
         status = SMJ(result, projCnt, proj_info, attrdesc1, op, attrdesc2, reclen);
         if (status != OK)   return status;
     }
