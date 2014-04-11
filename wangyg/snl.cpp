@@ -9,7 +9,7 @@
 
 static int reccmp(char* p1, char* p2, int p1Len, int p2Len, Datatype type, Operator op)
 {
-  float diff = 0.0;
+  int diff = 0;
   int iattr, ifltr;
   double fattr, ffltr;
 
@@ -21,10 +21,18 @@ static int reccmp(char* p1, char* p2, int p1Len, int p2Len, Datatype type, Opera
     diff = iattr - ifltr;
     break;
   case DOUBLE:
-                     // word-alignment problem possible
+    double tmp;                 // word-alignment problem possible
     memcpy(&fattr, p1, sizeof(double));
     memcpy(&ffltr, p2, sizeof(double));
-    diff = fattr - ffltr;
+    tmp = fattr - ffltr;
+    if (tmp < 0){
+      diff = -1;
+    }else if (tmp == 0){
+      diff = 0;
+    }else{
+      diff = 1;
+    }
+
     break;
   case STRING:
     diff = strncmp(p1, p2, std::min(p1Len, p2Len));
@@ -34,22 +42,22 @@ static int reccmp(char* p1, char* p2, int p1Len, int p2Len, Datatype type, Opera
   }
   switch(op) {
   case LT:
-    return (int) diff < 0;
+    return (int) (diff < 0);
     break;
   case LTE:
-    return (int) diff <= 0;
+    return (int) (diff <= 0);
     break;
   case EQ:
-    return (int) diff == 0;
+    return (int) (diff == 0);
     break;
   case GTE:
-    return (int) diff >= 0;
+    return (int) (diff >= 0);
     break;
   case GT:
-    return (int) diff > 0;
+    return (int) (diff > 0);
     break;
   case NE:
-    return (int) diff != 0;
+    return (int) (diff != 0);
     break;
   case NOTSET:
     return -1;
@@ -76,12 +84,12 @@ Status Operators::SNL(const string& result,           // Output relation name
   std::string relName1 (attrDesc1.relName);
   std::string relName2 (attrDesc2.relName);
 
-  std::vector<unsigned> attrList1;
-  std::vector<unsigned> attrList2;
+  std::vector<int> attrList1;
+  std::vector<int> attrList2;
 
   Status isOK;
 
-  for (unsigned int i = 0; i < projCnt; i++){
+  for (int i = 0; i < projCnt; i++){
     if ( strcmp(attrDescArray[i].relName, attrDesc1.relName) == 0 ){
       attrList1.push_back(i);
     }else if (strcmp(attrDescArray[i].relName, attrDesc2.relName) == 0){
@@ -118,13 +126,13 @@ Status Operators::SNL(const string& result,           // Output relation name
   RID outRid;
   int diff;
 
-  heapfile1.startScan(attrDesc1.attrOffset, attrDesc1.attrLen, (Datatype) attrDesc1.attrType, NULL, op);
+  //heapfile1.startScan(attrDesc1.attrOffset, attrDesc1.attrLen, (Datatype) attrDesc1.attrType, NULL, op);
   for (j = 0; j < reccnt1; j++){
     heapfile1.scanNext(outRid1, rec1);
-    heapfile2.startScan(attrDesc2.attrOffset, attrDesc2.attrLen, (Datatype) attrDesc2.attrType, NULL, op);
+    //heapfile2.startScan(attrDesc2.attrOffset, attrDesc2.attrLen, (Datatype) attrDesc2.attrType, NULL, op);
     for (k = 0; k < reccnt2; k++){
       heapfile2.scanNext(outRid2, rec2);
-      diff = reccmp( (char*) rec1.data + attrDesc1.attrOffset, (char*) rec2.data + attrDesc2.attrOffset, attrDesc1.attrLen, attrDesc1.attrLen, (Datatype)attrDesc1.attrType, op);
+      diff = reccmp( (char*) rec1.data + attrDesc1.attrOffset, (char*) rec2.data + attrDesc2.attrOffset, attrDesc1.attrLen, attrDesc2.attrLen, (Datatype)attrDesc1.attrType, op);
       if (diff == -1){
         return NOTUSED1;
       }else{
@@ -142,7 +150,7 @@ Status Operators::SNL(const string& result,           // Output relation name
               resulttupleidx += attrDescArray[m].attrLen;
             }
             resultfile.insertRecord(joinresult, outRid);
-            delete [] joinresult.data;
+            //delete [] joinresult.data;
           }
 
         }
