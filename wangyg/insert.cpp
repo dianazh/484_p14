@@ -87,12 +87,12 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     for (i = 0; i < attrCnt; i++){
         it = std::lower_bound(attrList_cp, attrList_cp+attrCnt, attrDescList[i], MyComp2());
         assert(strcmp(it->attrName, attrDescList[i].attrName)==0);
-        std::cout << "\tattrName: " << it->attrName << "\tattrType: " << it->attrType << "\tattrLen: " << it->attrLen << '\n';
-        std::cout << "\tattrName: " << attrDescList[i].attrName << "\tattrType: " << attrDescList[i].attrType << "\tattrLen: "
-                << attrDescList[i].attrLen << "\tattrOffset " << attrDescList[i].attrOffset <<'\n';
+        //std::cout << "\tattrName: " << it->attrName << "\tattrType: " << it->attrType << "\tattrLen: " << it->attrLen << '\n';
+        //std::cout << "\tattrName: " << attrDescList[i].attrName << "\tattrType: " << attrDescList[i].attrType << "\tattrLen: "
+        //        << attrDescList[i].attrLen << "\tattrOffset " << attrDescList[i].attrOffset <<'\n';
 
         unsigned long beginAddr = (unsigned long) newRecord.data + attrDescList[i].attrOffset;
-        std::cout << beginAddr << "\t" << attrDescList[i].attrOffset << '\n';
+        //std::cout << beginAddr << "\t" << attrDescList[i].attrOffset << '\n';
 
         memcpy((void*) beginAddr, it->attrValue, attrDescList[i].attrLen);
 
@@ -115,6 +115,6 @@ Status Updates::Insert(const string& relation,      // Name of the relation
             idx.insertEntry( (void *)((unsigned long)newRecord.data+attrDescList[indexedAttr[i]].attrOffset), newRid);
         }
     }
-
+    delete[] newRecordData;
     return OK;
 }
