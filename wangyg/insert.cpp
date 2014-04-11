@@ -49,12 +49,12 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     isOK = relCat->getInfo(relation ,insert2which);
 
     if (isOK != OK){
-        Error::print(isOK);
+        //Error::print(isOK);
         return isOK;
     }
 
     if (attrCnt != insert2which.attrCnt || attrCnt == 0){
-        Error::print(ATTRNOTFOUND);
+        //Error::print(ATTRNOTFOUND);
         return ATTRNOTFOUND;
     }
 
@@ -69,7 +69,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     HeapFile relationFile(relation, isOK);
 
     if (isOK != OK){
-        Error::print(isOK);
+        //Error::print(isOK);
         return isOK;
     }
     Record newRecord;
@@ -109,7 +109,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
             Index idx(insert2which.relName, attrDescList[indexedAttr[i]].attrOffset, attrDescList[indexedAttr[i]].attrLen,
                     (Datatype) attrDescList[indexedAttr[i]].attrType, 0, isOK);
             if (isOK != OK){
-                Error::print(isOK);
+                //Error::print(isOK);
                 return isOK;
             }
             idx.insertEntry( (void *)((unsigned long)newRecord.data+attrDescList[indexedAttr[i]].attrOffset), newRid);
