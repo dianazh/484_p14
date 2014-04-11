@@ -3,6 +3,8 @@
 #include "sort.h"
 #include "index.h"
 
+#include <cstring>
+
 Status Operators::SNL(const string& result,           // Output relation name
                       const int projCnt,              // Number of attributes in the projection
                       const AttrDesc attrDescArray[], // Projection list (as AttrDesc)
@@ -25,7 +27,7 @@ Status Operators::SNL(const string& result,           // Output relation name
   for (unsigned int i = 0; i < projCnt; i++){
     if ( strcmp(attrDescArray[i].relName, attrDesc1.relName) == 0 ){
       attrList1.push_back(i);
-    }else if (strcmp(attrDescArray[i].relName, attrDesc2.relName == 0){
+    }else if (strcmp(attrDescArray[i].relName, attrDesc2.relName) == 0){
       attrList2.push_back(i);
     }else{
       return ATTRNOTFOUND;
@@ -36,12 +38,26 @@ Status Operators::SNL(const string& result,           // Output relation name
   if (isOK1 != OK){
     return isOK1;
   }
-  HeapFileScan heapfile1(relName1, isOK2);
-  if (isOK2 != OK){
-    return isOK2;
+  HeapFileScan heapfile2(relName2, isOK1);
+  if (isOK1 != OK){
+    return isOK1;
   }
 
+  int reccnt1 = heapfile1.getRecCnt();
+  int reccnt2 = heapfile2.getRecCnt();
+  RID outRid1, outRid2;
+  int j = 0, k = 0;
+  Record rec1, rec2;
 
+  for (j = 0; j < reccnt1; j++){
+    heapfile1.scanNext(outRid1, rec1);
+
+    for (k = 0; k < recnt2; k++){
+      heapfile2.scanNext(outR2, rec2);
+
+    }
+    heapfile2.endScan();
+  }
 
   if (op == LT){
 
