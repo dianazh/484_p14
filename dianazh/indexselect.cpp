@@ -28,8 +28,6 @@ Status Operators::IndexSelect(const string& result,       // Name of the output 
     HeapFile new_hf(result, status);
     if (status != OK) return status;
 
-    //int recnum = old_hf.getRecCnt();
-
     index.startScan(attrValue);
     while (index.scanNext(rid_old)==OK){
         status = old_hf.getRandomRecord(rid_old, rec_old);
