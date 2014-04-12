@@ -7,9 +7,10 @@
 #include <algorithm>
 
 
-static int reccmp(char* p1, char* p2, int p1Len, int p2Len, Datatype type, Operator op)
+inline static int reccmp(char* p1, char* p2, int p1Len, int p2Len, Datatype type, Operator op)
 {
   int diff = 0;
+  double double_diff;
   int iattr, ifltr;
   double fattr, ffltr;
 
@@ -21,13 +22,13 @@ static int reccmp(char* p1, char* p2, int p1Len, int p2Len, Datatype type, Opera
     diff = iattr - ifltr;
     break;
   case DOUBLE:
-    double tmp;                 // word-alignment problem possible
+                     // word-alignment problem possible
     memcpy(&fattr, p1, sizeof(double));
     memcpy(&ffltr, p2, sizeof(double));
-    tmp = fattr - ffltr;
-    if (tmp < 0){
+    double_diff = fattr - ffltr;
+    if (double_diff < 0){
       diff = -1;
-    }else if (tmp == 0){
+    }else if (double_diff == 0){
       diff = 0;
     }else{
       diff = 1;
@@ -124,7 +125,7 @@ Status Operators::SNL(const string& result,           // Output relation name
     return ATTRTYPEMISMATCH;
   }
   RID outRid;
-  int diff;
+  int isOp;
 
   //heapfile1.startScan(attrDesc1.attrOffset, attrDesc1.attrLen, (Datatype) attrDesc1.attrType, NULL, op);
   for (j = 0; j < reccnt1; j++){
@@ -132,11 +133,11 @@ Status Operators::SNL(const string& result,           // Output relation name
     //heapfile2.startScan(attrDesc2.attrOffset, attrDesc2.attrLen, (Datatype) attrDesc2.attrType, NULL, op);
     for (k = 0; k < reccnt2; k++){
       heapfile2.scanNext(outRid2, rec2);
-      diff = reccmp( (char*) rec1.data + attrDesc1.attrOffset, (char*) rec2.data + attrDesc2.attrOffset, attrDesc1.attrLen, attrDesc2.attrLen, (Datatype)attrDesc1.attrType, op);
-      if (diff == -1){
+      isOp = reccmp( (char*) rec1.data + attrDesc1.attrOffset, (char*) rec2.data + attrDesc2.attrOffset, attrDesc1.attrLen, attrDesc2.attrLen, (Datatype)attrDesc1.attrType, op);
+      if (isOp == -1){
         return NOTUSED1;
       }else{
-        if (diff){
+        if (isOp){
           Record joinresult;
           joinresult.length = reclen;
           joinresult.data = (void*) new char [reclen];
@@ -149,9 +150,10 @@ Status Operators::SNL(const string& result,           // Output relation name
               memcpy(joinresult.data+resulttupleidx, rec2.data + attrDescArray[m].attrOffset, attrDescArray[m].attrLen);
               resulttupleidx += attrDescArray[m].attrLen;
             }
-            resultfile.insertRecord(joinresult, outRid);
-            //delete [] joinresult.data;
+
           }
+          resultfile.insertRecord(joinresult, outRid);
+          delete [] joinresult.data;
 
         }
       }
