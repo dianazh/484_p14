@@ -76,18 +76,25 @@ Status Operators::SMJ(const string& result,           // Output relation name
 
     while (!end_loop){
         matched = false;
-        int a, b;
+        //test
+        /*int a, b;
         memcpy(&a, rec_old1.data+attrDesc1.attrOffset, attrDesc2.attrLen);
         memcpy(&b, rec_old2.data+attrDesc2.attrOffset, attrDesc2.attrLen);
+        cout<<"rel1: "<<a<<" rel2: "<<b<<endl; //test*/
         diff = matchRec(rec_old1, rec_old2, attrDesc1, attrDesc2); 
         if (diff < 0){
             //next tuple in rel1
+            memcpy (&prev_rec1, &rec_old1, sizeof(Record));  //copy the previous rec in rel1
             status = table1.next(rec_old1);
             if (status == FILEEOF){
                 end_loop = true;
             } else if (status != OK){
                 return status;
             }
+            if (matchRec(prev_rec1, rec_old1, attrDesc1, attrDesc1)==0){  //is equal
+                table2.gotoMark();
+                table2.next(rec_old2);
+            } 
         } else if (diff > 0){
             //next tuple in rel2
             status = table2.next(rec_old2);
