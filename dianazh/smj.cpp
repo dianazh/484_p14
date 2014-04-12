@@ -66,6 +66,7 @@ Status Operators::SMJ(const string& result,           // Output relation name
     bool matched = false;
     bool end_loop = false;
     Record prev_rec1;
+    int diff; 
     status = table1.next(rec_old1);
     if (status == FILEEOF) return OK;
     else if (status != OK) return status;
@@ -75,7 +76,28 @@ Status Operators::SMJ(const string& result,           // Output relation name
 
     while (!end_loop){
         matched = false;
-        while ((matchRec(rec_old1, rec_old2, attrDesc1, attrDesc2)==0)&&(!end_loop)){ //match
+        int a, b;
+        memcpy(&a, rec_old1.data+attrDesc1.attrOffset, attrDesc2.attrLen);
+        memcpy(&b, rec_old2.data+attrDesc2.attrOffset, attrDesc2.attrLen);
+        diff = matchRec(rec_old1, rec_old2, attrDesc1, attrDesc2); 
+        if (diff < 0){
+            //next tuple in rel1
+            status = table1.next(rec_old1);
+            if (status == FILEEOF){
+                end_loop = true;
+            } else if (status != OK){
+                return status;
+            }
+        } else if (diff > 0){
+            //next tuple in rel2
+            status = table2.next(rec_old2);
+            if (status == FILEEOF){
+                end_loop = true;
+            } else if (status != OK){
+                return status;
+            }
+        }
+        while ((diff == 0)&&(!end_loop)){ //match
             if (!matched){
                 table2.setMark();
                 matched = true;
@@ -100,9 +122,9 @@ Status Operators::SMJ(const string& result,           // Output relation name
             if (status == FILEEOF){ //if end of inner loop
                 memcpy (&prev_rec1, &rec_old1, sizeof(Record));  //copy the previous rec in rel1
                 status  = table1.next(rec_old1);
-                if ((status != OK)&&(status == FILEEOF)){
+                if (status == FILEEOF){
                     end_loop = true;
-                } else {
+                } else if (status != OK){
                     return status;
                 }
                 if (matchRec(prev_rec1, rec_old1, attrDesc1, attrDesc1)==0){  //is equal
@@ -114,30 +136,31 @@ Status Operators::SMJ(const string& result,           // Output relation name
             } else if (status != OK){
                 return status;
             }
+            diff = matchRec(rec_old1, rec_old2, attrDesc1, attrDesc2);
         }
         //not a match
-        if (!matched){
+        /*if (!matched){
             //next tuple in rel2
             status = table2.next(rec_old2);
-            if ((status != OK)&&(status == FILEEOF)){
+            if (status == FILEEOF){
                 end_loop = true;
-            } else {
+            } else if (status != OK){
                 return status;
             }
         } else {
             //next tuple in rel1
             memcpy(&prev_rec1, &rec_old1, sizeof(Record)); //copy previous one
             status = table1.next(rec_old1);
-            if ((status != OK)&&(status == FILEEOF)){
+            if (status == FILEEOF){
                 end_loop = true;
-            } else {
+            } else if (status != OK){
                 return status;
             }
             if (matchRec(prev_rec1, rec_old1, attrDesc1, attrDesc1)==0){ //next tuple is same
                 table2.gotoMark();
                 table2.next(rec_old2);
             }
-        }
+        }*/
     }
     return OK;
 }
