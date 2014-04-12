@@ -218,8 +218,9 @@ const Status Page::getRecord(const RID & rid, Record & rec)
             //slotNo = (slot[i].offset / slot[i].length) + 1;
             //if (slotNo == rid.slotNo){
                 rec.length = slot[1-rid.slotNo].length;
-                rec.data =  (void*) new char [slot[1-rid.slotNo].length];
-                memcpy(rec.data, data+slot[1-rid.slotNo].offset, slot[1-rid.slotNo].length);
+                //rec.data =  (void*) new char [slot[1-rid.slotNo].length];
+                rec.data = data + slot[1-rid.slotNo].offset;
+                //memcpy(rec.data, data+slot[1-rid.slotNo].offset, slot[1-rid.slotNo].length);
                 return OK;
             //}
         }else{

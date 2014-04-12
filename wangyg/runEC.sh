@@ -1,0 +1,2 @@
+./dbdestroyEC testdb
+./dbcreateEC testdb

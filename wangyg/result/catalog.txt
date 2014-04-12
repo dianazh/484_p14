@@ -1,0 +1,28 @@
+Welcome to Minirel
+1 --> Query:  select * from relcat;
+Buf Stats: accesses = 4, disk reads = 3, disk writes = 0
+
+2 --> Query:  select * from attrcat;
+Buf Stats: accesses = 4, disk reads = 0, disk writes = 0
+
+3 --> Query:  create table soaps(soapid integer, name char(32), network char(4), rating double);
+4 --> Query:  create index soaps (soapid);
+5 --> Query:  create table stars(starid integer, real_name char(20), plays char(12), soapid integer);
+6 --> Query:  select relcat.relname, relcat.attrcnt, relcat.indexcnt from relcat;
+Buf Stats: accesses = 4, disk reads = 0, disk writes = 0
+
+7 --> Query:  select * from relcat;
+Buf Stats: accesses = 4, disk reads = 0, disk writes = 0
+
+8 --> Query:  select attrcat.relname, attrcat.attrname, attrcat.attroffset, attrcat.attrtype, attrcat.attrlen, attrcat.indexed from attrcat;
+Buf Stats: accesses = 4, disk reads = 0, disk writes = 0
+
+9 --> Query:  drop table soaps;
+10 --> Query:  select relcat.relname, relcat.attrcnt, relcat.indexcnt from relcat;
+Buf Stats: accesses = 4, disk reads = 0, disk writes = 0
+
+11 --> Query:  select attrcat.relname, attrcat.attrname, attrcat.attroffset, attrcat.attrtype, attrcat.attrlen, attrcat.indexed from attrcat;
+Buf Stats: accesses = 4, disk reads = 0, disk writes = 0
+
+12 --> Query:  drop table stars;
+13 --> 
