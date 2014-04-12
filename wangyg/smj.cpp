@@ -67,6 +67,7 @@ Status Operators::SMJ(const string& result,           // Output relation name
   rec2_old.length = -1;
 
   isOK = OK;
+  /*
   while( 1 ){
     isOK = sortedfile1.next(rec1_new);
     if (isOK == FILEEOF){
@@ -75,7 +76,7 @@ Status Operators::SMJ(const string& result,           // Output relation name
     }
     if ( reccmp_t(rec1_new) ){}
   }
-
+  */
 
   return OK;
 }
