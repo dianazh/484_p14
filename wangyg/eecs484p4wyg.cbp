@@ -38,6 +38,16 @@
 				<Option type="0" />
 				<Option compiler="gcc" />
 			</Target>
+			<Target title="EC">
+				<Option output="eecs484p4wyg" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="cleanEC">
+				<Option output="eecs484p4wyg" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />

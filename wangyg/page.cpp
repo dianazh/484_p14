@@ -16,12 +16,12 @@ void Page::init(int pageNo)
     //slot[0].length = -1;
     slotCnt = 0;
     freePtr = 0;
-    freeSpace = PAGESIZE - DPFIXED + sizeof(slot_t);
+    freeSpace = PAGESIZE - DPFIXED; //+ sizeof(slot_t);
     //dummy = 0;
     //prevPage = 0;
     //nextPage = 0;
     curPage = pageNo;
-    dumpPage();
+    //dumpPage();
 
 }
 
@@ -74,7 +74,7 @@ const short Page::getFreeSpace() const
 const Status Page::insertRecord(const Record & rec, RID& rid)
 {
     /* Solution Here */
-    dumpPage();
+    //dumpPage();
     if (freeSpace < rec.length + sizeof(slot_t)){
         return NOSPACE;
     }else{
@@ -121,16 +121,16 @@ const Status Page::deleteRecord(const RID & rid)
     if (rid.pageNo != curPage){
         return INVALIDSLOTNO;
     }
-    int i = 0;
-    int slotNo;
+    //int i = 0;
+    //int slotNo;
     //for (i = 0; i > slotCnt; i--){
 
         if (slot[1-rid.slotNo].length != -1){
             //slotNo = (slot[i].offset / slot[i].length) + 1;
             //slotNo = i;
             //if (slotNo == rid.slotNo){
-                freeSpace += (slot[i].length + sizeof(slot_t));
-                slot[i].length = -1;
+                freeSpace += (slot[1-rid.slotNo].length + sizeof(slot_t));
+                slot[1-rid.slotNo].length = -1;
                 return OK;
             //}
         }
