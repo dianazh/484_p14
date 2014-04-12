@@ -1,10 +1,7 @@
 #include "catalog.h"
 #include "query.h"
 #include "index.h"
-#include <string.h>  //Can I do this?
-#include <algorithm>
-#include <assert.h>
-#include <vector>
+
 
 /*
  * Inserts a record into the specified relation
