@@ -11,12 +11,12 @@ using namespace std;
 void Page::init(int pageNo)
 {
     /* Solution Here */
-    //memset(data, 0, PAGESIZE - DPFIXED);
+    memset(data, 0, PAGESIZE - DPFIXED);
     //slot[0].offset = 0;
-    slot[0].length = -1;
+    //slot[0].length = -1;
     slotCnt = 0;
     freePtr = 0;
-    freeSpace = PAGESIZE - DPFIXED + sizeof(slot_t);
+    freeSpace = PAGESIZE - DPFIXED; //+ sizeof(slot_t);
     //dummy = 0;
     //prevPage = 0;
     //nextPage = 0;
@@ -75,7 +75,6 @@ const Status Page::insertRecord(const Record & rec, RID& rid)
 {
     /* Solution Here */
     //dumpPage();
-    /*
     if (freeSpace < rec.length + sizeof(slot_t)){
         return NOSPACE;
     }else{
@@ -89,6 +88,7 @@ const Status Page::insertRecord(const Record & rec, RID& rid)
 
                 freeSpace -= (slot[i].length + sizeof(slot_t));
                 rid.pageNo = curPage;
+                //rid.slotNo = (slot[i].offset / slot[i].length) + 1;
                 rid.slotNo = -i+1;
                 memcpy(data+slot[i].offset, rec.data, slot[i].length);
                 break;
@@ -101,38 +101,10 @@ const Status Page::insertRecord(const Record & rec, RID& rid)
             slotCnt--;
             freeSpace -= (slot[i].length + sizeof(slot_t));
             rid.pageNo = curPage;
+            //rid.slotNo = (slot[i].offset / slot[i].length) + 1;
             rid.slotNo = -i+1;
             memcpy(data+slot[i].offset, rec.data, slot[i].length);
         }
-        return OK;
-    }
-    */
-    if (freeSpace < rec.length + sizeof(slot_t)){
-        return NOSPACE;
-    }else{
-        freeSpace -= (rec.length + sizeof(slot_t));
-        int i = 0;
-        for (i = 0; i > slotCnt; i--){
-            if (slot[i].length == -1){
-                slot[i].length = rec.length;
-                slot[i].offset = freePtr;
-                freePtr += slot[i].length;
-
-                freeSpace -= (slot[i].length + sizeof(slot_t));
-                rid.pageNo = curPage;
-                rid.slotNo = -i+1;
-                memcpy(data+slot[i].offset, rec.data, slot[i].length);
-                return OK;
-            }
-        }
-        slot[i].length = rec.length;
-        slot[i].offset = freePtr;
-        freePtr += slot[i].length;
-        slotCnt--;
-        freeSpace -= (slot[i].length + sizeof(slot_t));
-        rid.pageNo = curPage;
-        rid.slotNo = -i+1;
-        memcpy(data+slot[i].offset, rec.data, slot[i].length);
         return OK;
     }
 }
@@ -146,44 +118,24 @@ const Status Page::insertRecord(const Record & rec, RID& rid)
 const Status Page::deleteRecord(const RID & rid)
 {
     /* Solution Here */
-    /*
     if (rid.pageNo != curPage){
         return INVALIDSLOTNO;
     }
-    if (slot[1-rid.slotNo].length != -1){
-        freeSpace += (slot[1-rid.slotNo].length + sizeof(slot_t));
-        slot[1-rid.slotNo].length = -1;
-        return OK;
-    }
+    //int i = 0;
+    //int slotNo;
+    //for (i = 0; i > slotCnt; i--){
+
+        if (slot[1-rid.slotNo].length != -1){
+            //slotNo = (slot[i].offset / slot[i].length) + 1;
+            //slotNo = i;
+            //if (slotNo == rid.slotNo){
+                freeSpace += (slot[1-rid.slotNo].length + sizeof(slot_t));
+                slot[1-rid.slotNo].length = -1;
+                return OK;
+            //}
+        }
+    //}
     return INVALIDSLOTNO;
-    */
-    if (rid.pageNo != curPage){
-        return INVALIDSLOTNO;
-    }
-    int slotidx = 1-rid.slotNo;
-    if (slotidx <= slotCnt || slot[1-rid.slotNo].length == -1 || slotCnt == 0){
-        return INVALIDSLOTNO;
-    }
-    if (slot[1-rid.slotNo].length != -1){
-        int length = slot[1-rid.slotNo].length;
-        freeSpace += (slot[1-rid.slotNo].length + sizeof(slot_t));
-        freePtr -= slot[1-rid.slotNo].length;
-        slot[1-rid.slotNo].length = -1;
-        if (freePtr == 0){
-            return NORECORDS;
-        }
-        //memmove(data+slot[1-rid.slotNo].offset, data+slot[1-rid.slotNo].offset+length, freePtr-slot[1-rid.slotNo].offset);
-        bcopy(data+slot[1-rid.slotNo].offset+length, data+slot[1-rid.slotNo].offset, freePtr-slot[1-rid.slotNo].offset);
-        int i = 0;
-        for (i = 0; i > slotCnt; i--){
-            if (slot[i].offset > slot[1-rid.slotNo].offset && slot[i].length != -1){
-                slot[i].offset -= length;
-            }
-        }
-        return OK;
-    }else{
-        return INVALIDSLOTNO;
-    }
 }
 
 // returns RID of first record on page
@@ -195,6 +147,7 @@ const Status Page::firstRecord(RID& firstRid) const
     for (i = 0; i > slotCnt; i--){
         if (slot[i].length != -1){
             firstRid.pageNo = curPage;
+            //firstRid.slotNo = slot[i].offset / slot[i].length + 1;
             firstRid.slotNo = -i+1;
             return OK;
         }
@@ -210,12 +163,24 @@ const Status Page::nextRecord (const RID &curRid, RID& nextRid) const
     if (curRid.pageNo != curPage){
         return INVALIDSLOTNO;
     }
-    int j = 0;
+    int i = 0, j = 0;
+    //int slotNo;
+    //for (i = 0; i > slotCnt; i--){
 
+        //if (slot[1-curRid.slotNo].length != -1){
+            //slotNo = (slot[i].offset / slot[i].length) + 1;
+
+            //if (slotNo == curRid.slotNo){
+                //break;
+                //return OK;
+            //}
+        //}
+    //}
     if (slot[1-curRid.slotNo].length != -1){
         for (j = -curRid.slotNo; j > slotCnt; j--){
             if (slot[j].length != -1){
                 nextRid.pageNo = curPage;
+                //nextRid.slotNo = (slot[j].offset / slot[j].length) + 1;
                 nextRid.slotNo = -j+1;
                 return OK;
             }
@@ -226,6 +191,15 @@ const Status Page::nextRecord (const RID &curRid, RID& nextRid) const
         return INVALIDSLOTNO;
     }
 
+    //for (j = i-1; j > slotCnt; j--){
+        //if (slot[j].length != -1){
+            //nextRid.pageNo = curPage;
+            //nextRid.slotNo = (slot[j].offset / slot[j].length) + 1;
+            //return OK;
+        //}
+
+    //}
+    //return ENDOFPAGE;
 }
 
 // returns length and pointer to record with RID rid
@@ -236,13 +210,22 @@ const Status Page::getRecord(const RID & rid, Record & rec)
     if (rid.pageNo != curPage){
         return INVALIDSLOTNO;
     }
-    if (slot[1-rid.slotNo].length != -1){
-            rec.length = slot[1-rid.slotNo].length;
-            rec.data =  (void*) new char [slot[1-rid.slotNo].length];
-            //rec.data = data + slot[1-rid.slotNo].offset;
-            memcpy(rec.data, data+slot[1-rid.slotNo].offset, slot[1-rid.slotNo].length);
-            return OK;
-    }else{
-        return INVALIDSLOTNO;
-    }
+    //int i = 0, j = 0;
+    //int slotNo;
+    //for (i = 0; i > slotCnt; i--){
+
+        if (slot[1-rid.slotNo].length != -1){
+            //slotNo = (slot[i].offset / slot[i].length) + 1;
+            //if (slotNo == rid.slotNo){
+                rec.length = slot[1-rid.slotNo].length;
+                //rec.data =  (void*) new char [slot[1-rid.slotNo].length];
+                rec.data = data + slot[1-rid.slotNo].offset;
+                //memcpy(rec.data, data+slot[1-rid.slotNo].offset, slot[1-rid.slotNo].length);
+                return OK;
+            //}
+        }else{
+            return INVALIDSLOTNO;
+        }
+    //}
+    //return INVALIDSLOTNO;
 }
