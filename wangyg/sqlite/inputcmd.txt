@@ -1,0 +1,4 @@
+.mode csv
+.output join-smj-samelen.csv
+.read ../\sql/\join-smj-samelen.sql
+.exit
