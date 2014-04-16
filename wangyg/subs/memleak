@@ -1,0 +1,25 @@
+rm -f core *.bak *~ error.o heapfile.o index.o print.o insert.o select.o scanselect.o indexselect.o snl.o smj.o inl.o join.o sort.o minirel.o dbcreate.o dbdestroy.o minirelEC.o dbcreateEC.o dbdestroyEC.o minirel dbcreate dbdestroy minirelEC dbcreateEC dbdestroyEC *.pure
+g++ -g -Wall -DDEBUG    -c -o minirel.o minirel.cpp
+g++ -g -Wall -DDEBUG    -c -o error.o error.cpp
+g++ -g -Wall -DDEBUG    -c -o heapfile.o heapfile.cpp
+g++ -g -Wall -DDEBUG    -c -o index.o index.cpp
+g++ -g -Wall -DDEBUG    -c -o print.o print.cpp
+g++ -g -Wall -DDEBUG    -c -o insert.o insert.cpp
+g++ -g -Wall -DDEBUG    -c -o select.o select.cpp
+g++ -g -Wall -DDEBUG    -c -o scanselect.o scanselect.cpp
+g++ -g -Wall -DDEBUG    -c -o indexselect.o indexselect.cpp
+g++ -g -Wall -DDEBUG    -c -o snl.o snl.cpp
+g++ -g -Wall -DDEBUG    -c -o smj.o smj.cpp
+g++ -g -Wall -DDEBUG    -c -o inl.o inl.cpp
+g++ -g -Wall -DDEBUG    -c -o join.o join.cpp
+g++ -g -Wall -DDEBUG    -c -o sort.o sort.cpp
+g++ -o minirel minirel.o error.o heapfile.o index.o print.o insert.o select.o scanselect.o indexselect.o snl.o smj.o inl.o join.o sort.o libsql.a libcat.a libmisc.a liblsm.a   -lm
+g++ -g -Wall -DDEBUG    -c -o dbcreate.o dbcreate.cpp
+g++ -o dbcreate dbcreate.o print.o error.o heapfile.o index.o liblsm.a libcat.a  -lm
+g++ -g -Wall -DDEBUG    -c -o dbdestroy.o dbdestroy.cpp
+g++ -o dbdestroy dbdestroy.o
+Enter y if you want to delete testdb/*
+Executing rm -r testdb
+Database testdb created
+Enter y if you want to delete testdb/*
+Executing rm -r testdb
