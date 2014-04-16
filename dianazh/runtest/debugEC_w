@@ -1,0 +1,116 @@
+Welcome to Minirel
+1 --> Query:  create table table1(ikey integer, dkey double, skey char(20));
+2 --> YYERROR: Line 6: syntax error at "abcd1"
+3 --> Welcome to Minirel
+1 --> Query:  create table table5(ikey integer, dkey double, skey char(20));
+2 --> Query:  create table table6(ikey integer, dkey double, skey char(20));
+3 --> Query:  create index table5(ikey);
+4 --> Query:  create index table5(dkey);
+5 --> Query:  create index table6(ikey);
+6 --> Query:  create index table6(dkey);
+7 --> YYERROR: Line 14: syntax error at "abcd1"
+8 --> Welcome to Minirel
+1 --> Query:  create table table5(ikey integer, dkey double, skey char(20));
+2 --> Query:  create table table6(ikey integer, dkey double, skey char(20));
+3 --> Query:  create index table5(ikey);
+4 --> Query:  create index table5(dkey);
+5 --> YYERROR: Line 12: syntax error at "abcd1"
+6 --> Welcome to Minirel
+1 --> Query:  create table table5(ikey integer, dkey double, skey char(20));
+2 --> Query:  create table table6(ikey integer, dkey double, skey char(20));
+3 --> Query:  create index table5(ikey);
+4 --> Query:  create index table5(dkey);
+5 --> YYERROR: Line 12: syntax error at "abcd1"
+6 --> Welcome to Minirel
+1 --> Query: create table dda (serial integer, ikey integer, filler char(80), dkey double);
+2 --> Query:  create table ddb (serial integer, ikey integer, filler char(80), dkey double);
+3 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+4 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+5 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+6 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 13, 00000 string record, 0.0);
+7 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+8 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+9 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 12, 00000 string record, 0.0);
+10 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 13, 00000 string record, 0.0);
+11 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+12 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+13 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+14 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+15 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+16 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+17 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+18 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 13, 00000 string record, 0.0);
+19 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+20 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+21 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 12, 00000 string record, 0.0);
+22 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 13, 00000 string record, 0.0);
+23 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+24 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+25 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+26 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+27 --> Query:  select * from dda, ddb where dda.serial = ddb.serial;
+Algorithm: SM Join
+Welcome to Minirel
+1 --> Query:  create table dda (serial integer, ikey integer, filler char(80), dkey double);
+2 --> Query:  create table ddb (serial integer, ikey integer, filler char(80), dkey double);
+3 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+4 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+5 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+6 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+7 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+8 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+9 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+10 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+11 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+12 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+13 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+14 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+15 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 13, 00000 string record, 0.0);
+16 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+17 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+18 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 12, 00000 string record, 0.0);
+19 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 13, 00000 string record, 0.0);
+20 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+21 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+22 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+23 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+24 --> Query:  select * from dda, ddb where dda.serial = ddb.serial;
+Algorithm: SM Join
+Welcome to Minirel
+1 --> Query:  create table dda (serial integer, ikey integer, filler char(80), dkey double);
+2 --> Query:  create table ddb (serial integer, ikey integer, filler char(80), dkey double);
+3 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+4 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+5 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+6 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 13, 00000 string record, 0.0);
+7 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+8 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+9 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 12, 00000 string record, 0.0);
+10 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 13, 00000 string record, 0.0);
+11 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+12 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+13 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+14 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+15 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+16 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+17 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+18 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 13, 00000 string record, 0.0);
+19 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+20 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+21 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 12, 00000 string record, 0.0);
+22 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 13, 00000 string record, 0.0);
+23 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+24 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+25 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+26 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+27 --> Query:  select * from dda, ddb where dda.serial = ddb.serial;
+Algorithm: SM Join
+Welcome to Minirel
+1 --> Query:  create table table4(ikey integer, dkey double, skey char(20));
+2 --> Query:  create index table4(ikey);
+3 --> Query:  create index table4(dkey);
+4 --> YYERROR: Line 11: syntax error at "abcd1"
+5 --> Welcome to Minirel
+1 --> Query:  create table table3(ikey integer, dkey double, skey char(20));
+2 --> YYERROR: Line 6: syntax error at "abcd1"
+3 --> 
