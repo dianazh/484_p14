@@ -9,4 +9,6 @@
 .read ../\sql/\join-index-sqlite.sql
 .output select-scan.csv
 .read ../\sql/\select-scan.sql
+.output select-index-sqlite.csv
+.read ../\sql/\select-index-sqlite.sql
 .exit
