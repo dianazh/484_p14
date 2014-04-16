@@ -80,3 +80,6 @@ SELECT DA.ikey, DB.ikey FROM DA, DB WHERE DA.ikey <> DB.ikey;
 SELECT DA.dkey, DB.dkey FROM DA, DB WHERE DA.dkey <> DB.dkey;
 -- Join on string
 SELECT DA.filler, DB.filler FROM DA, DB WHERE DA.filler <> DB.filler;
+
+DROP TABLE DA;
+DROP TABLE DB;

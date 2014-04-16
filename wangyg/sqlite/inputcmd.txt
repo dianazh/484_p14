@@ -5,6 +5,8 @@
 .read ../\sql/\join-smj-difflen.sql
 .output join-snl.csv
 .read ../\sql/\join-snl.sql
+.output join-index-sqlite.csv
+.read ../\sql/\join-index-sqlite.sql
 .output select-scan.csv
 .read ../\sql/\select-scan.sql
 .exit
