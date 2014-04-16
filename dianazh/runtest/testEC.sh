@@ -1,3 +1,4 @@
+make clean
 make EC
 echo Y | ./dbdestroyEC testdb
 ./dbcreateEC testdb

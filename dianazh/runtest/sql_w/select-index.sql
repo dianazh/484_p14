@@ -23,5 +23,37 @@ SELECT * FROM table4 WHERE table4.ikey = 4;
 -- Predicate on double
 SELECT * FROM table4 WHERE table4.dkey = 4;
 
+--other selections that should not be index select
+SELECT table3.ikey, table3.dkey, table3.skey FROM table3 WHERE table3.ikey < 3;
+SELECT table3.ikey, table3.skey, table3.dkey FROM table3 WHERE table3.dkey < 3;
+SELECT table3.dkey, table3.ikey, table3.skey FROM table3 WHERE table3.skey < 'abcd3';
+SELECT table3.dkey, table3.skey, table3.ikey FROM table3 WHERE table3.ikey <= 3;
+SELECT table3.skey, table3.ikey, table3.dkey FROM table3 WHERE table3.dkey <= 3;
+SELECT table3.skey, table3.dkey, table3.ikey FROM table3 WHERE table3.skey <= 'abcd3';
+SELECT table3.dkey, table3.skey FROM table3 WHERE table3.ikey >= 3;
+SELECT table3.skey, table3.ikey FROM table3 WHERE table3.dkey >= 3;
+SELECT table3.skey, table3.dkey FROM table3 WHERE table3.skey >= 'abcd3';
+SELECT table3.ikey FROM table3 WHERE table3.ikey > 3;
+SELECT table3.ikey FROM table3 WHERE table3.dkey > 3;
+SELECT table3.dkey FROM table3 WHERE table3.skey > 'abcd3';
+SELECT table3.dkey FROM table3 WHERE table3.ikey <> 3;
+SELECT table3.skey FROM table3 WHERE table3.dkey <> 3;
+SELECT table3.skey FROM table3 WHERE table3.skey <> 'abcd3';
+
+--Test if index select is chosen
+--project 3 items in different order
+SELECT table3.ikey, table3.dkey, table3.skey FROM table3 WHERE table3.ikey = 3;
+SELECT table3.ikey, table3.skey, table3.dkey, FROM table3 WHERE table3.ikey = 3;
+SELECT table3.skey, table3.ikey,  table3.dkey, FROM table3 WHERE table3.ikey = 3;
+--project 2 items in different order
+SELECT table3.ikey, table3.skey FROM table3 WHERE table3.dkey = 3.3;
+SELECT table3.dkey, table3.skey FROM table3 WHERE table3.dkey = 3.3;
+SELECT table3.skey, table3.ikey FROM table3 WHERE table3.dkey = 3.3;
+--project 1 item
+SELECT table3.ikey FROM table3 WHERE table3.dkey = 3.3;
+SELECT table3.dkey FROM table3 WHERE table3.ikey = 4;
+SELECT table3.skey FROM table3 WHERE table3.ikey = 4;
+
+
 DROP TABLE table4;
 

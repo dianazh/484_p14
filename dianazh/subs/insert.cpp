@@ -52,18 +52,17 @@ Status Updates::Insert(const string& relation,      // Name of the relation
         }
         entry_size += (attrs_info+i)->attrLen;
     }
+    
+    //create or open the file
+    HeapFile rel_heapfile(relation, status);  
+    if (status != OK) return status;
+
     //generate record
     Record new_rec;
     new_rec.length = entry_size;
     new_rec.data = operator new (entry_size);
     for (int i = 0; i < attrCnt; i++){
         memcpy(new_rec.data+(attrs_info+i)->attrOffset, attrList[match_num[i]].attrValue, (attrs_info+i)->attrLen);
-    }
-    //create or open the file
-    HeapFile rel_heapfile(relation, status);  
-    if (status != OK){
-        operator delete (new_rec.data);
-        return status;
     }
     //insert new_rec
     RID new_rid;

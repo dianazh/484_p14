@@ -1,7 +1,20 @@
 Welcome to Minirel
+1 --> Query:  create table table2(ikey integer, dkey double, skey char(20));
+2 --> Query:  create index table2(ikey);
+3 --> Query:  create index table2(dkey);
+4 --> YYERROR: Line 11: syntax error at "abcd1"
+5 --> Welcome to Minirel
 1 --> Query:  create table table1(ikey integer, dkey double, skey char(20));
 2 --> YYERROR: Line 6: syntax error at "abcd1"
 3 --> Welcome to Minirel
+1 --> Query:  create table table3(ikey integer, dkey double, skey char(20));
+2 --> YYERROR: Line 6: syntax error at "abcd1"
+3 --> Welcome to Minirel
+1 --> Query:  create table table4(ikey integer, dkey double, skey char(20));
+2 --> Query:  create index table4(ikey);
+3 --> Query:  create index table4(dkey);
+4 --> YYERROR: Line 11: syntax error at "abcd1"
+5 --> Welcome to Minirel
 1 --> Query:  create table table5(ikey integer, dkey double, skey char(20));
 2 --> Query:  create table table6(ikey integer, dkey double, skey char(20));
 3 --> Query:  create index table5(ikey);
@@ -102,7 +115,7 @@ serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey
 3        13      00000 string re  0.00    3        13      00000 string re  0.00    
 
 Number of records: 48
-Buf Stats: accesses = 221, disk reads = 24, disk writes = 42
+Buf Stats: accesses = 285, disk reads = 24, disk writes = 42
 
 28 --> Query:  drop table dda;
 29 --> Query:  drop table ddb;
@@ -172,7 +185,7 @@ serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey
 3        13      00000 string re  0.00    3        13      00000 string re  0.00    
 
 Number of records: 36
-Buf Stats: accesses = 198, disk reads = 20, disk writes = 36
+Buf Stats: accesses = 262, disk reads = 20, disk writes = 36
 
 25 --> Query:  select * from dda, ddb where dda.dkey = ddb.dkey;
 Algorithm: SM Join
@@ -280,7 +293,7 @@ serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey
 3        13      00000 string re  0.00    1        13      00000 string re  0.00    
 
 Number of records: 108
-Buf Stats: accesses = 309, disk reads = 38, disk writes = 68
+Buf Stats: accesses = 373, disk reads = 39, disk writes = 67
 
 26 --> Query:  select * from dda, ddb where dda.filler = ddb.filler;
 Algorithm: SM Join
@@ -388,7 +401,7 @@ serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey
 3        13      00000 string re  0.00    1        11      00000 string re  0.00    
 
 Number of records: 108
-Buf Stats: accesses = 309, disk reads = 38, disk writes = 67
+Buf Stats: accesses = 373, disk reads = 40, disk writes = 67
 
 27 --> Query:  drop table dda;
 28 --> Query:  drop table ddb;
@@ -473,7 +486,7 @@ serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey
 3        13      00000 string re  0.00    3        13      00000 string re  0.00    
 
 Number of records: 48
-Buf Stats: accesses = 221, disk reads = 24, disk writes = 42
+Buf Stats: accesses = 285, disk reads = 24, disk writes = 42
 
 28 --> Query:  select * from dda, ddb where dda.dkey = ddb.dkey;
 Algorithm: SM Join
@@ -581,7 +594,7 @@ serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey
 3        10      00000 string re  0.00    1        13      00000 string re  0.00    
 
 Number of records: 144
-Buf Stats: accesses = 372, disk reads = 51, disk writes = 84
+Buf Stats: accesses = 436, disk reads = 55, disk writes = 84
 
 29 --> Query:  select * from dda, ddb where dda.filler = ddb.filler;
 Algorithm: SM Join
@@ -689,16 +702,1427 @@ serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey
 2        13      00000 string re  0.00    1        11      00000 string re  0.00    
 
 Number of records: 144
-Buf Stats: accesses = 372, disk reads = 51, disk writes = 83
+Buf Stats: accesses = 436, disk reads = 55, disk writes = 83
 
 30 --> Query:  drop table dda;
 31 --> Query:  drop table ddb;
 32 --> Welcome to Minirel
-1 --> Query:  create table table4(ikey integer, dkey double, skey char(20));
-2 --> Query:  create index table4(ikey);
-3 --> Query:  create index table4(dkey);
-4 --> YYERROR: Line 11: syntax error at "abcd1"
-5 --> Welcome to Minirel
-1 --> Query:  create table table3(ikey integer, dkey double, skey char(20));
-2 --> YYERROR: Line 6: syntax error at "abcd1"
-3 --> 
+1 --> Query:  create table da (serial integer, ikey integer, filler char(80), dkey double);
+2 --> Query:  create table db (serial integer, ikey integer, filler char(80), dkey double);
+3 --> Query:  insert into da (serial, ikey, filler, dkey) values (0, 11618, 00000 string record, 0.0);
+4 --> Query:  insert into da (serial, ikey, filler, dkey) values (1, 15378, 00001 string record, 1.1);
+5 --> Query:  insert into da (serial, ikey, filler, dkey) values (2, 17233, 00002 string record, 2.2);
+6 --> Query:  insert into da (serial, ikey, filler, dkey) values (3, 19052, 00003 string record, 3.3);
+7 --> Query:  insert into da (serial, ikey, filler, dkey) values (4, 24069, 00004 string record, 4.4);
+8 --> Query:  insert into da (serial, ikey, filler, dkey) values (5, 17188, 00005 string record, 5.5);
+9 --> Query:  insert into da (serial, ikey, filler, dkey) values (6, 28769, 00006 string record, 6.6);
+10 --> Query:  insert into da (serial, ikey, filler, dkey) values (7, 15168, 00007 string record, 7.7);
+11 --> Query:  insert into da (serial, ikey, filler, dkey) values (8, 578, 00008 string record, 8.8);
+12 --> Query:  insert into da (serial, ikey, filler, dkey) values (9, 21055, 00009 string record, 9.9);
+13 --> Query:  insert into da (serial, ikey, filler, dkey) values (10, 7648, 00010 string record, 11.0);
+14 --> Query:  insert into da (serial, ikey, filler, dkey) values (11, 10153, 00011 string record, 12.1);
+15 --> Query:  insert into da (serial, ikey, filler, dkey) values (12, 31851, 00012 string record, 13.2);
+16 --> Query:  insert into da (serial, ikey, filler, dkey) values (13, 25573, 00013 string record, 14.3);
+17 --> Query:  insert into da (serial, ikey, filler, dkey) values (14, 23765, 00014 string record, 15.4);
+18 --> Query:  insert into da (serial, ikey, filler, dkey) values (15, 8758, 00015 string record, 16.5);
+19 --> Query:  insert into da (serial, ikey, filler, dkey) values (16, 18243, 00016 string record, 17.6);
+20 --> Query:  insert into da (serial, ikey, filler, dkey) values (17, 26285, 00017 string record, 18.7);
+21 --> Query:  insert into da (serial, ikey, filler, dkey) values (18, 32157, 00018 string record, 19.8);
+22 --> Query:  insert into da (serial, ikey, filler, dkey) values (19, 21879, 00019 string record, 20.9);
+23 --> Query:  insert into db (serial, ikey, filler, dkey) values (0, 23798, 00000 string record, 0.0);
+24 --> Query:  insert into db (serial, ikey, filler, dkey) values (1, 24529, 00001 string record, 1.1);
+25 --> Query:  insert into db (serial, ikey, filler, dkey) values (2, 1440, 00002 string record, 2.2);
+26 --> Query:  insert into db (serial, ikey, filler, dkey) values (3, 20441, 00003 string record, 3.3);
+27 --> Query:  insert into db (serial, ikey, filler, dkey) values (4, 8210, 00004 string record, 4.4);
+28 --> Query:  insert into db (serial, ikey, filler, dkey) values (5, 31830, 00005 string record, 5.5);
+29 --> Query:  insert into db (serial, ikey, filler, dkey) values (6, 18816, 00006 string record, 6.6);
+30 --> Query:  insert into db (serial, ikey, filler, dkey) values (7, 22849, 00007 string record, 7.7);
+31 --> Query:  insert into db (serial, ikey, filler, dkey) values (8, 28448, 00008 string record, 8.8);
+32 --> Query:  insert into db (serial, ikey, filler, dkey) values (9, 27189, 00009 string record, 9.9);
+33 --> Query:  select da.ikey, db.ikey from da, db where da.ikey < db.ikey;
+Algorithm: Simple NL Join
+ikey.0  ikey.1  
+------  ------  
+11618   23798   
+15378   23798   
+17233   23798   
+19052   23798   
+17188   23798   
+15168   23798   
+578     23798   
+21055   23798   
+7648    23798   
+10153   23798   
+23765   23798   
+8758    23798   
+18243   23798   
+21879   23798   
+11618   24529   
+15378   24529   
+17233   24529   
+19052   24529   
+24069   24529   
+17188   24529   
+15168   24529   
+578     24529   
+21055   24529   
+7648    24529   
+10153   24529   
+23765   24529   
+8758    24529   
+18243   24529   
+21879   24529   
+578     1440    
+11618   20441   
+15378   20441   
+17233   20441   
+19052   20441   
+17188   20441   
+15168   20441   
+578     20441   
+7648    20441   
+10153   20441   
+8758    20441   
+18243   20441   
+578     8210    
+7648    8210    
+11618   31830   
+15378   31830   
+17233   31830   
+19052   31830   
+24069   31830   
+17188   31830   
+28769   31830   
+15168   31830   
+578     31830   
+21055   31830   
+7648    31830   
+10153   31830   
+25573   31830   
+23765   31830   
+8758    31830   
+18243   31830   
+26285   31830   
+21879   31830   
+11618   18816   
+15378   18816   
+17233   18816   
+17188   18816   
+15168   18816   
+578     18816   
+7648    18816   
+10153   18816   
+8758    18816   
+18243   18816   
+11618   22849   
+15378   22849   
+17233   22849   
+19052   22849   
+17188   22849   
+15168   22849   
+578     22849   
+21055   22849   
+7648    22849   
+10153   22849   
+8758    22849   
+18243   22849   
+21879   22849   
+11618   28448   
+15378   28448   
+17233   28448   
+19052   28448   
+24069   28448   
+17188   28448   
+15168   28448   
+578     28448   
+21055   28448   
+7648    28448   
+10153   28448   
+25573   28448   
+23765   28448   
+8758    28448   
+18243   28448   
+26285   28448   
+
+Number of records: 118
+Buf Stats: accesses = 206, disk reads = 9, disk writes = 10
+
+34 --> Query:  select da.dkey, db.dkey from da, db where da.dkey < db.dkey;
+Algorithm: Simple NL Join
+dkey.0  dkey.1  
+------  ------  
+0.00    1.10    
+0.00    2.20    
+1.10    2.20    
+0.00    3.30    
+1.10    3.30    
+2.20    3.30    
+0.00    4.40    
+1.10    4.40    
+2.20    4.40    
+3.30    4.40    
+0.00    5.50    
+1.10    5.50    
+2.20    5.50    
+3.30    5.50    
+4.40    5.50    
+0.00    6.60    
+1.10    6.60    
+2.20    6.60    
+3.30    6.60    
+4.40    6.60    
+5.50    6.60    
+0.00    7.70    
+1.10    7.70    
+2.20    7.70    
+3.30    7.70    
+4.40    7.70    
+5.50    7.70    
+6.60    7.70    
+0.00    8.80    
+1.10    8.80    
+2.20    8.80    
+3.30    8.80    
+4.40    8.80    
+5.50    8.80    
+6.60    8.80    
+7.70    8.80    
+0.00    9.90    
+1.10    9.90    
+2.20    9.90    
+3.30    9.90    
+4.40    9.90    
+5.50    9.90    
+6.60    9.90    
+7.70    9.90    
+8.80    9.90    
+
+Number of records: 45
+Buf Stats: accesses = 134, disk reads = 8, disk writes = 8
+
+35 --> Query:  select da.filler, db.filler from da, db where da.filler < db.filler;
+Algorithm: Simple NL Join
+filler.0         filler.1         
+---------------  ---------------  
+00000 string re  00001 string re  
+00000 string re  00002 string re  
+00001 string re  00002 string re  
+00000 string re  00003 string re  
+00001 string re  00003 string re  
+00002 string re  00003 string re  
+00000 string re  00004 string re  
+00001 string re  00004 string re  
+00002 string re  00004 string re  
+00003 string re  00004 string re  
+00000 string re  00005 string re  
+00001 string re  00005 string re  
+00002 string re  00005 string re  
+00003 string re  00005 string re  
+00004 string re  00005 string re  
+00000 string re  00006 string re  
+00001 string re  00006 string re  
+00002 string re  00006 string re  
+00003 string re  00006 string re  
+00004 string re  00006 string re  
+00005 string re  00006 string re  
+00000 string re  00007 string re  
+00001 string re  00007 string re  
+00002 string re  00007 string re  
+00003 string re  00007 string re  
+00004 string re  00007 string re  
+00005 string re  00007 string re  
+00006 string re  00007 string re  
+00000 string re  00008 string re  
+00001 string re  00008 string re  
+00002 string re  00008 string re  
+00003 string re  00008 string re  
+00004 string re  00008 string re  
+00005 string re  00008 string re  
+00006 string re  00008 string re  
+00007 string re  00008 string re  
+00000 string re  00009 string re  
+00001 string re  00009 string re  
+00002 string re  00009 string re  
+00003 string re  00009 string re  
+00004 string re  00009 string re  
+00005 string re  00009 string re  
+00006 string re  00009 string re  
+00007 string re  00009 string re  
+00008 string re  00009 string re  
+
+Number of records: 45
+Buf Stats: accesses = 148, disk reads = 15, disk writes = 22
+
+36 --> Query:  select da.ikey, db.ikey from da, db where da.ikey <= db.ikey;
+Algorithm: Simple NL Join
+ikey.0  ikey.1  
+------  ------  
+11618   23798   
+15378   23798   
+17233   23798   
+19052   23798   
+17188   23798   
+15168   23798   
+578     23798   
+21055   23798   
+7648    23798   
+10153   23798   
+23765   23798   
+8758    23798   
+18243   23798   
+21879   23798   
+11618   24529   
+15378   24529   
+17233   24529   
+19052   24529   
+24069   24529   
+17188   24529   
+15168   24529   
+578     24529   
+21055   24529   
+7648    24529   
+10153   24529   
+23765   24529   
+8758    24529   
+18243   24529   
+21879   24529   
+578     1440    
+11618   20441   
+15378   20441   
+17233   20441   
+19052   20441   
+17188   20441   
+15168   20441   
+578     20441   
+7648    20441   
+10153   20441   
+8758    20441   
+18243   20441   
+578     8210    
+7648    8210    
+11618   31830   
+15378   31830   
+17233   31830   
+19052   31830   
+24069   31830   
+17188   31830   
+28769   31830   
+15168   31830   
+578     31830   
+21055   31830   
+7648    31830   
+10153   31830   
+25573   31830   
+23765   31830   
+8758    31830   
+18243   31830   
+26285   31830   
+21879   31830   
+11618   18816   
+15378   18816   
+17233   18816   
+17188   18816   
+15168   18816   
+578     18816   
+7648    18816   
+10153   18816   
+8758    18816   
+18243   18816   
+11618   22849   
+15378   22849   
+17233   22849   
+19052   22849   
+17188   22849   
+15168   22849   
+578     22849   
+21055   22849   
+7648    22849   
+10153   22849   
+8758    22849   
+18243   22849   
+21879   22849   
+11618   28448   
+15378   28448   
+17233   28448   
+19052   28448   
+24069   28448   
+17188   28448   
+15168   28448   
+578     28448   
+21055   28448   
+7648    28448   
+10153   28448   
+25573   28448   
+23765   28448   
+8758    28448   
+18243   28448   
+26285   28448   
+
+Number of records: 118
+Buf Stats: accesses = 206, disk reads = 9, disk writes = 10
+
+37 --> Query:  select da.dkey, db.dkey from da, db where da.dkey <= db.dkey;
+Algorithm: Simple NL Join
+dkey.0  dkey.1  
+------  ------  
+0.00    0.00    
+0.00    1.10    
+1.10    1.10    
+0.00    2.20    
+1.10    2.20    
+2.20    2.20    
+0.00    3.30    
+1.10    3.30    
+2.20    3.30    
+3.30    3.30    
+0.00    4.40    
+1.10    4.40    
+2.20    4.40    
+3.30    4.40    
+4.40    4.40    
+0.00    5.50    
+1.10    5.50    
+2.20    5.50    
+3.30    5.50    
+4.40    5.50    
+5.50    5.50    
+0.00    6.60    
+1.10    6.60    
+2.20    6.60    
+3.30    6.60    
+4.40    6.60    
+5.50    6.60    
+6.60    6.60    
+0.00    7.70    
+1.10    7.70    
+2.20    7.70    
+3.30    7.70    
+4.40    7.70    
+5.50    7.70    
+6.60    7.70    
+7.70    7.70    
+0.00    8.80    
+1.10    8.80    
+2.20    8.80    
+3.30    8.80    
+4.40    8.80    
+5.50    8.80    
+6.60    8.80    
+7.70    8.80    
+8.80    8.80    
+0.00    9.90    
+1.10    9.90    
+2.20    9.90    
+3.30    9.90    
+4.40    9.90    
+5.50    9.90    
+6.60    9.90    
+7.70    9.90    
+8.80    9.90    
+9.90    9.90    
+
+Number of records: 55
+Buf Stats: accesses = 146, disk reads = 9, disk writes = 10
+
+38 --> Query:  select da.filler, db.filler from da, db where da.filler <= db.filler;
+Algorithm: Simple NL Join
+filler.0         filler.1         
+---------------  ---------------  
+00000 string re  00000 string re  
+00000 string re  00001 string re  
+00001 string re  00001 string re  
+00000 string re  00002 string re  
+00001 string re  00002 string re  
+00002 string re  00002 string re  
+00000 string re  00003 string re  
+00001 string re  00003 string re  
+00002 string re  00003 string re  
+00003 string re  00003 string re  
+00000 string re  00004 string re  
+00001 string re  00004 string re  
+00002 string re  00004 string re  
+00003 string re  00004 string re  
+00004 string re  00004 string re  
+00000 string re  00005 string re  
+00001 string re  00005 string re  
+00002 string re  00005 string re  
+00003 string re  00005 string re  
+00004 string re  00005 string re  
+00005 string re  00005 string re  
+00000 string re  00006 string re  
+00001 string re  00006 string re  
+00002 string re  00006 string re  
+00003 string re  00006 string re  
+00004 string re  00006 string re  
+00005 string re  00006 string re  
+00006 string re  00006 string re  
+00000 string re  00007 string re  
+00001 string re  00007 string re  
+00002 string re  00007 string re  
+00003 string re  00007 string re  
+00004 string re  00007 string re  
+00005 string re  00007 string re  
+00006 string re  00007 string re  
+00007 string re  00007 string re  
+00000 string re  00008 string re  
+00001 string re  00008 string re  
+00002 string re  00008 string re  
+00003 string re  00008 string re  
+00004 string re  00008 string re  
+00005 string re  00008 string re  
+00006 string re  00008 string re  
+00007 string re  00008 string re  
+00008 string re  00008 string re  
+00000 string re  00009 string re  
+00001 string re  00009 string re  
+00002 string re  00009 string re  
+00003 string re  00009 string re  
+00004 string re  00009 string re  
+00005 string re  00009 string re  
+00006 string re  00009 string re  
+00007 string re  00009 string re  
+00008 string re  00009 string re  
+00009 string re  00009 string re  
+
+Number of records: 55
+Buf Stats: accesses = 162, disk reads = 17, disk writes = 26
+
+39 --> Query:  select da.ikey, db.ikey from da, db where da.ikey >= db.ikey;
+Algorithm: Simple NL Join
+ikey.0  ikey.1  
+------  ------  
+24069   23798   
+28769   23798   
+31851   23798   
+25573   23798   
+26285   23798   
+32157   23798   
+28769   24529   
+31851   24529   
+25573   24529   
+26285   24529   
+32157   24529   
+11618   1440    
+15378   1440    
+17233   1440    
+19052   1440    
+24069   1440    
+17188   1440    
+28769   1440    
+15168   1440    
+21055   1440    
+7648    1440    
+10153   1440    
+31851   1440    
+25573   1440    
+23765   1440    
+8758    1440    
+18243   1440    
+26285   1440    
+32157   1440    
+21879   1440    
+24069   20441   
+28769   20441   
+21055   20441   
+31851   20441   
+25573   20441   
+23765   20441   
+26285   20441   
+32157   20441   
+21879   20441   
+11618   8210    
+15378   8210    
+17233   8210    
+19052   8210    
+24069   8210    
+17188   8210    
+28769   8210    
+15168   8210    
+21055   8210    
+10153   8210    
+31851   8210    
+25573   8210    
+23765   8210    
+8758    8210    
+18243   8210    
+26285   8210    
+32157   8210    
+21879   8210    
+31851   31830   
+32157   31830   
+19052   18816   
+24069   18816   
+28769   18816   
+21055   18816   
+31851   18816   
+25573   18816   
+23765   18816   
+26285   18816   
+32157   18816   
+21879   18816   
+24069   22849   
+28769   22849   
+31851   22849   
+25573   22849   
+23765   22849   
+26285   22849   
+32157   22849   
+28769   28448   
+31851   28448   
+32157   28448   
+28769   27189   
+31851   27189   
+32157   27189   
+
+Number of records: 82
+Buf Stats: accesses = 168, disk reads = 8, disk writes = 8
+
+40 --> Query:  select da.dkey, db.dkey from da, db where da.dkey >= db.dkey;
+Algorithm: Simple NL Join
+dkey.0  dkey.1  
+------  ------  
+0.00    0.00    
+1.10    0.00    
+2.20    0.00    
+3.30    0.00    
+4.40    0.00    
+5.50    0.00    
+6.60    0.00    
+7.70    0.00    
+8.80    0.00    
+9.90    0.00    
+11.00   0.00    
+12.10   0.00    
+13.20   0.00    
+14.30   0.00    
+15.40   0.00    
+16.50   0.00    
+17.60   0.00    
+18.70   0.00    
+19.80   0.00    
+20.90   0.00    
+1.10    1.10    
+2.20    1.10    
+3.30    1.10    
+4.40    1.10    
+5.50    1.10    
+6.60    1.10    
+7.70    1.10    
+8.80    1.10    
+9.90    1.10    
+11.00   1.10    
+12.10   1.10    
+13.20   1.10    
+14.30   1.10    
+15.40   1.10    
+16.50   1.10    
+17.60   1.10    
+18.70   1.10    
+19.80   1.10    
+20.90   1.10    
+2.20    2.20    
+3.30    2.20    
+4.40    2.20    
+5.50    2.20    
+6.60    2.20    
+7.70    2.20    
+8.80    2.20    
+9.90    2.20    
+11.00   2.20    
+12.10   2.20    
+13.20   2.20    
+14.30   2.20    
+15.40   2.20    
+16.50   2.20    
+17.60   2.20    
+18.70   2.20    
+19.80   2.20    
+20.90   2.20    
+3.30    3.30    
+4.40    3.30    
+5.50    3.30    
+6.60    3.30    
+7.70    3.30    
+8.80    3.30    
+9.90    3.30    
+11.00   3.30    
+12.10   3.30    
+13.20   3.30    
+14.30   3.30    
+15.40   3.30    
+16.50   3.30    
+17.60   3.30    
+18.70   3.30    
+19.80   3.30    
+20.90   3.30    
+4.40    4.40    
+5.50    4.40    
+6.60    4.40    
+7.70    4.40    
+8.80    4.40    
+9.90    4.40    
+11.00   4.40    
+12.10   4.40    
+13.20   4.40    
+14.30   4.40    
+15.40   4.40    
+16.50   4.40    
+17.60   4.40    
+18.70   4.40    
+19.80   4.40    
+20.90   4.40    
+5.50    5.50    
+6.60    5.50    
+7.70    5.50    
+8.80    5.50    
+9.90    5.50    
+11.00   5.50    
+12.10   5.50    
+13.20   5.50    
+14.30   5.50    
+15.40   5.50    
+
+Number of records: 155
+Buf Stats: accesses = 250, disk reads = 11, disk writes = 14
+
+41 --> Query:  select da.filler, db.filler from da, db where da.filler >= db.filler;
+Algorithm: Simple NL Join
+filler.0         filler.1         
+---------------  ---------------  
+00000 string re  00000 string re  
+00001 string re  00000 string re  
+00002 string re  00000 string re  
+00003 string re  00000 string re  
+00004 string re  00000 string re  
+00005 string re  00000 string re  
+00006 string re  00000 string re  
+00007 string re  00000 string re  
+00008 string re  00000 string re  
+00009 string re  00000 string re  
+00010 string re  00000 string re  
+00011 string re  00000 string re  
+00012 string re  00000 string re  
+00013 string re  00000 string re  
+00014 string re  00000 string re  
+00015 string re  00000 string re  
+00016 string re  00000 string re  
+00017 string re  00000 string re  
+00018 string re  00000 string re  
+00019 string re  00000 string re  
+00001 string re  00001 string re  
+00002 string re  00001 string re  
+00003 string re  00001 string re  
+00004 string re  00001 string re  
+00005 string re  00001 string re  
+00006 string re  00001 string re  
+00007 string re  00001 string re  
+00008 string re  00001 string re  
+00009 string re  00001 string re  
+00010 string re  00001 string re  
+00011 string re  00001 string re  
+00012 string re  00001 string re  
+00013 string re  00001 string re  
+00014 string re  00001 string re  
+00015 string re  00001 string re  
+00016 string re  00001 string re  
+00017 string re  00001 string re  
+00018 string re  00001 string re  
+00019 string re  00001 string re  
+00002 string re  00002 string re  
+00003 string re  00002 string re  
+00004 string re  00002 string re  
+00005 string re  00002 string re  
+00006 string re  00002 string re  
+00007 string re  00002 string re  
+00008 string re  00002 string re  
+00009 string re  00002 string re  
+00010 string re  00002 string re  
+00011 string re  00002 string re  
+00012 string re  00002 string re  
+00013 string re  00002 string re  
+00014 string re  00002 string re  
+00015 string re  00002 string re  
+00016 string re  00002 string re  
+00017 string re  00002 string re  
+00018 string re  00002 string re  
+00019 string re  00002 string re  
+00003 string re  00003 string re  
+00004 string re  00003 string re  
+00005 string re  00003 string re  
+00006 string re  00003 string re  
+00007 string re  00003 string re  
+00008 string re  00003 string re  
+00009 string re  00003 string re  
+00010 string re  00003 string re  
+00011 string re  00003 string re  
+00012 string re  00003 string re  
+00013 string re  00003 string re  
+00014 string re  00003 string re  
+00015 string re  00003 string re  
+00016 string re  00003 string re  
+00017 string re  00003 string re  
+00018 string re  00003 string re  
+00019 string re  00003 string re  
+00004 string re  00004 string re  
+00005 string re  00004 string re  
+00006 string re  00004 string re  
+00007 string re  00004 string re  
+00008 string re  00004 string re  
+00009 string re  00004 string re  
+00010 string re  00004 string re  
+00011 string re  00004 string re  
+00012 string re  00004 string re  
+00013 string re  00004 string re  
+00014 string re  00004 string re  
+00015 string re  00004 string re  
+00016 string re  00004 string re  
+00017 string re  00004 string re  
+00018 string re  00004 string re  
+00019 string re  00004 string re  
+00005 string re  00005 string re  
+00006 string re  00005 string re  
+00007 string re  00005 string re  
+00008 string re  00005 string re  
+00009 string re  00005 string re  
+00010 string re  00005 string re  
+00011 string re  00005 string re  
+00012 string re  00005 string re  
+00013 string re  00005 string re  
+00014 string re  00005 string re  
+
+Number of records: 155
+Buf Stats: accesses = 294, disk reads = 43, disk writes = 61
+
+42 --> Query:  select da.ikey, db.ikey from da, db where da.ikey > db.ikey;
+Algorithm: Simple NL Join
+ikey.0  ikey.1  
+------  ------  
+24069   23798   
+28769   23798   
+31851   23798   
+25573   23798   
+26285   23798   
+32157   23798   
+28769   24529   
+31851   24529   
+25573   24529   
+26285   24529   
+32157   24529   
+11618   1440    
+15378   1440    
+17233   1440    
+19052   1440    
+24069   1440    
+17188   1440    
+28769   1440    
+15168   1440    
+21055   1440    
+7648    1440    
+10153   1440    
+31851   1440    
+25573   1440    
+23765   1440    
+8758    1440    
+18243   1440    
+26285   1440    
+32157   1440    
+21879   1440    
+24069   20441   
+28769   20441   
+21055   20441   
+31851   20441   
+25573   20441   
+23765   20441   
+26285   20441   
+32157   20441   
+21879   20441   
+11618   8210    
+15378   8210    
+17233   8210    
+19052   8210    
+24069   8210    
+17188   8210    
+28769   8210    
+15168   8210    
+21055   8210    
+10153   8210    
+31851   8210    
+25573   8210    
+23765   8210    
+8758    8210    
+18243   8210    
+26285   8210    
+32157   8210    
+21879   8210    
+31851   31830   
+32157   31830   
+19052   18816   
+24069   18816   
+28769   18816   
+21055   18816   
+31851   18816   
+25573   18816   
+23765   18816   
+26285   18816   
+32157   18816   
+21879   18816   
+24069   22849   
+28769   22849   
+31851   22849   
+25573   22849   
+23765   22849   
+26285   22849   
+32157   22849   
+28769   28448   
+31851   28448   
+32157   28448   
+28769   27189   
+31851   27189   
+32157   27189   
+
+Number of records: 82
+Buf Stats: accesses = 168, disk reads = 8, disk writes = 8
+
+43 --> Query:  select da.dkey, db.dkey from da, db where da.dkey > db.dkey;
+Algorithm: Simple NL Join
+dkey.0  dkey.1  
+------  ------  
+1.10    0.00    
+2.20    0.00    
+3.30    0.00    
+4.40    0.00    
+5.50    0.00    
+6.60    0.00    
+7.70    0.00    
+8.80    0.00    
+9.90    0.00    
+11.00   0.00    
+12.10   0.00    
+13.20   0.00    
+14.30   0.00    
+15.40   0.00    
+16.50   0.00    
+17.60   0.00    
+18.70   0.00    
+19.80   0.00    
+20.90   0.00    
+2.20    1.10    
+3.30    1.10    
+4.40    1.10    
+5.50    1.10    
+6.60    1.10    
+7.70    1.10    
+8.80    1.10    
+9.90    1.10    
+11.00   1.10    
+12.10   1.10    
+13.20   1.10    
+14.30   1.10    
+15.40   1.10    
+16.50   1.10    
+17.60   1.10    
+18.70   1.10    
+19.80   1.10    
+20.90   1.10    
+3.30    2.20    
+4.40    2.20    
+5.50    2.20    
+6.60    2.20    
+7.70    2.20    
+8.80    2.20    
+9.90    2.20    
+11.00   2.20    
+12.10   2.20    
+13.20   2.20    
+14.30   2.20    
+15.40   2.20    
+16.50   2.20    
+17.60   2.20    
+18.70   2.20    
+19.80   2.20    
+20.90   2.20    
+4.40    3.30    
+5.50    3.30    
+6.60    3.30    
+7.70    3.30    
+8.80    3.30    
+9.90    3.30    
+11.00   3.30    
+12.10   3.30    
+13.20   3.30    
+14.30   3.30    
+15.40   3.30    
+16.50   3.30    
+17.60   3.30    
+18.70   3.30    
+19.80   3.30    
+20.90   3.30    
+5.50    4.40    
+6.60    4.40    
+7.70    4.40    
+8.80    4.40    
+9.90    4.40    
+11.00   4.40    
+12.10   4.40    
+13.20   4.40    
+14.30   4.40    
+15.40   4.40    
+16.50   4.40    
+17.60   4.40    
+18.70   4.40    
+19.80   4.40    
+20.90   4.40    
+6.60    5.50    
+7.70    5.50    
+8.80    5.50    
+9.90    5.50    
+11.00   5.50    
+12.10   5.50    
+13.20   5.50    
+14.30   5.50    
+15.40   5.50    
+16.50   5.50    
+17.60   5.50    
+18.70   5.50    
+19.80   5.50    
+20.90   5.50    
+7.70    6.60    
+
+Number of records: 145
+Buf Stats: accesses = 238, disk reads = 10, disk writes = 12
+
+44 --> Query:  select da.filler, db.filler from da, db where da.filler > db.filler;
+Algorithm: Simple NL Join
+filler.0         filler.1         
+---------------  ---------------  
+00001 string re  00000 string re  
+00002 string re  00000 string re  
+00003 string re  00000 string re  
+00004 string re  00000 string re  
+00005 string re  00000 string re  
+00006 string re  00000 string re  
+00007 string re  00000 string re  
+00008 string re  00000 string re  
+00009 string re  00000 string re  
+00010 string re  00000 string re  
+00011 string re  00000 string re  
+00012 string re  00000 string re  
+00013 string re  00000 string re  
+00014 string re  00000 string re  
+00015 string re  00000 string re  
+00016 string re  00000 string re  
+00017 string re  00000 string re  
+00018 string re  00000 string re  
+00019 string re  00000 string re  
+00002 string re  00001 string re  
+00003 string re  00001 string re  
+00004 string re  00001 string re  
+00005 string re  00001 string re  
+00006 string re  00001 string re  
+00007 string re  00001 string re  
+00008 string re  00001 string re  
+00009 string re  00001 string re  
+00010 string re  00001 string re  
+00011 string re  00001 string re  
+00012 string re  00001 string re  
+00013 string re  00001 string re  
+00014 string re  00001 string re  
+00015 string re  00001 string re  
+00016 string re  00001 string re  
+00017 string re  00001 string re  
+00018 string re  00001 string re  
+00019 string re  00001 string re  
+00003 string re  00002 string re  
+00004 string re  00002 string re  
+00005 string re  00002 string re  
+00006 string re  00002 string re  
+00007 string re  00002 string re  
+00008 string re  00002 string re  
+00009 string re  00002 string re  
+00010 string re  00002 string re  
+00011 string re  00002 string re  
+00012 string re  00002 string re  
+00013 string re  00002 string re  
+00014 string re  00002 string re  
+00015 string re  00002 string re  
+00016 string re  00002 string re  
+00017 string re  00002 string re  
+00018 string re  00002 string re  
+00019 string re  00002 string re  
+00004 string re  00003 string re  
+00005 string re  00003 string re  
+00006 string re  00003 string re  
+00007 string re  00003 string re  
+00008 string re  00003 string re  
+00009 string re  00003 string re  
+00010 string re  00003 string re  
+00011 string re  00003 string re  
+00012 string re  00003 string re  
+00013 string re  00003 string re  
+00014 string re  00003 string re  
+00015 string re  00003 string re  
+00016 string re  00003 string re  
+00017 string re  00003 string re  
+00018 string re  00003 string re  
+00019 string re  00003 string re  
+00005 string re  00004 string re  
+00006 string re  00004 string re  
+00007 string re  00004 string re  
+00008 string re  00004 string re  
+00009 string re  00004 string re  
+00010 string re  00004 string re  
+00011 string re  00004 string re  
+00012 string re  00004 string re  
+00013 string re  00004 string re  
+00014 string re  00004 string re  
+00015 string re  00004 string re  
+00016 string re  00004 string re  
+00017 string re  00004 string re  
+00018 string re  00004 string re  
+00019 string re  00004 string re  
+00006 string re  00005 string re  
+00007 string re  00005 string re  
+00008 string re  00005 string re  
+00009 string re  00005 string re  
+00010 string re  00005 string re  
+00011 string re  00005 string re  
+00012 string re  00005 string re  
+00013 string re  00005 string re  
+00014 string re  00005 string re  
+00015 string re  00005 string re  
+00016 string re  00005 string re  
+00017 string re  00005 string re  
+00018 string re  00005 string re  
+00019 string re  00005 string re  
+00007 string re  00006 string re  
+
+Number of records: 145
+Buf Stats: accesses = 282, disk reads = 38, disk writes = 58
+
+45 --> Query:  select da.ikey, db.ikey from da, db where da.ikey <> db.ikey;
+Algorithm: Simple NL Join
+ikey.0  ikey.1  
+------  ------  
+11618   23798   
+15378   23798   
+17233   23798   
+19052   23798   
+24069   23798   
+17188   23798   
+28769   23798   
+15168   23798   
+578     23798   
+21055   23798   
+7648    23798   
+10153   23798   
+31851   23798   
+25573   23798   
+23765   23798   
+8758    23798   
+18243   23798   
+26285   23798   
+32157   23798   
+21879   23798   
+11618   24529   
+15378   24529   
+17233   24529   
+19052   24529   
+24069   24529   
+17188   24529   
+28769   24529   
+15168   24529   
+578     24529   
+21055   24529   
+7648    24529   
+10153   24529   
+31851   24529   
+25573   24529   
+23765   24529   
+8758    24529   
+18243   24529   
+26285   24529   
+32157   24529   
+21879   24529   
+11618   1440    
+15378   1440    
+17233   1440    
+19052   1440    
+24069   1440    
+17188   1440    
+28769   1440    
+15168   1440    
+578     1440    
+21055   1440    
+7648    1440    
+10153   1440    
+31851   1440    
+25573   1440    
+23765   1440    
+8758    1440    
+18243   1440    
+26285   1440    
+32157   1440    
+21879   1440    
+11618   20441   
+15378   20441   
+17233   20441   
+19052   20441   
+24069   20441   
+17188   20441   
+28769   20441   
+15168   20441   
+578     20441   
+21055   20441   
+7648    20441   
+10153   20441   
+31851   20441   
+25573   20441   
+23765   20441   
+8758    20441   
+18243   20441   
+26285   20441   
+32157   20441   
+21879   20441   
+11618   8210    
+15378   8210    
+17233   8210    
+19052   8210    
+24069   8210    
+17188   8210    
+28769   8210    
+15168   8210    
+578     8210    
+21055   8210    
+7648    8210    
+10153   8210    
+31851   8210    
+25573   8210    
+23765   8210    
+8758    8210    
+18243   8210    
+26285   8210    
+32157   8210    
+21879   8210    
+
+Number of records: 200
+Buf Stats: accesses = 290, disk reads = 10, disk writes = 12
+
+46 --> Query:  select da.dkey, db.dkey from da, db where da.dkey <> db.dkey;
+Algorithm: Simple NL Join
+dkey.0  dkey.1  
+------  ------  
+1.10    0.00    
+2.20    0.00    
+3.30    0.00    
+4.40    0.00    
+5.50    0.00    
+6.60    0.00    
+7.70    0.00    
+8.80    0.00    
+9.90    0.00    
+11.00   0.00    
+12.10   0.00    
+13.20   0.00    
+14.30   0.00    
+15.40   0.00    
+16.50   0.00    
+17.60   0.00    
+18.70   0.00    
+19.80   0.00    
+20.90   0.00    
+0.00    1.10    
+2.20    1.10    
+3.30    1.10    
+4.40    1.10    
+5.50    1.10    
+6.60    1.10    
+7.70    1.10    
+8.80    1.10    
+9.90    1.10    
+11.00   1.10    
+12.10   1.10    
+13.20   1.10    
+14.30   1.10    
+15.40   1.10    
+16.50   1.10    
+17.60   1.10    
+18.70   1.10    
+19.80   1.10    
+20.90   1.10    
+0.00    2.20    
+1.10    2.20    
+3.30    2.20    
+4.40    2.20    
+5.50    2.20    
+6.60    2.20    
+7.70    2.20    
+8.80    2.20    
+9.90    2.20    
+11.00   2.20    
+12.10   2.20    
+13.20   2.20    
+14.30   2.20    
+15.40   2.20    
+16.50   2.20    
+17.60   2.20    
+18.70   2.20    
+19.80   2.20    
+20.90   2.20    
+0.00    3.30    
+1.10    3.30    
+2.20    3.30    
+4.40    3.30    
+5.50    3.30    
+6.60    3.30    
+7.70    3.30    
+8.80    3.30    
+9.90    3.30    
+11.00   3.30    
+12.10   3.30    
+13.20   3.30    
+14.30   3.30    
+15.40   3.30    
+16.50   3.30    
+17.60   3.30    
+18.70   3.30    
+19.80   3.30    
+20.90   3.30    
+0.00    4.40    
+1.10    4.40    
+2.20    4.40    
+3.30    4.40    
+5.50    4.40    
+6.60    4.40    
+7.70    4.40    
+8.80    4.40    
+9.90    4.40    
+11.00   4.40    
+12.10   4.40    
+13.20   4.40    
+14.30   4.40    
+15.40   4.40    
+16.50   4.40    
+17.60   4.40    
+18.70   4.40    
+19.80   4.40    
+20.90   4.40    
+0.00    5.50    
+1.10    5.50    
+2.20    5.50    
+3.30    5.50    
+4.40    5.50    
+
+Number of records: 190
+Buf Stats: accesses = 285, disk reads = 11, disk writes = 14
+
+47 --> Query:  select da.filler, db.filler from da, db where da.filler <> db.filler;
+Algorithm: Simple NL Join
+filler.0         filler.1         
+---------------  ---------------  
+00001 string re  00000 string re  
+00002 string re  00000 string re  
+00003 string re  00000 string re  
+00004 string re  00000 string re  
+00005 string re  00000 string re  
+00006 string re  00000 string re  
+00007 string re  00000 string re  
+00008 string re  00000 string re  
+00009 string re  00000 string re  
+00010 string re  00000 string re  
+00011 string re  00000 string re  
+00012 string re  00000 string re  
+00013 string re  00000 string re  
+00014 string re  00000 string re  
+00015 string re  00000 string re  
+00016 string re  00000 string re  
+00017 string re  00000 string re  
+00018 string re  00000 string re  
+00019 string re  00000 string re  
+00000 string re  00001 string re  
+00002 string re  00001 string re  
+00003 string re  00001 string re  
+00004 string re  00001 string re  
+00005 string re  00001 string re  
+00006 string re  00001 string re  
+00007 string re  00001 string re  
+00008 string re  00001 string re  
+00009 string re  00001 string re  
+00010 string re  00001 string re  
+00011 string re  00001 string re  
+00012 string re  00001 string re  
+00013 string re  00001 string re  
+00014 string re  00001 string re  
+00015 string re  00001 string re  
+00016 string re  00001 string re  
+00017 string re  00001 string re  
+00018 string re  00001 string re  
+00019 string re  00001 string re  
+00000 string re  00002 string re  
+00001 string re  00002 string re  
+00003 string re  00002 string re  
+00004 string re  00002 string re  
+00005 string re  00002 string re  
+00006 string re  00002 string re  
+00007 string re  00002 string re  
+00008 string re  00002 string re  
+00009 string re  00002 string re  
+00010 string re  00002 string re  
+00011 string re  00002 string re  
+00012 string re  00002 string re  
+00013 string re  00002 string re  
+00014 string re  00002 string re  
+00015 string re  00002 string re  
+00016 string re  00002 string re  
+00017 string re  00002 string re  
+00018 string re  00002 string re  
+00019 string re  00002 string re  
+00000 string re  00003 string re  
+00001 string re  00003 string re  
+00002 string re  00003 string re  
+00004 string re  00003 string re  
+00005 string re  00003 string re  
+00006 string re  00003 string re  
+00007 string re  00003 string re  
+00008 string re  00003 string re  
+00009 string re  00003 string re  
+00010 string re  00003 string re  
+00011 string re  00003 string re  
+00012 string re  00003 string re  
+00013 string re  00003 string re  
+00014 string re  00003 string re  
+00015 string re  00003 string re  
+00016 string re  00003 string re  
+00017 string re  00003 string re  
+00018 string re  00003 string re  
+00019 string re  00003 string re  
+00000 string re  00004 string re  
+00001 string re  00004 string re  
+00002 string re  00004 string re  
+00003 string re  00004 string re  
+00005 string re  00004 string re  
+00006 string re  00004 string re  
+00007 string re  00004 string re  
+00008 string re  00004 string re  
+00009 string re  00004 string re  
+00010 string re  00004 string re  
+00011 string re  00004 string re  
+00012 string re  00004 string re  
+00013 string re  00004 string re  
+00014 string re  00004 string re  
+00015 string re  00004 string re  
+00016 string re  00004 string re  
+00017 string re  00004 string re  
+00018 string re  00004 string re  
+00019 string re  00004 string re  
+00000 string re  00005 string re  
+00001 string re  00005 string re  
+00002 string re  00005 string re  
+00003 string re  00005 string re  
+00004 string re  00005 string re  
+
+Number of records: 190
+Buf Stats: accesses = 341, disk reads = 49, disk writes = 72
+
+48 --> Query:  drop table da;
+49 --> Query:  drop table db;
+50 --> 

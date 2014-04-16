@@ -1,10 +1,11 @@
+make clean
 make EC
 echo Y | ./dbdestroyEC testdb
 ./dbcreateEC testdb
 ./minirelEC testdb < sql_w/insert-index.sql > debugEC_w
 echo Y | ./dbdestroyEC testdb
 ./dbcreateEC testdb
-./minirelEC testdb < sql_w/insert-nonindex.sql > debugEC_w
+./minirelEC testdb < sql_w/insert-nonindex.sql >> debugEC_w
 echo Y | ./dbdestroyEC testdb
 ./dbcreateEC testdb
 ./minirelEC testdb < sql_w/join-index-both.sql >> debugEC_w
