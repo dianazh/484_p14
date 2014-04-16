@@ -1,0 +1,1780 @@
+11618,23798
+11618,24529
+11618,20441
+11618,31830
+11618,18816
+11618,22849
+11618,28448
+11618,27189
+15378,23798
+15378,24529
+15378,20441
+15378,31830
+15378,18816
+15378,22849
+15378,28448
+15378,27189
+17233,23798
+17233,24529
+17233,20441
+17233,31830
+17233,18816
+17233,22849
+17233,28448
+17233,27189
+19052,23798
+19052,24529
+19052,20441
+19052,31830
+19052,22849
+19052,28448
+19052,27189
+24069,24529
+24069,31830
+24069,28448
+24069,27189
+17188,23798
+17188,24529
+17188,20441
+17188,31830
+17188,18816
+17188,22849
+17188,28448
+17188,27189
+28769,31830
+15168,23798
+15168,24529
+15168,20441
+15168,31830
+15168,18816
+15168,22849
+15168,28448
+15168,27189
+578,23798
+578,24529
+578,1440
+578,20441
+578,8210
+578,31830
+578,18816
+578,22849
+578,28448
+578,27189
+21055,23798
+21055,24529
+21055,31830
+21055,22849
+21055,28448
+21055,27189
+7648,23798
+7648,24529
+7648,20441
+7648,8210
+7648,31830
+7648,18816
+7648,22849
+7648,28448
+7648,27189
+10153,23798
+10153,24529
+10153,20441
+10153,31830
+10153,18816
+10153,22849
+10153,28448
+10153,27189
+25573,31830
+25573,28448
+25573,27189
+23765,23798
+23765,24529
+23765,31830
+23765,28448
+23765,27189
+8758,23798
+8758,24529
+8758,20441
+8758,31830
+8758,18816
+8758,22849
+8758,28448
+8758,27189
+18243,23798
+18243,24529
+18243,20441
+18243,31830
+18243,18816
+18243,22849
+18243,28448
+18243,27189
+26285,31830
+26285,28448
+26285,27189
+21879,23798
+21879,24529
+21879,31830
+21879,22849
+21879,28448
+21879,27189
+0.0,1.1
+0.0,2.2
+0.0,3.3
+0.0,4.4
+0.0,5.5
+0.0,6.6
+0.0,7.7
+0.0,8.8
+0.0,9.9
+1.1,2.2
+1.1,3.3
+1.1,4.4
+1.1,5.5
+1.1,6.6
+1.1,7.7
+1.1,8.8
+1.1,9.9
+2.2,3.3
+2.2,4.4
+2.2,5.5
+2.2,6.6
+2.2,7.7
+2.2,8.8
+2.2,9.9
+3.3,4.4
+3.3,5.5
+3.3,6.6
+3.3,7.7
+3.3,8.8
+3.3,9.9
+4.4,5.5
+4.4,6.6
+4.4,7.7
+4.4,8.8
+4.4,9.9
+5.5,6.6
+5.5,7.7
+5.5,8.8
+5.5,9.9
+6.6,7.7
+6.6,8.8
+6.6,9.9
+7.7,8.8
+7.7,9.9
+8.8,9.9
+"00000 string record","00001 string record"
+"00000 string record","00002 string record"
+"00000 string record","00003 string record"
+"00000 string record","00004 string record"
+"00000 string record","00005 string record"
+"00000 string record","00006 string record"
+"00000 string record","00007 string record"
+"00000 string record","00008 string record"
+"00000 string record","00009 string record"
+"00001 string record","00002 string record"
+"00001 string record","00003 string record"
+"00001 string record","00004 string record"
+"00001 string record","00005 string record"
+"00001 string record","00006 string record"
+"00001 string record","00007 string record"
+"00001 string record","00008 string record"
+"00001 string record","00009 string record"
+"00002 string record","00003 string record"
+"00002 string record","00004 string record"
+"00002 string record","00005 string record"
+"00002 string record","00006 string record"
+"00002 string record","00007 string record"
+"00002 string record","00008 string record"
+"00002 string record","00009 string record"
+"00003 string record","00004 string record"
+"00003 string record","00005 string record"
+"00003 string record","00006 string record"
+"00003 string record","00007 string record"
+"00003 string record","00008 string record"
+"00003 string record","00009 string record"
+"00004 string record","00005 string record"
+"00004 string record","00006 string record"
+"00004 string record","00007 string record"
+"00004 string record","00008 string record"
+"00004 string record","00009 string record"
+"00005 string record","00006 string record"
+"00005 string record","00007 string record"
+"00005 string record","00008 string record"
+"00005 string record","00009 string record"
+"00006 string record","00007 string record"
+"00006 string record","00008 string record"
+"00006 string record","00009 string record"
+"00007 string record","00008 string record"
+"00007 string record","00009 string record"
+"00008 string record","00009 string record"
+11618,23798
+11618,24529
+11618,20441
+11618,31830
+11618,18816
+11618,22849
+11618,28448
+11618,27189
+15378,23798
+15378,24529
+15378,20441
+15378,31830
+15378,18816
+15378,22849
+15378,28448
+15378,27189
+17233,23798
+17233,24529
+17233,20441
+17233,31830
+17233,18816
+17233,22849
+17233,28448
+17233,27189
+19052,23798
+19052,24529
+19052,20441
+19052,31830
+19052,22849
+19052,28448
+19052,27189
+24069,24529
+24069,31830
+24069,28448
+24069,27189
+17188,23798
+17188,24529
+17188,20441
+17188,31830
+17188,18816
+17188,22849
+17188,28448
+17188,27189
+28769,31830
+15168,23798
+15168,24529
+15168,20441
+15168,31830
+15168,18816
+15168,22849
+15168,28448
+15168,27189
+578,23798
+578,24529
+578,1440
+578,20441
+578,8210
+578,31830
+578,18816
+578,22849
+578,28448
+578,27189
+21055,23798
+21055,24529
+21055,31830
+21055,22849
+21055,28448
+21055,27189
+7648,23798
+7648,24529
+7648,20441
+7648,8210
+7648,31830
+7648,18816
+7648,22849
+7648,28448
+7648,27189
+10153,23798
+10153,24529
+10153,20441
+10153,31830
+10153,18816
+10153,22849
+10153,28448
+10153,27189
+25573,31830
+25573,28448
+25573,27189
+23765,23798
+23765,24529
+23765,31830
+23765,28448
+23765,27189
+8758,23798
+8758,24529
+8758,20441
+8758,31830
+8758,18816
+8758,22849
+8758,28448
+8758,27189
+18243,23798
+18243,24529
+18243,20441
+18243,31830
+18243,18816
+18243,22849
+18243,28448
+18243,27189
+26285,31830
+26285,28448
+26285,27189
+21879,23798
+21879,24529
+21879,31830
+21879,22849
+21879,28448
+21879,27189
+0.0,0.0
+0.0,1.1
+0.0,2.2
+0.0,3.3
+0.0,4.4
+0.0,5.5
+0.0,6.6
+0.0,7.7
+0.0,8.8
+0.0,9.9
+1.1,1.1
+1.1,2.2
+1.1,3.3
+1.1,4.4
+1.1,5.5
+1.1,6.6
+1.1,7.7
+1.1,8.8
+1.1,9.9
+2.2,2.2
+2.2,3.3
+2.2,4.4
+2.2,5.5
+2.2,6.6
+2.2,7.7
+2.2,8.8
+2.2,9.9
+3.3,3.3
+3.3,4.4
+3.3,5.5
+3.3,6.6
+3.3,7.7
+3.3,8.8
+3.3,9.9
+4.4,4.4
+4.4,5.5
+4.4,6.6
+4.4,7.7
+4.4,8.8
+4.4,9.9
+5.5,5.5
+5.5,6.6
+5.5,7.7
+5.5,8.8
+5.5,9.9
+6.6,6.6
+6.6,7.7
+6.6,8.8
+6.6,9.9
+7.7,7.7
+7.7,8.8
+7.7,9.9
+8.8,8.8
+8.8,9.9
+9.9,9.9
+"00000 string record","00000 string record"
+"00000 string record","00001 string record"
+"00000 string record","00002 string record"
+"00000 string record","00003 string record"
+"00000 string record","00004 string record"
+"00000 string record","00005 string record"
+"00000 string record","00006 string record"
+"00000 string record","00007 string record"
+"00000 string record","00008 string record"
+"00000 string record","00009 string record"
+"00001 string record","00001 string record"
+"00001 string record","00002 string record"
+"00001 string record","00003 string record"
+"00001 string record","00004 string record"
+"00001 string record","00005 string record"
+"00001 string record","00006 string record"
+"00001 string record","00007 string record"
+"00001 string record","00008 string record"
+"00001 string record","00009 string record"
+"00002 string record","00002 string record"
+"00002 string record","00003 string record"
+"00002 string record","00004 string record"
+"00002 string record","00005 string record"
+"00002 string record","00006 string record"
+"00002 string record","00007 string record"
+"00002 string record","00008 string record"
+"00002 string record","00009 string record"
+"00003 string record","00003 string record"
+"00003 string record","00004 string record"
+"00003 string record","00005 string record"
+"00003 string record","00006 string record"
+"00003 string record","00007 string record"
+"00003 string record","00008 string record"
+"00003 string record","00009 string record"
+"00004 string record","00004 string record"
+"00004 string record","00005 string record"
+"00004 string record","00006 string record"
+"00004 string record","00007 string record"
+"00004 string record","00008 string record"
+"00004 string record","00009 string record"
+"00005 string record","00005 string record"
+"00005 string record","00006 string record"
+"00005 string record","00007 string record"
+"00005 string record","00008 string record"
+"00005 string record","00009 string record"
+"00006 string record","00006 string record"
+"00006 string record","00007 string record"
+"00006 string record","00008 string record"
+"00006 string record","00009 string record"
+"00007 string record","00007 string record"
+"00007 string record","00008 string record"
+"00007 string record","00009 string record"
+"00008 string record","00008 string record"
+"00008 string record","00009 string record"
+"00009 string record","00009 string record"
+11618,1440
+11618,8210
+15378,1440
+15378,8210
+17233,1440
+17233,8210
+19052,1440
+19052,8210
+19052,18816
+24069,23798
+24069,1440
+24069,20441
+24069,8210
+24069,18816
+24069,22849
+17188,1440
+17188,8210
+28769,23798
+28769,24529
+28769,1440
+28769,20441
+28769,8210
+28769,18816
+28769,22849
+28769,28448
+28769,27189
+15168,1440
+15168,8210
+21055,1440
+21055,20441
+21055,8210
+21055,18816
+7648,1440
+10153,1440
+10153,8210
+31851,23798
+31851,24529
+31851,1440
+31851,20441
+31851,8210
+31851,31830
+31851,18816
+31851,22849
+31851,28448
+31851,27189
+25573,23798
+25573,24529
+25573,1440
+25573,20441
+25573,8210
+25573,18816
+25573,22849
+23765,1440
+23765,20441
+23765,8210
+23765,18816
+23765,22849
+8758,1440
+8758,8210
+18243,1440
+18243,8210
+26285,23798
+26285,24529
+26285,1440
+26285,20441
+26285,8210
+26285,18816
+26285,22849
+32157,23798
+32157,24529
+32157,1440
+32157,20441
+32157,8210
+32157,31830
+32157,18816
+32157,22849
+32157,28448
+32157,27189
+21879,1440
+21879,20441
+21879,8210
+21879,18816
+0.0,0.0
+1.1,0.0
+1.1,1.1
+2.2,0.0
+2.2,1.1
+2.2,2.2
+3.3,0.0
+3.3,1.1
+3.3,2.2
+3.3,3.3
+4.4,0.0
+4.4,1.1
+4.4,2.2
+4.4,3.3
+4.4,4.4
+5.5,0.0
+5.5,1.1
+5.5,2.2
+5.5,3.3
+5.5,4.4
+5.5,5.5
+6.6,0.0
+6.6,1.1
+6.6,2.2
+6.6,3.3
+6.6,4.4
+6.6,5.5
+6.6,6.6
+7.7,0.0
+7.7,1.1
+7.7,2.2
+7.7,3.3
+7.7,4.4
+7.7,5.5
+7.7,6.6
+7.7,7.7
+8.8,0.0
+8.8,1.1
+8.8,2.2
+8.8,3.3
+8.8,4.4
+8.8,5.5
+8.8,6.6
+8.8,7.7
+8.8,8.8
+9.9,0.0
+9.9,1.1
+9.9,2.2
+9.9,3.3
+9.9,4.4
+9.9,5.5
+9.9,6.6
+9.9,7.7
+9.9,8.8
+9.9,9.9
+11.0,0.0
+11.0,1.1
+11.0,2.2
+11.0,3.3
+11.0,4.4
+11.0,5.5
+11.0,6.6
+11.0,7.7
+11.0,8.8
+11.0,9.9
+12.1,0.0
+12.1,1.1
+12.1,2.2
+12.1,3.3
+12.1,4.4
+12.1,5.5
+12.1,6.6
+12.1,7.7
+12.1,8.8
+12.1,9.9
+13.2,0.0
+13.2,1.1
+13.2,2.2
+13.2,3.3
+13.2,4.4
+13.2,5.5
+13.2,6.6
+13.2,7.7
+13.2,8.8
+13.2,9.9
+14.3,0.0
+14.3,1.1
+14.3,2.2
+14.3,3.3
+14.3,4.4
+14.3,5.5
+14.3,6.6
+14.3,7.7
+14.3,8.8
+14.3,9.9
+15.4,0.0
+15.4,1.1
+15.4,2.2
+15.4,3.3
+15.4,4.4
+15.4,5.5
+15.4,6.6
+15.4,7.7
+15.4,8.8
+15.4,9.9
+16.5,0.0
+16.5,1.1
+16.5,2.2
+16.5,3.3
+16.5,4.4
+16.5,5.5
+16.5,6.6
+16.5,7.7
+16.5,8.8
+16.5,9.9
+17.6,0.0
+17.6,1.1
+17.6,2.2
+17.6,3.3
+17.6,4.4
+17.6,5.5
+17.6,6.6
+17.6,7.7
+17.6,8.8
+17.6,9.9
+18.7,0.0
+18.7,1.1
+18.7,2.2
+18.7,3.3
+18.7,4.4
+18.7,5.5
+18.7,6.6
+18.7,7.7
+18.7,8.8
+18.7,9.9
+19.8,0.0
+19.8,1.1
+19.8,2.2
+19.8,3.3
+19.8,4.4
+19.8,5.5
+19.8,6.6
+19.8,7.7
+19.8,8.8
+19.8,9.9
+20.9,0.0
+20.9,1.1
+20.9,2.2
+20.9,3.3
+20.9,4.4
+20.9,5.5
+20.9,6.6
+20.9,7.7
+20.9,8.8
+20.9,9.9
+"00000 string record","00000 string record"
+"00001 string record","00000 string record"
+"00001 string record","00001 string record"
+"00002 string record","00000 string record"
+"00002 string record","00001 string record"
+"00002 string record","00002 string record"
+"00003 string record","00000 string record"
+"00003 string record","00001 string record"
+"00003 string record","00002 string record"
+"00003 string record","00003 string record"
+"00004 string record","00000 string record"
+"00004 string record","00001 string record"
+"00004 string record","00002 string record"
+"00004 string record","00003 string record"
+"00004 string record","00004 string record"
+"00005 string record","00000 string record"
+"00005 string record","00001 string record"
+"00005 string record","00002 string record"
+"00005 string record","00003 string record"
+"00005 string record","00004 string record"
+"00005 string record","00005 string record"
+"00006 string record","00000 string record"
+"00006 string record","00001 string record"
+"00006 string record","00002 string record"
+"00006 string record","00003 string record"
+"00006 string record","00004 string record"
+"00006 string record","00005 string record"
+"00006 string record","00006 string record"
+"00007 string record","00000 string record"
+"00007 string record","00001 string record"
+"00007 string record","00002 string record"
+"00007 string record","00003 string record"
+"00007 string record","00004 string record"
+"00007 string record","00005 string record"
+"00007 string record","00006 string record"
+"00007 string record","00007 string record"
+"00008 string record","00000 string record"
+"00008 string record","00001 string record"
+"00008 string record","00002 string record"
+"00008 string record","00003 string record"
+"00008 string record","00004 string record"
+"00008 string record","00005 string record"
+"00008 string record","00006 string record"
+"00008 string record","00007 string record"
+"00008 string record","00008 string record"
+"00009 string record","00000 string record"
+"00009 string record","00001 string record"
+"00009 string record","00002 string record"
+"00009 string record","00003 string record"
+"00009 string record","00004 string record"
+"00009 string record","00005 string record"
+"00009 string record","00006 string record"
+"00009 string record","00007 string record"
+"00009 string record","00008 string record"
+"00009 string record","00009 string record"
+"00010 string record","00000 string record"
+"00010 string record","00001 string record"
+"00010 string record","00002 string record"
+"00010 string record","00003 string record"
+"00010 string record","00004 string record"
+"00010 string record","00005 string record"
+"00010 string record","00006 string record"
+"00010 string record","00007 string record"
+"00010 string record","00008 string record"
+"00010 string record","00009 string record"
+"00011 string record","00000 string record"
+"00011 string record","00001 string record"
+"00011 string record","00002 string record"
+"00011 string record","00003 string record"
+"00011 string record","00004 string record"
+"00011 string record","00005 string record"
+"00011 string record","00006 string record"
+"00011 string record","00007 string record"
+"00011 string record","00008 string record"
+"00011 string record","00009 string record"
+"00012 string record","00000 string record"
+"00012 string record","00001 string record"
+"00012 string record","00002 string record"
+"00012 string record","00003 string record"
+"00012 string record","00004 string record"
+"00012 string record","00005 string record"
+"00012 string record","00006 string record"
+"00012 string record","00007 string record"
+"00012 string record","00008 string record"
+"00012 string record","00009 string record"
+"00013 string record","00000 string record"
+"00013 string record","00001 string record"
+"00013 string record","00002 string record"
+"00013 string record","00003 string record"
+"00013 string record","00004 string record"
+"00013 string record","00005 string record"
+"00013 string record","00006 string record"
+"00013 string record","00007 string record"
+"00013 string record","00008 string record"
+"00013 string record","00009 string record"
+"00014 string record","00000 string record"
+"00014 string record","00001 string record"
+"00014 string record","00002 string record"
+"00014 string record","00003 string record"
+"00014 string record","00004 string record"
+"00014 string record","00005 string record"
+"00014 string record","00006 string record"
+"00014 string record","00007 string record"
+"00014 string record","00008 string record"
+"00014 string record","00009 string record"
+"00015 string record","00000 string record"
+"00015 string record","00001 string record"
+"00015 string record","00002 string record"
+"00015 string record","00003 string record"
+"00015 string record","00004 string record"
+"00015 string record","00005 string record"
+"00015 string record","00006 string record"
+"00015 string record","00007 string record"
+"00015 string record","00008 string record"
+"00015 string record","00009 string record"
+"00016 string record","00000 string record"
+"00016 string record","00001 string record"
+"00016 string record","00002 string record"
+"00016 string record","00003 string record"
+"00016 string record","00004 string record"
+"00016 string record","00005 string record"
+"00016 string record","00006 string record"
+"00016 string record","00007 string record"
+"00016 string record","00008 string record"
+"00016 string record","00009 string record"
+"00017 string record","00000 string record"
+"00017 string record","00001 string record"
+"00017 string record","00002 string record"
+"00017 string record","00003 string record"
+"00017 string record","00004 string record"
+"00017 string record","00005 string record"
+"00017 string record","00006 string record"
+"00017 string record","00007 string record"
+"00017 string record","00008 string record"
+"00017 string record","00009 string record"
+"00018 string record","00000 string record"
+"00018 string record","00001 string record"
+"00018 string record","00002 string record"
+"00018 string record","00003 string record"
+"00018 string record","00004 string record"
+"00018 string record","00005 string record"
+"00018 string record","00006 string record"
+"00018 string record","00007 string record"
+"00018 string record","00008 string record"
+"00018 string record","00009 string record"
+"00019 string record","00000 string record"
+"00019 string record","00001 string record"
+"00019 string record","00002 string record"
+"00019 string record","00003 string record"
+"00019 string record","00004 string record"
+"00019 string record","00005 string record"
+"00019 string record","00006 string record"
+"00019 string record","00007 string record"
+"00019 string record","00008 string record"
+"00019 string record","00009 string record"
+11618,1440
+11618,8210
+15378,1440
+15378,8210
+17233,1440
+17233,8210
+19052,1440
+19052,8210
+19052,18816
+24069,23798
+24069,1440
+24069,20441
+24069,8210
+24069,18816
+24069,22849
+17188,1440
+17188,8210
+28769,23798
+28769,24529
+28769,1440
+28769,20441
+28769,8210
+28769,18816
+28769,22849
+28769,28448
+28769,27189
+15168,1440
+15168,8210
+21055,1440
+21055,20441
+21055,8210
+21055,18816
+7648,1440
+10153,1440
+10153,8210
+31851,23798
+31851,24529
+31851,1440
+31851,20441
+31851,8210
+31851,31830
+31851,18816
+31851,22849
+31851,28448
+31851,27189
+25573,23798
+25573,24529
+25573,1440
+25573,20441
+25573,8210
+25573,18816
+25573,22849
+23765,1440
+23765,20441
+23765,8210
+23765,18816
+23765,22849
+8758,1440
+8758,8210
+18243,1440
+18243,8210
+26285,23798
+26285,24529
+26285,1440
+26285,20441
+26285,8210
+26285,18816
+26285,22849
+32157,23798
+32157,24529
+32157,1440
+32157,20441
+32157,8210
+32157,31830
+32157,18816
+32157,22849
+32157,28448
+32157,27189
+21879,1440
+21879,20441
+21879,8210
+21879,18816
+1.1,0.0
+2.2,0.0
+2.2,1.1
+3.3,0.0
+3.3,1.1
+3.3,2.2
+4.4,0.0
+4.4,1.1
+4.4,2.2
+4.4,3.3
+5.5,0.0
+5.5,1.1
+5.5,2.2
+5.5,3.3
+5.5,4.4
+6.6,0.0
+6.6,1.1
+6.6,2.2
+6.6,3.3
+6.6,4.4
+6.6,5.5
+7.7,0.0
+7.7,1.1
+7.7,2.2
+7.7,3.3
+7.7,4.4
+7.7,5.5
+7.7,6.6
+8.8,0.0
+8.8,1.1
+8.8,2.2
+8.8,3.3
+8.8,4.4
+8.8,5.5
+8.8,6.6
+8.8,7.7
+9.9,0.0
+9.9,1.1
+9.9,2.2
+9.9,3.3
+9.9,4.4
+9.9,5.5
+9.9,6.6
+9.9,7.7
+9.9,8.8
+11.0,0.0
+11.0,1.1
+11.0,2.2
+11.0,3.3
+11.0,4.4
+11.0,5.5
+11.0,6.6
+11.0,7.7
+11.0,8.8
+11.0,9.9
+12.1,0.0
+12.1,1.1
+12.1,2.2
+12.1,3.3
+12.1,4.4
+12.1,5.5
+12.1,6.6
+12.1,7.7
+12.1,8.8
+12.1,9.9
+13.2,0.0
+13.2,1.1
+13.2,2.2
+13.2,3.3
+13.2,4.4
+13.2,5.5
+13.2,6.6
+13.2,7.7
+13.2,8.8
+13.2,9.9
+14.3,0.0
+14.3,1.1
+14.3,2.2
+14.3,3.3
+14.3,4.4
+14.3,5.5
+14.3,6.6
+14.3,7.7
+14.3,8.8
+14.3,9.9
+15.4,0.0
+15.4,1.1
+15.4,2.2
+15.4,3.3
+15.4,4.4
+15.4,5.5
+15.4,6.6
+15.4,7.7
+15.4,8.8
+15.4,9.9
+16.5,0.0
+16.5,1.1
+16.5,2.2
+16.5,3.3
+16.5,4.4
+16.5,5.5
+16.5,6.6
+16.5,7.7
+16.5,8.8
+16.5,9.9
+17.6,0.0
+17.6,1.1
+17.6,2.2
+17.6,3.3
+17.6,4.4
+17.6,5.5
+17.6,6.6
+17.6,7.7
+17.6,8.8
+17.6,9.9
+18.7,0.0
+18.7,1.1
+18.7,2.2
+18.7,3.3
+18.7,4.4
+18.7,5.5
+18.7,6.6
+18.7,7.7
+18.7,8.8
+18.7,9.9
+19.8,0.0
+19.8,1.1
+19.8,2.2
+19.8,3.3
+19.8,4.4
+19.8,5.5
+19.8,6.6
+19.8,7.7
+19.8,8.8
+19.8,9.9
+20.9,0.0
+20.9,1.1
+20.9,2.2
+20.9,3.3
+20.9,4.4
+20.9,5.5
+20.9,6.6
+20.9,7.7
+20.9,8.8
+20.9,9.9
+"00001 string record","00000 string record"
+"00002 string record","00000 string record"
+"00002 string record","00001 string record"
+"00003 string record","00000 string record"
+"00003 string record","00001 string record"
+"00003 string record","00002 string record"
+"00004 string record","00000 string record"
+"00004 string record","00001 string record"
+"00004 string record","00002 string record"
+"00004 string record","00003 string record"
+"00005 string record","00000 string record"
+"00005 string record","00001 string record"
+"00005 string record","00002 string record"
+"00005 string record","00003 string record"
+"00005 string record","00004 string record"
+"00006 string record","00000 string record"
+"00006 string record","00001 string record"
+"00006 string record","00002 string record"
+"00006 string record","00003 string record"
+"00006 string record","00004 string record"
+"00006 string record","00005 string record"
+"00007 string record","00000 string record"
+"00007 string record","00001 string record"
+"00007 string record","00002 string record"
+"00007 string record","00003 string record"
+"00007 string record","00004 string record"
+"00007 string record","00005 string record"
+"00007 string record","00006 string record"
+"00008 string record","00000 string record"
+"00008 string record","00001 string record"
+"00008 string record","00002 string record"
+"00008 string record","00003 string record"
+"00008 string record","00004 string record"
+"00008 string record","00005 string record"
+"00008 string record","00006 string record"
+"00008 string record","00007 string record"
+"00009 string record","00000 string record"
+"00009 string record","00001 string record"
+"00009 string record","00002 string record"
+"00009 string record","00003 string record"
+"00009 string record","00004 string record"
+"00009 string record","00005 string record"
+"00009 string record","00006 string record"
+"00009 string record","00007 string record"
+"00009 string record","00008 string record"
+"00010 string record","00000 string record"
+"00010 string record","00001 string record"
+"00010 string record","00002 string record"
+"00010 string record","00003 string record"
+"00010 string record","00004 string record"
+"00010 string record","00005 string record"
+"00010 string record","00006 string record"
+"00010 string record","00007 string record"
+"00010 string record","00008 string record"
+"00010 string record","00009 string record"
+"00011 string record","00000 string record"
+"00011 string record","00001 string record"
+"00011 string record","00002 string record"
+"00011 string record","00003 string record"
+"00011 string record","00004 string record"
+"00011 string record","00005 string record"
+"00011 string record","00006 string record"
+"00011 string record","00007 string record"
+"00011 string record","00008 string record"
+"00011 string record","00009 string record"
+"00012 string record","00000 string record"
+"00012 string record","00001 string record"
+"00012 string record","00002 string record"
+"00012 string record","00003 string record"
+"00012 string record","00004 string record"
+"00012 string record","00005 string record"
+"00012 string record","00006 string record"
+"00012 string record","00007 string record"
+"00012 string record","00008 string record"
+"00012 string record","00009 string record"
+"00013 string record","00000 string record"
+"00013 string record","00001 string record"
+"00013 string record","00002 string record"
+"00013 string record","00003 string record"
+"00013 string record","00004 string record"
+"00013 string record","00005 string record"
+"00013 string record","00006 string record"
+"00013 string record","00007 string record"
+"00013 string record","00008 string record"
+"00013 string record","00009 string record"
+"00014 string record","00000 string record"
+"00014 string record","00001 string record"
+"00014 string record","00002 string record"
+"00014 string record","00003 string record"
+"00014 string record","00004 string record"
+"00014 string record","00005 string record"
+"00014 string record","00006 string record"
+"00014 string record","00007 string record"
+"00014 string record","00008 string record"
+"00014 string record","00009 string record"
+"00015 string record","00000 string record"
+"00015 string record","00001 string record"
+"00015 string record","00002 string record"
+"00015 string record","00003 string record"
+"00015 string record","00004 string record"
+"00015 string record","00005 string record"
+"00015 string record","00006 string record"
+"00015 string record","00007 string record"
+"00015 string record","00008 string record"
+"00015 string record","00009 string record"
+"00016 string record","00000 string record"
+"00016 string record","00001 string record"
+"00016 string record","00002 string record"
+"00016 string record","00003 string record"
+"00016 string record","00004 string record"
+"00016 string record","00005 string record"
+"00016 string record","00006 string record"
+"00016 string record","00007 string record"
+"00016 string record","00008 string record"
+"00016 string record","00009 string record"
+"00017 string record","00000 string record"
+"00017 string record","00001 string record"
+"00017 string record","00002 string record"
+"00017 string record","00003 string record"
+"00017 string record","00004 string record"
+"00017 string record","00005 string record"
+"00017 string record","00006 string record"
+"00017 string record","00007 string record"
+"00017 string record","00008 string record"
+"00017 string record","00009 string record"
+"00018 string record","00000 string record"
+"00018 string record","00001 string record"
+"00018 string record","00002 string record"
+"00018 string record","00003 string record"
+"00018 string record","00004 string record"
+"00018 string record","00005 string record"
+"00018 string record","00006 string record"
+"00018 string record","00007 string record"
+"00018 string record","00008 string record"
+"00018 string record","00009 string record"
+"00019 string record","00000 string record"
+"00019 string record","00001 string record"
+"00019 string record","00002 string record"
+"00019 string record","00003 string record"
+"00019 string record","00004 string record"
+"00019 string record","00005 string record"
+"00019 string record","00006 string record"
+"00019 string record","00007 string record"
+"00019 string record","00008 string record"
+"00019 string record","00009 string record"
+11618,23798
+11618,24529
+11618,1440
+11618,20441
+11618,8210
+11618,31830
+11618,18816
+11618,22849
+11618,28448
+11618,27189
+15378,23798
+15378,24529
+15378,1440
+15378,20441
+15378,8210
+15378,31830
+15378,18816
+15378,22849
+15378,28448
+15378,27189
+17233,23798
+17233,24529
+17233,1440
+17233,20441
+17233,8210
+17233,31830
+17233,18816
+17233,22849
+17233,28448
+17233,27189
+19052,23798
+19052,24529
+19052,1440
+19052,20441
+19052,8210
+19052,31830
+19052,18816
+19052,22849
+19052,28448
+19052,27189
+24069,23798
+24069,24529
+24069,1440
+24069,20441
+24069,8210
+24069,31830
+24069,18816
+24069,22849
+24069,28448
+24069,27189
+17188,23798
+17188,24529
+17188,1440
+17188,20441
+17188,8210
+17188,31830
+17188,18816
+17188,22849
+17188,28448
+17188,27189
+28769,23798
+28769,24529
+28769,1440
+28769,20441
+28769,8210
+28769,31830
+28769,18816
+28769,22849
+28769,28448
+28769,27189
+15168,23798
+15168,24529
+15168,1440
+15168,20441
+15168,8210
+15168,31830
+15168,18816
+15168,22849
+15168,28448
+15168,27189
+578,23798
+578,24529
+578,1440
+578,20441
+578,8210
+578,31830
+578,18816
+578,22849
+578,28448
+578,27189
+21055,23798
+21055,24529
+21055,1440
+21055,20441
+21055,8210
+21055,31830
+21055,18816
+21055,22849
+21055,28448
+21055,27189
+7648,23798
+7648,24529
+7648,1440
+7648,20441
+7648,8210
+7648,31830
+7648,18816
+7648,22849
+7648,28448
+7648,27189
+10153,23798
+10153,24529
+10153,1440
+10153,20441
+10153,8210
+10153,31830
+10153,18816
+10153,22849
+10153,28448
+10153,27189
+31851,23798
+31851,24529
+31851,1440
+31851,20441
+31851,8210
+31851,31830
+31851,18816
+31851,22849
+31851,28448
+31851,27189
+25573,23798
+25573,24529
+25573,1440
+25573,20441
+25573,8210
+25573,31830
+25573,18816
+25573,22849
+25573,28448
+25573,27189
+23765,23798
+23765,24529
+23765,1440
+23765,20441
+23765,8210
+23765,31830
+23765,18816
+23765,22849
+23765,28448
+23765,27189
+8758,23798
+8758,24529
+8758,1440
+8758,20441
+8758,8210
+8758,31830
+8758,18816
+8758,22849
+8758,28448
+8758,27189
+18243,23798
+18243,24529
+18243,1440
+18243,20441
+18243,8210
+18243,31830
+18243,18816
+18243,22849
+18243,28448
+18243,27189
+26285,23798
+26285,24529
+26285,1440
+26285,20441
+26285,8210
+26285,31830
+26285,18816
+26285,22849
+26285,28448
+26285,27189
+32157,23798
+32157,24529
+32157,1440
+32157,20441
+32157,8210
+32157,31830
+32157,18816
+32157,22849
+32157,28448
+32157,27189
+21879,23798
+21879,24529
+21879,1440
+21879,20441
+21879,8210
+21879,31830
+21879,18816
+21879,22849
+21879,28448
+21879,27189
+0.0,1.1
+0.0,2.2
+0.0,3.3
+0.0,4.4
+0.0,5.5
+0.0,6.6
+0.0,7.7
+0.0,8.8
+0.0,9.9
+1.1,0.0
+1.1,2.2
+1.1,3.3
+1.1,4.4
+1.1,5.5
+1.1,6.6
+1.1,7.7
+1.1,8.8
+1.1,9.9
+2.2,0.0
+2.2,1.1
+2.2,3.3
+2.2,4.4
+2.2,5.5
+2.2,6.6
+2.2,7.7
+2.2,8.8
+2.2,9.9
+3.3,0.0
+3.3,1.1
+3.3,2.2
+3.3,4.4
+3.3,5.5
+3.3,6.6
+3.3,7.7
+3.3,8.8
+3.3,9.9
+4.4,0.0
+4.4,1.1
+4.4,2.2
+4.4,3.3
+4.4,5.5
+4.4,6.6
+4.4,7.7
+4.4,8.8
+4.4,9.9
+5.5,0.0
+5.5,1.1
+5.5,2.2
+5.5,3.3
+5.5,4.4
+5.5,6.6
+5.5,7.7
+5.5,8.8
+5.5,9.9
+6.6,0.0
+6.6,1.1
+6.6,2.2
+6.6,3.3
+6.6,4.4
+6.6,5.5
+6.6,7.7
+6.6,8.8
+6.6,9.9
+7.7,0.0
+7.7,1.1
+7.7,2.2
+7.7,3.3
+7.7,4.4
+7.7,5.5
+7.7,6.6
+7.7,8.8
+7.7,9.9
+8.8,0.0
+8.8,1.1
+8.8,2.2
+8.8,3.3
+8.8,4.4
+8.8,5.5
+8.8,6.6
+8.8,7.7
+8.8,9.9
+9.9,0.0
+9.9,1.1
+9.9,2.2
+9.9,3.3
+9.9,4.4
+9.9,5.5
+9.9,6.6
+9.9,7.7
+9.9,8.8
+11.0,0.0
+11.0,1.1
+11.0,2.2
+11.0,3.3
+11.0,4.4
+11.0,5.5
+11.0,6.6
+11.0,7.7
+11.0,8.8
+11.0,9.9
+12.1,0.0
+12.1,1.1
+12.1,2.2
+12.1,3.3
+12.1,4.4
+12.1,5.5
+12.1,6.6
+12.1,7.7
+12.1,8.8
+12.1,9.9
+13.2,0.0
+13.2,1.1
+13.2,2.2
+13.2,3.3
+13.2,4.4
+13.2,5.5
+13.2,6.6
+13.2,7.7
+13.2,8.8
+13.2,9.9
+14.3,0.0
+14.3,1.1
+14.3,2.2
+14.3,3.3
+14.3,4.4
+14.3,5.5
+14.3,6.6
+14.3,7.7
+14.3,8.8
+14.3,9.9
+15.4,0.0
+15.4,1.1
+15.4,2.2
+15.4,3.3
+15.4,4.4
+15.4,5.5
+15.4,6.6
+15.4,7.7
+15.4,8.8
+15.4,9.9
+16.5,0.0
+16.5,1.1
+16.5,2.2
+16.5,3.3
+16.5,4.4
+16.5,5.5
+16.5,6.6
+16.5,7.7
+16.5,8.8
+16.5,9.9
+17.6,0.0
+17.6,1.1
+17.6,2.2
+17.6,3.3
+17.6,4.4
+17.6,5.5
+17.6,6.6
+17.6,7.7
+17.6,8.8
+17.6,9.9
+18.7,0.0
+18.7,1.1
+18.7,2.2
+18.7,3.3
+18.7,4.4
+18.7,5.5
+18.7,6.6
+18.7,7.7
+18.7,8.8
+18.7,9.9
+19.8,0.0
+19.8,1.1
+19.8,2.2
+19.8,3.3
+19.8,4.4
+19.8,5.5
+19.8,6.6
+19.8,7.7
+19.8,8.8
+19.8,9.9
+20.9,0.0
+20.9,1.1
+20.9,2.2
+20.9,3.3
+20.9,4.4
+20.9,5.5
+20.9,6.6
+20.9,7.7
+20.9,8.8
+20.9,9.9
+"00000 string record","00001 string record"
+"00000 string record","00002 string record"
+"00000 string record","00003 string record"
+"00000 string record","00004 string record"
+"00000 string record","00005 string record"
+"00000 string record","00006 string record"
+"00000 string record","00007 string record"
+"00000 string record","00008 string record"
+"00000 string record","00009 string record"
+"00001 string record","00000 string record"
+"00001 string record","00002 string record"
+"00001 string record","00003 string record"
+"00001 string record","00004 string record"
+"00001 string record","00005 string record"
+"00001 string record","00006 string record"
+"00001 string record","00007 string record"
+"00001 string record","00008 string record"
+"00001 string record","00009 string record"
+"00002 string record","00000 string record"
+"00002 string record","00001 string record"
+"00002 string record","00003 string record"
+"00002 string record","00004 string record"
+"00002 string record","00005 string record"
+"00002 string record","00006 string record"
+"00002 string record","00007 string record"
+"00002 string record","00008 string record"
+"00002 string record","00009 string record"
+"00003 string record","00000 string record"
+"00003 string record","00001 string record"
+"00003 string record","00002 string record"
+"00003 string record","00004 string record"
+"00003 string record","00005 string record"
+"00003 string record","00006 string record"
+"00003 string record","00007 string record"
+"00003 string record","00008 string record"
+"00003 string record","00009 string record"
+"00004 string record","00000 string record"
+"00004 string record","00001 string record"
+"00004 string record","00002 string record"
+"00004 string record","00003 string record"
+"00004 string record","00005 string record"
+"00004 string record","00006 string record"
+"00004 string record","00007 string record"
+"00004 string record","00008 string record"
+"00004 string record","00009 string record"
+"00005 string record","00000 string record"
+"00005 string record","00001 string record"
+"00005 string record","00002 string record"
+"00005 string record","00003 string record"
+"00005 string record","00004 string record"
+"00005 string record","00006 string record"
+"00005 string record","00007 string record"
+"00005 string record","00008 string record"
+"00005 string record","00009 string record"
+"00006 string record","00000 string record"
+"00006 string record","00001 string record"
+"00006 string record","00002 string record"
+"00006 string record","00003 string record"
+"00006 string record","00004 string record"
+"00006 string record","00005 string record"
+"00006 string record","00007 string record"
+"00006 string record","00008 string record"
+"00006 string record","00009 string record"
+"00007 string record","00000 string record"
+"00007 string record","00001 string record"
+"00007 string record","00002 string record"
+"00007 string record","00003 string record"
+"00007 string record","00004 string record"
+"00007 string record","00005 string record"
+"00007 string record","00006 string record"
+"00007 string record","00008 string record"
+"00007 string record","00009 string record"
+"00008 string record","00000 string record"
+"00008 string record","00001 string record"
+"00008 string record","00002 string record"
+"00008 string record","00003 string record"
+"00008 string record","00004 string record"
+"00008 string record","00005 string record"
+"00008 string record","00006 string record"
+"00008 string record","00007 string record"
+"00008 string record","00009 string record"
+"00009 string record","00000 string record"
+"00009 string record","00001 string record"
+"00009 string record","00002 string record"
+"00009 string record","00003 string record"
+"00009 string record","00004 string record"
+"00009 string record","00005 string record"
+"00009 string record","00006 string record"
+"00009 string record","00007 string record"
+"00009 string record","00008 string record"
+"00010 string record","00000 string record"
+"00010 string record","00001 string record"
+"00010 string record","00002 string record"
+"00010 string record","00003 string record"
+"00010 string record","00004 string record"
+"00010 string record","00005 string record"
+"00010 string record","00006 string record"
+"00010 string record","00007 string record"
+"00010 string record","00008 string record"
+"00010 string record","00009 string record"
+"00011 string record","00000 string record"
+"00011 string record","00001 string record"
+"00011 string record","00002 string record"
+"00011 string record","00003 string record"
+"00011 string record","00004 string record"
+"00011 string record","00005 string record"
+"00011 string record","00006 string record"
+"00011 string record","00007 string record"
+"00011 string record","00008 string record"
+"00011 string record","00009 string record"
+"00012 string record","00000 string record"
+"00012 string record","00001 string record"
+"00012 string record","00002 string record"
+"00012 string record","00003 string record"
+"00012 string record","00004 string record"
+"00012 string record","00005 string record"
+"00012 string record","00006 string record"
+"00012 string record","00007 string record"
+"00012 string record","00008 string record"
+"00012 string record","00009 string record"
+"00013 string record","00000 string record"
+"00013 string record","00001 string record"
+"00013 string record","00002 string record"
+"00013 string record","00003 string record"
+"00013 string record","00004 string record"
+"00013 string record","00005 string record"
+"00013 string record","00006 string record"
+"00013 string record","00007 string record"
+"00013 string record","00008 string record"
+"00013 string record","00009 string record"
+"00014 string record","00000 string record"
+"00014 string record","00001 string record"
+"00014 string record","00002 string record"
+"00014 string record","00003 string record"
+"00014 string record","00004 string record"
+"00014 string record","00005 string record"
+"00014 string record","00006 string record"
+"00014 string record","00007 string record"
+"00014 string record","00008 string record"
+"00014 string record","00009 string record"
+"00015 string record","00000 string record"
+"00015 string record","00001 string record"
+"00015 string record","00002 string record"
+"00015 string record","00003 string record"
+"00015 string record","00004 string record"
+"00015 string record","00005 string record"
+"00015 string record","00006 string record"
+"00015 string record","00007 string record"
+"00015 string record","00008 string record"
+"00015 string record","00009 string record"
+"00016 string record","00000 string record"
+"00016 string record","00001 string record"
+"00016 string record","00002 string record"
+"00016 string record","00003 string record"
+"00016 string record","00004 string record"
+"00016 string record","00005 string record"
+"00016 string record","00006 string record"
+"00016 string record","00007 string record"
+"00016 string record","00008 string record"
+"00016 string record","00009 string record"
+"00017 string record","00000 string record"
+"00017 string record","00001 string record"
+"00017 string record","00002 string record"
+"00017 string record","00003 string record"
+"00017 string record","00004 string record"
+"00017 string record","00005 string record"
+"00017 string record","00006 string record"
+"00017 string record","00007 string record"
+"00017 string record","00008 string record"
+"00017 string record","00009 string record"
+"00018 string record","00000 string record"
+"00018 string record","00001 string record"
+"00018 string record","00002 string record"
+"00018 string record","00003 string record"
+"00018 string record","00004 string record"
+"00018 string record","00005 string record"
+"00018 string record","00006 string record"
+"00018 string record","00007 string record"
+"00018 string record","00008 string record"
+"00018 string record","00009 string record"
+"00019 string record","00000 string record"
+"00019 string record","00001 string record"
+"00019 string record","00002 string record"
+"00019 string record","00003 string record"
+"00019 string record","00004 string record"
+"00019 string record","00005 string record"
+"00019 string record","00006 string record"
+"00019 string record","00007 string record"
+"00019 string record","00008 string record"
+"00019 string record","00009 string record"

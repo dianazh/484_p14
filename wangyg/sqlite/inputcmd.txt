@@ -1,4 +1,10 @@
 .mode csv
 .output join-smj-samelen.csv
 .read ../\sql/\join-smj-samelen.sql
+.output join-smj-difflen.csv
+.read ../\sql/\join-smj-difflen.sql
+.output join-snl.csv
+.read ../\sql/\join-snl.sql
+.output select-scan.csv
+.read ../\sql/\select-scan.sql
 .exit
