@@ -43,11 +43,11 @@ INSERT INTO DB (serial, ikey, filler, dkey) VALUES (9, 27189, '00009 string reco
 
 -- Operator LT
 -- Join on int
-SELECT DA.ikey, DB.ikey FROM DA, DB WHERE DA.ikey < DB.ikey;
+SELECT DA.serial, DA.ikey, DB.ikey, DA.dkey, DB.dkey, DB.filler FROM DA, DB WHERE DA.ikey < DB.ikey;
 -- Join on double
-SELECT DA.dkey, DB.dkey FROM DA, DB WHERE DA.dkey < DB.dkey;
+SELECT DA.serial, DA.ikey, DB.ikey, DA.dkey, DB.dkey, DB.filler FROM DA, DB WHERE DA.dkey < DB.dkey;
 -- Join on string
-SELECT DA.filler, DB.filler FROM DA, DB WHERE DA.filler < DB.filler;
+SELECT DA.serial, DB.ikey, DA.dkey, DB.dkey, DB.filler FROM DA, DB WHERE DA.filler < DB.filler;
 
 -- Operator LTE
 -- Join on int
