@@ -2,8 +2,8 @@ make clean
 make
 echo Y | ./dbdestroy testdb
 ./dbcreate testdb
-./minirel testdb < sql_w/insert-nonindex.sql > debug_w
-./minirel testdb < sql_w/insert-index.sql >> debug_w
+./minirel testdb < sql_w/insert-index.sql > debug_w
+./minirel testdb < sql_w/insert-nonindex.sql >> debug_w
 ./minirel testdb < sql_w/select-scan.sql >> debug_w
 ./minirel testdb < sql_w/select-index.sql >> debug_w
 ./minirel testdb < sql_w/join-index-both.sql >> debug_w
