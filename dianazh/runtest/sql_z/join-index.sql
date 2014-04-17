@@ -5,14 +5,14 @@ CREATE TABLE table5(ikey INTEGER, dkey DOUBLE, skey CHAR(20));
 CREATE TABLE table6(ikey INTEGER, dkey DOUBLE, skey CHAR(20));
 
 -- Insert with attributes in order
-INSERT INTO table5(ikey, dkey, skey) VALUES (1, 1.1, "abcd1");
-INSERT INTO table5(ikey, dkey, skey) VALUES (2, 2.2, "abcd2");
-INSERT INTO table5(ikey, dkey, skey) VALUES (3, 3.3, "abcd3");
+INSERT INTO table5(ikey, dkey, skey) VALUES (1, 1.1, 'abcd1');
+INSERT INTO table5(ikey, dkey, skey) VALUES (2, 2.2, 'abcd2');
+INSERT INTO table5(ikey, dkey, skey) VALUES (3, 3.3, 'abcd3');
 
 -- Insert with attributes out of order
-INSERT INTO table6(skey, dkey, ikey) VALUES ("abcd1", 1.1, 4);
-INSERT INTO table6(skey, dkey, ikey) VALUES ("abcd2", 5.5, 2);
-INSERT INTO table6(skey, dkey, ikey) VALUES ("abcd6", 3.3, 3);
+INSERT INTO table6(skey, dkey, ikey) VALUES ('abcd1', 1.1, 4);
+INSERT INTO table6(skey, dkey, ikey) VALUES ('abcd2', 5.5, 2);
+INSERT INTO table6(skey, dkey, ikey) VALUES ('abcd6', 3.3, 3);
 
 --Test when both sides have indices
 --Create index

@@ -1,0 +1,1810 @@
+DA.serial   DA.ikey     DB.ikey     DA.dkey     DB.dkey     DA.filler            DB.filler          
+----------  ----------  ----------  ----------  ----------  -------------------  -------------------
+0           11618       23798       0.0         0.0         00000 string record  00000 string record
+0           11618       24529       0.0         1.1         00000 string record  00001 string record
+0           11618       20441       0.0         3.3         00000 string record  00003 string record
+0           11618       31830       0.0         5.5         00000 string record  00005 string record
+0           11618       18816       0.0         6.6         00000 string record  00006 string record
+0           11618       22849       0.0         7.7         00000 string record  00007 string record
+0           11618       28448       0.0         8.8         00000 string record  00008 string record
+0           11618       27189       0.0         9.9         00000 string record  00009 string record
+1           15378       23798       1.1         0.0         00001 string record  00000 string record
+1           15378       24529       1.1         1.1         00001 string record  00001 string record
+1           15378       20441       1.1         3.3         00001 string record  00003 string record
+1           15378       31830       1.1         5.5         00001 string record  00005 string record
+1           15378       18816       1.1         6.6         00001 string record  00006 string record
+1           15378       22849       1.1         7.7         00001 string record  00007 string record
+1           15378       28448       1.1         8.8         00001 string record  00008 string record
+1           15378       27189       1.1         9.9         00001 string record  00009 string record
+2           17233       23798       2.2         0.0         00002 string record  00000 string record
+2           17233       24529       2.2         1.1         00002 string record  00001 string record
+2           17233       20441       2.2         3.3         00002 string record  00003 string record
+2           17233       31830       2.2         5.5         00002 string record  00005 string record
+2           17233       18816       2.2         6.6         00002 string record  00006 string record
+2           17233       22849       2.2         7.7         00002 string record  00007 string record
+2           17233       28448       2.2         8.8         00002 string record  00008 string record
+2           17233       27189       2.2         9.9         00002 string record  00009 string record
+3           19052       23798       3.3         0.0         00003 string record  00000 string record
+3           19052       24529       3.3         1.1         00003 string record  00001 string record
+3           19052       20441       3.3         3.3         00003 string record  00003 string record
+3           19052       31830       3.3         5.5         00003 string record  00005 string record
+3           19052       22849       3.3         7.7         00003 string record  00007 string record
+3           19052       28448       3.3         8.8         00003 string record  00008 string record
+3           19052       27189       3.3         9.9         00003 string record  00009 string record
+4           24069       24529       4.4         1.1         00004 string record  00001 string record
+4           24069       31830       4.4         5.5         00004 string record  00005 string record
+4           24069       28448       4.4         8.8         00004 string record  00008 string record
+4           24069       27189       4.4         9.9         00004 string record  00009 string record
+5           17188       23798       5.5         0.0         00005 string record  00000 string record
+5           17188       24529       5.5         1.1         00005 string record  00001 string record
+5           17188       20441       5.5         3.3         00005 string record  00003 string record
+5           17188       31830       5.5         5.5         00005 string record  00005 string record
+5           17188       18816       5.5         6.6         00005 string record  00006 string record
+5           17188       22849       5.5         7.7         00005 string record  00007 string record
+5           17188       28448       5.5         8.8         00005 string record  00008 string record
+5           17188       27189       5.5         9.9         00005 string record  00009 string record
+6           28769       31830       6.6         5.5         00006 string record  00005 string record
+7           15168       23798       7.7         0.0         00007 string record  00000 string record
+7           15168       24529       7.7         1.1         00007 string record  00001 string record
+7           15168       20441       7.7         3.3         00007 string record  00003 string record
+7           15168       31830       7.7         5.5         00007 string record  00005 string record
+7           15168       18816       7.7         6.6         00007 string record  00006 string record
+7           15168       22849       7.7         7.7         00007 string record  00007 string record
+7           15168       28448       7.7         8.8         00007 string record  00008 string record
+7           15168       27189       7.7         9.9         00007 string record  00009 string record
+8           578         23798       8.8         0.0         00008 string record  00000 string record
+8           578         24529       8.8         1.1         00008 string record  00001 string record
+8           578         1440        8.8         2.2         00008 string record  00002 string record
+8           578         20441       8.8         3.3         00008 string record  00003 string record
+8           578         8210        8.8         4.4         00008 string record  00004 string record
+8           578         31830       8.8         5.5         00008 string record  00005 string record
+8           578         18816       8.8         6.6         00008 string record  00006 string record
+8           578         22849       8.8         7.7         00008 string record  00007 string record
+8           578         28448       8.8         8.8         00008 string record  00008 string record
+8           578         27189       8.8         9.9         00008 string record  00009 string record
+9           21055       23798       9.9         0.0         00009 string record  00000 string record
+9           21055       24529       9.9         1.1         00009 string record  00001 string record
+9           21055       31830       9.9         5.5         00009 string record  00005 string record
+9           21055       22849       9.9         7.7         00009 string record  00007 string record
+9           21055       28448       9.9         8.8         00009 string record  00008 string record
+9           21055       27189       9.9         9.9         00009 string record  00009 string record
+10          7648        23798       11.0        0.0         00010 string record  00000 string record
+10          7648        24529       11.0        1.1         00010 string record  00001 string record
+10          7648        20441       11.0        3.3         00010 string record  00003 string record
+10          7648        8210        11.0        4.4         00010 string record  00004 string record
+10          7648        31830       11.0        5.5         00010 string record  00005 string record
+10          7648        18816       11.0        6.6         00010 string record  00006 string record
+10          7648        22849       11.0        7.7         00010 string record  00007 string record
+10          7648        28448       11.0        8.8         00010 string record  00008 string record
+10          7648        27189       11.0        9.9         00010 string record  00009 string record
+11          10153       23798       12.1        0.0         00011 string record  00000 string record
+11          10153       24529       12.1        1.1         00011 string record  00001 string record
+11          10153       20441       12.1        3.3         00011 string record  00003 string record
+11          10153       31830       12.1        5.5         00011 string record  00005 string record
+11          10153       18816       12.1        6.6         00011 string record  00006 string record
+11          10153       22849       12.1        7.7         00011 string record  00007 string record
+11          10153       28448       12.1        8.8         00011 string record  00008 string record
+11          10153       27189       12.1        9.9         00011 string record  00009 string record
+13          25573       31830       14.3        5.5         00013 string record  00005 string record
+13          25573       28448       14.3        8.8         00013 string record  00008 string record
+13          25573       27189       14.3        9.9         00013 string record  00009 string record
+14          23765       23798       15.4        0.0         00014 string record  00000 string record
+14          23765       24529       15.4        1.1         00014 string record  00001 string record
+14          23765       31830       15.4        5.5         00014 string record  00005 string record
+14          23765       28448       15.4        8.8         00014 string record  00008 string record
+14          23765       27189       15.4        9.9         00014 string record  00009 string record
+15          8758        23798       16.5        0.0         00015 string record  00000 string record
+15          8758        24529       16.5        1.1         00015 string record  00001 string record
+15          8758        20441       16.5        3.3         00015 string record  00003 string record
+15          8758        31830       16.5        5.5         00015 string record  00005 string record
+15          8758        18816       16.5        6.6         00015 string record  00006 string record
+15          8758        22849       16.5        7.7         00015 string record  00007 string record
+15          8758        28448       16.5        8.8         00015 string record  00008 string record
+15          8758        27189       16.5        9.9         00015 string record  00009 string record
+16          18243       23798       17.6        0.0         00016 string record  00000 string record
+16          18243       24529       17.6        1.1         00016 string record  00001 string record
+16          18243       20441       17.6        3.3         00016 string record  00003 string record
+16          18243       31830       17.6        5.5         00016 string record  00005 string record
+16          18243       18816       17.6        6.6         00016 string record  00006 string record
+16          18243       22849       17.6        7.7         00016 string record  00007 string record
+16          18243       28448       17.6        8.8         00016 string record  00008 string record
+16          18243       27189       17.6        9.9         00016 string record  00009 string record
+17          26285       31830       18.7        5.5         00017 string record  00005 string record
+17          26285       28448       18.7        8.8         00017 string record  00008 string record
+17          26285       27189       18.7        9.9         00017 string record  00009 string record
+19          21879       23798       20.9        0.0         00019 string record  00000 string record
+19          21879       24529       20.9        1.1         00019 string record  00001 string record
+19          21879       31830       20.9        5.5         00019 string record  00005 string record
+19          21879       22849       20.9        7.7         00019 string record  00007 string record
+19          21879       28448       20.9        8.8         00019 string record  00008 string record
+19          21879       27189       20.9        9.9         00019 string record  00009 string record
+DA.serial   DA.ikey     DB.ikey     DA.dkey     DB.dkey     DA.filler            DB.filler          
+----------  ----------  ----------  ----------  ----------  -------------------  -------------------
+0           11618       24529       0.0         1.1         00000 string record  00001 string record
+0           11618       1440        0.0         2.2         00000 string record  00002 string record
+0           11618       20441       0.0         3.3         00000 string record  00003 string record
+0           11618       8210        0.0         4.4         00000 string record  00004 string record
+0           11618       31830       0.0         5.5         00000 string record  00005 string record
+0           11618       18816       0.0         6.6         00000 string record  00006 string record
+0           11618       22849       0.0         7.7         00000 string record  00007 string record
+0           11618       28448       0.0         8.8         00000 string record  00008 string record
+0           11618       27189       0.0         9.9         00000 string record  00009 string record
+1           15378       1440        1.1         2.2         00001 string record  00002 string record
+1           15378       20441       1.1         3.3         00001 string record  00003 string record
+1           15378       8210        1.1         4.4         00001 string record  00004 string record
+1           15378       31830       1.1         5.5         00001 string record  00005 string record
+1           15378       18816       1.1         6.6         00001 string record  00006 string record
+1           15378       22849       1.1         7.7         00001 string record  00007 string record
+1           15378       28448       1.1         8.8         00001 string record  00008 string record
+1           15378       27189       1.1         9.9         00001 string record  00009 string record
+2           17233       20441       2.2         3.3         00002 string record  00003 string record
+2           17233       8210        2.2         4.4         00002 string record  00004 string record
+2           17233       31830       2.2         5.5         00002 string record  00005 string record
+2           17233       18816       2.2         6.6         00002 string record  00006 string record
+2           17233       22849       2.2         7.7         00002 string record  00007 string record
+2           17233       28448       2.2         8.8         00002 string record  00008 string record
+2           17233       27189       2.2         9.9         00002 string record  00009 string record
+3           19052       8210        3.3         4.4         00003 string record  00004 string record
+3           19052       31830       3.3         5.5         00003 string record  00005 string record
+3           19052       18816       3.3         6.6         00003 string record  00006 string record
+3           19052       22849       3.3         7.7         00003 string record  00007 string record
+3           19052       28448       3.3         8.8         00003 string record  00008 string record
+3           19052       27189       3.3         9.9         00003 string record  00009 string record
+4           24069       31830       4.4         5.5         00004 string record  00005 string record
+4           24069       18816       4.4         6.6         00004 string record  00006 string record
+4           24069       22849       4.4         7.7         00004 string record  00007 string record
+4           24069       28448       4.4         8.8         00004 string record  00008 string record
+4           24069       27189       4.4         9.9         00004 string record  00009 string record
+5           17188       18816       5.5         6.6         00005 string record  00006 string record
+5           17188       22849       5.5         7.7         00005 string record  00007 string record
+5           17188       28448       5.5         8.8         00005 string record  00008 string record
+5           17188       27189       5.5         9.9         00005 string record  00009 string record
+6           28769       22849       6.6         7.7         00006 string record  00007 string record
+6           28769       28448       6.6         8.8         00006 string record  00008 string record
+6           28769       27189       6.6         9.9         00006 string record  00009 string record
+7           15168       28448       7.7         8.8         00007 string record  00008 string record
+7           15168       27189       7.7         9.9         00007 string record  00009 string record
+8           578         27189       8.8         9.9         00008 string record  00009 string record
+DA.serial   DA.ikey     DB.ikey     DA.dkey     DB.dkey     DA.filler            DB.filler          
+----------  ----------  ----------  ----------  ----------  -------------------  -------------------
+0           11618       24529       0.0         1.1         00000 string record  00001 string record
+0           11618       1440        0.0         2.2         00000 string record  00002 string record
+0           11618       20441       0.0         3.3         00000 string record  00003 string record
+0           11618       8210        0.0         4.4         00000 string record  00004 string record
+0           11618       31830       0.0         5.5         00000 string record  00005 string record
+0           11618       18816       0.0         6.6         00000 string record  00006 string record
+0           11618       22849       0.0         7.7         00000 string record  00007 string record
+0           11618       28448       0.0         8.8         00000 string record  00008 string record
+0           11618       27189       0.0         9.9         00000 string record  00009 string record
+1           15378       1440        1.1         2.2         00001 string record  00002 string record
+1           15378       20441       1.1         3.3         00001 string record  00003 string record
+1           15378       8210        1.1         4.4         00001 string record  00004 string record
+1           15378       31830       1.1         5.5         00001 string record  00005 string record
+1           15378       18816       1.1         6.6         00001 string record  00006 string record
+1           15378       22849       1.1         7.7         00001 string record  00007 string record
+1           15378       28448       1.1         8.8         00001 string record  00008 string record
+1           15378       27189       1.1         9.9         00001 string record  00009 string record
+2           17233       20441       2.2         3.3         00002 string record  00003 string record
+2           17233       8210        2.2         4.4         00002 string record  00004 string record
+2           17233       31830       2.2         5.5         00002 string record  00005 string record
+2           17233       18816       2.2         6.6         00002 string record  00006 string record
+2           17233       22849       2.2         7.7         00002 string record  00007 string record
+2           17233       28448       2.2         8.8         00002 string record  00008 string record
+2           17233       27189       2.2         9.9         00002 string record  00009 string record
+3           19052       8210        3.3         4.4         00003 string record  00004 string record
+3           19052       31830       3.3         5.5         00003 string record  00005 string record
+3           19052       18816       3.3         6.6         00003 string record  00006 string record
+3           19052       22849       3.3         7.7         00003 string record  00007 string record
+3           19052       28448       3.3         8.8         00003 string record  00008 string record
+3           19052       27189       3.3         9.9         00003 string record  00009 string record
+4           24069       31830       4.4         5.5         00004 string record  00005 string record
+4           24069       18816       4.4         6.6         00004 string record  00006 string record
+4           24069       22849       4.4         7.7         00004 string record  00007 string record
+4           24069       28448       4.4         8.8         00004 string record  00008 string record
+4           24069       27189       4.4         9.9         00004 string record  00009 string record
+5           17188       18816       5.5         6.6         00005 string record  00006 string record
+5           17188       22849       5.5         7.7         00005 string record  00007 string record
+5           17188       28448       5.5         8.8         00005 string record  00008 string record
+5           17188       27189       5.5         9.9         00005 string record  00009 string record
+6           28769       22849       6.6         7.7         00006 string record  00007 string record
+6           28769       28448       6.6         8.8         00006 string record  00008 string record
+6           28769       27189       6.6         9.9         00006 string record  00009 string record
+7           15168       28448       7.7         8.8         00007 string record  00008 string record
+7           15168       27189       7.7         9.9         00007 string record  00009 string record
+8           578         27189       8.8         9.9         00008 string record  00009 string record
+DA.serial   DA.dkey     DB.dkey     DA.filler            DB.filler          
+----------  ----------  ----------  -------------------  -------------------
+0           0.0         0.0         00000 string record  00000 string record
+0           0.0         1.1         00000 string record  00001 string record
+0           0.0         3.3         00000 string record  00003 string record
+0           0.0         5.5         00000 string record  00005 string record
+0           0.0         6.6         00000 string record  00006 string record
+0           0.0         7.7         00000 string record  00007 string record
+0           0.0         8.8         00000 string record  00008 string record
+0           0.0         9.9         00000 string record  00009 string record
+1           1.1         0.0         00001 string record  00000 string record
+1           1.1         1.1         00001 string record  00001 string record
+1           1.1         3.3         00001 string record  00003 string record
+1           1.1         5.5         00001 string record  00005 string record
+1           1.1         6.6         00001 string record  00006 string record
+1           1.1         7.7         00001 string record  00007 string record
+1           1.1         8.8         00001 string record  00008 string record
+1           1.1         9.9         00001 string record  00009 string record
+2           2.2         0.0         00002 string record  00000 string record
+2           2.2         1.1         00002 string record  00001 string record
+2           2.2         3.3         00002 string record  00003 string record
+2           2.2         5.5         00002 string record  00005 string record
+2           2.2         6.6         00002 string record  00006 string record
+2           2.2         7.7         00002 string record  00007 string record
+2           2.2         8.8         00002 string record  00008 string record
+2           2.2         9.9         00002 string record  00009 string record
+3           3.3         0.0         00003 string record  00000 string record
+3           3.3         1.1         00003 string record  00001 string record
+3           3.3         3.3         00003 string record  00003 string record
+3           3.3         5.5         00003 string record  00005 string record
+3           3.3         7.7         00003 string record  00007 string record
+3           3.3         8.8         00003 string record  00008 string record
+3           3.3         9.9         00003 string record  00009 string record
+4           4.4         1.1         00004 string record  00001 string record
+4           4.4         5.5         00004 string record  00005 string record
+4           4.4         8.8         00004 string record  00008 string record
+4           4.4         9.9         00004 string record  00009 string record
+5           5.5         0.0         00005 string record  00000 string record
+5           5.5         1.1         00005 string record  00001 string record
+5           5.5         3.3         00005 string record  00003 string record
+5           5.5         5.5         00005 string record  00005 string record
+5           5.5         6.6         00005 string record  00006 string record
+5           5.5         7.7         00005 string record  00007 string record
+5           5.5         8.8         00005 string record  00008 string record
+5           5.5         9.9         00005 string record  00009 string record
+6           6.6         5.5         00006 string record  00005 string record
+7           7.7         0.0         00007 string record  00000 string record
+7           7.7         1.1         00007 string record  00001 string record
+7           7.7         3.3         00007 string record  00003 string record
+7           7.7         5.5         00007 string record  00005 string record
+7           7.7         6.6         00007 string record  00006 string record
+7           7.7         7.7         00007 string record  00007 string record
+7           7.7         8.8         00007 string record  00008 string record
+7           7.7         9.9         00007 string record  00009 string record
+8           8.8         0.0         00008 string record  00000 string record
+8           8.8         1.1         00008 string record  00001 string record
+8           8.8         2.2         00008 string record  00002 string record
+8           8.8         3.3         00008 string record  00003 string record
+8           8.8         4.4         00008 string record  00004 string record
+8           8.8         5.5         00008 string record  00005 string record
+8           8.8         6.6         00008 string record  00006 string record
+8           8.8         7.7         00008 string record  00007 string record
+8           8.8         8.8         00008 string record  00008 string record
+8           8.8         9.9         00008 string record  00009 string record
+9           9.9         0.0         00009 string record  00000 string record
+9           9.9         1.1         00009 string record  00001 string record
+9           9.9         5.5         00009 string record  00005 string record
+9           9.9         7.7         00009 string record  00007 string record
+9           9.9         8.8         00009 string record  00008 string record
+9           9.9         9.9         00009 string record  00009 string record
+10          11.0        0.0         00010 string record  00000 string record
+10          11.0        1.1         00010 string record  00001 string record
+10          11.0        3.3         00010 string record  00003 string record
+10          11.0        4.4         00010 string record  00004 string record
+10          11.0        5.5         00010 string record  00005 string record
+10          11.0        6.6         00010 string record  00006 string record
+10          11.0        7.7         00010 string record  00007 string record
+10          11.0        8.8         00010 string record  00008 string record
+10          11.0        9.9         00010 string record  00009 string record
+11          12.1        0.0         00011 string record  00000 string record
+11          12.1        1.1         00011 string record  00001 string record
+11          12.1        3.3         00011 string record  00003 string record
+11          12.1        5.5         00011 string record  00005 string record
+11          12.1        6.6         00011 string record  00006 string record
+11          12.1        7.7         00011 string record  00007 string record
+11          12.1        8.8         00011 string record  00008 string record
+11          12.1        9.9         00011 string record  00009 string record
+13          14.3        5.5         00013 string record  00005 string record
+13          14.3        8.8         00013 string record  00008 string record
+13          14.3        9.9         00013 string record  00009 string record
+14          15.4        0.0         00014 string record  00000 string record
+14          15.4        1.1         00014 string record  00001 string record
+14          15.4        5.5         00014 string record  00005 string record
+14          15.4        8.8         00014 string record  00008 string record
+14          15.4        9.9         00014 string record  00009 string record
+15          16.5        0.0         00015 string record  00000 string record
+15          16.5        1.1         00015 string record  00001 string record
+15          16.5        3.3         00015 string record  00003 string record
+15          16.5        5.5         00015 string record  00005 string record
+15          16.5        6.6         00015 string record  00006 string record
+15          16.5        7.7         00015 string record  00007 string record
+15          16.5        8.8         00015 string record  00008 string record
+15          16.5        9.9         00015 string record  00009 string record
+16          17.6        0.0         00016 string record  00000 string record
+16          17.6        1.1         00016 string record  00001 string record
+16          17.6        3.3         00016 string record  00003 string record
+16          17.6        5.5         00016 string record  00005 string record
+16          17.6        6.6         00016 string record  00006 string record
+16          17.6        7.7         00016 string record  00007 string record
+16          17.6        8.8         00016 string record  00008 string record
+16          17.6        9.9         00016 string record  00009 string record
+17          18.7        5.5         00017 string record  00005 string record
+17          18.7        8.8         00017 string record  00008 string record
+17          18.7        9.9         00017 string record  00009 string record
+19          20.9        0.0         00019 string record  00000 string record
+19          20.9        1.1         00019 string record  00001 string record
+19          20.9        5.5         00019 string record  00005 string record
+19          20.9        7.7         00019 string record  00007 string record
+19          20.9        8.8         00019 string record  00008 string record
+19          20.9        9.9         00019 string record  00009 string record
+DA.serial   DA.ikey     DB.ikey     DA.filler            DB.filler          
+----------  ----------  ----------  -------------------  -------------------
+0           11618       23798       00000 string record  00000 string record
+0           11618       24529       00000 string record  00001 string record
+0           11618       1440        00000 string record  00002 string record
+0           11618       20441       00000 string record  00003 string record
+0           11618       8210        00000 string record  00004 string record
+0           11618       31830       00000 string record  00005 string record
+0           11618       18816       00000 string record  00006 string record
+0           11618       22849       00000 string record  00007 string record
+0           11618       28448       00000 string record  00008 string record
+0           11618       27189       00000 string record  00009 string record
+1           15378       24529       00001 string record  00001 string record
+1           15378       1440        00001 string record  00002 string record
+1           15378       20441       00001 string record  00003 string record
+1           15378       8210        00001 string record  00004 string record
+1           15378       31830       00001 string record  00005 string record
+1           15378       18816       00001 string record  00006 string record
+1           15378       22849       00001 string record  00007 string record
+1           15378       28448       00001 string record  00008 string record
+1           15378       27189       00001 string record  00009 string record
+2           17233       1440        00002 string record  00002 string record
+2           17233       20441       00002 string record  00003 string record
+2           17233       8210        00002 string record  00004 string record
+2           17233       31830       00002 string record  00005 string record
+2           17233       18816       00002 string record  00006 string record
+2           17233       22849       00002 string record  00007 string record
+2           17233       28448       00002 string record  00008 string record
+2           17233       27189       00002 string record  00009 string record
+3           19052       20441       00003 string record  00003 string record
+3           19052       8210        00003 string record  00004 string record
+3           19052       31830       00003 string record  00005 string record
+3           19052       18816       00003 string record  00006 string record
+3           19052       22849       00003 string record  00007 string record
+3           19052       28448       00003 string record  00008 string record
+3           19052       27189       00003 string record  00009 string record
+4           24069       8210        00004 string record  00004 string record
+4           24069       31830       00004 string record  00005 string record
+4           24069       18816       00004 string record  00006 string record
+4           24069       22849       00004 string record  00007 string record
+4           24069       28448       00004 string record  00008 string record
+4           24069       27189       00004 string record  00009 string record
+5           17188       31830       00005 string record  00005 string record
+5           17188       18816       00005 string record  00006 string record
+5           17188       22849       00005 string record  00007 string record
+5           17188       28448       00005 string record  00008 string record
+5           17188       27189       00005 string record  00009 string record
+6           28769       18816       00006 string record  00006 string record
+6           28769       22849       00006 string record  00007 string record
+6           28769       28448       00006 string record  00008 string record
+6           28769       27189       00006 string record  00009 string record
+7           15168       22849       00007 string record  00007 string record
+7           15168       28448       00007 string record  00008 string record
+7           15168       27189       00007 string record  00009 string record
+8           578         28448       00008 string record  00008 string record
+8           578         27189       00008 string record  00009 string record
+9           21055       27189       00009 string record  00009 string record
+DA.serial   DA.ikey     DB.ikey     DA.dkey     DB.dkey   
+----------  ----------  ----------  ----------  ----------
+0           11618       23798       0.0         0.0       
+0           11618       24529       0.0         1.1       
+0           11618       1440        0.0         2.2       
+0           11618       20441       0.0         3.3       
+0           11618       8210        0.0         4.4       
+0           11618       31830       0.0         5.5       
+0           11618       18816       0.0         6.6       
+0           11618       22849       0.0         7.7       
+0           11618       28448       0.0         8.8       
+0           11618       27189       0.0         9.9       
+1           15378       24529       1.1         1.1       
+1           15378       1440        1.1         2.2       
+1           15378       20441       1.1         3.3       
+1           15378       8210        1.1         4.4       
+1           15378       31830       1.1         5.5       
+1           15378       18816       1.1         6.6       
+1           15378       22849       1.1         7.7       
+1           15378       28448       1.1         8.8       
+1           15378       27189       1.1         9.9       
+2           17233       1440        2.2         2.2       
+2           17233       20441       2.2         3.3       
+2           17233       8210        2.2         4.4       
+2           17233       31830       2.2         5.5       
+2           17233       18816       2.2         6.6       
+2           17233       22849       2.2         7.7       
+2           17233       28448       2.2         8.8       
+2           17233       27189       2.2         9.9       
+3           19052       20441       3.3         3.3       
+3           19052       8210        3.3         4.4       
+3           19052       31830       3.3         5.5       
+3           19052       18816       3.3         6.6       
+3           19052       22849       3.3         7.7       
+3           19052       28448       3.3         8.8       
+3           19052       27189       3.3         9.9       
+4           24069       8210        4.4         4.4       
+4           24069       31830       4.4         5.5       
+4           24069       18816       4.4         6.6       
+4           24069       22849       4.4         7.7       
+4           24069       28448       4.4         8.8       
+4           24069       27189       4.4         9.9       
+5           17188       31830       5.5         5.5       
+5           17188       18816       5.5         6.6       
+5           17188       22849       5.5         7.7       
+5           17188       28448       5.5         8.8       
+5           17188       27189       5.5         9.9       
+6           28769       18816       6.6         6.6       
+6           28769       22849       6.6         7.7       
+6           28769       28448       6.6         8.8       
+6           28769       27189       6.6         9.9       
+7           15168       22849       7.7         7.7       
+7           15168       28448       7.7         8.8       
+7           15168       27189       7.7         9.9       
+8           578         28448       8.8         8.8       
+8           578         27189       8.8         9.9       
+9           21055       27189       9.9         9.9       
+DA.ikey     DA.dkey     DA.filler          
+----------  ----------  -------------------
+11618       0.0         00000 string record
+11618       0.0         00000 string record
+15378       1.1         00001 string record
+15378       1.1         00001 string record
+17233       2.2         00002 string record
+17233       2.2         00002 string record
+19052       3.3         00003 string record
+19052       3.3         00003 string record
+19052       3.3         00003 string record
+24069       4.4         00004 string record
+24069       4.4         00004 string record
+24069       4.4         00004 string record
+24069       4.4         00004 string record
+24069       4.4         00004 string record
+24069       4.4         00004 string record
+17188       5.5         00005 string record
+17188       5.5         00005 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+28769       6.6         00006 string record
+15168       7.7         00007 string record
+15168       7.7         00007 string record
+21055       9.9         00009 string record
+21055       9.9         00009 string record
+21055       9.9         00009 string record
+21055       9.9         00009 string record
+7648        11.0        00010 string record
+10153       12.1        00011 string record
+10153       12.1        00011 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+31851       13.2        00012 string record
+25573       14.3        00013 string record
+25573       14.3        00013 string record
+25573       14.3        00013 string record
+25573       14.3        00013 string record
+25573       14.3        00013 string record
+25573       14.3        00013 string record
+25573       14.3        00013 string record
+23765       15.4        00014 string record
+23765       15.4        00014 string record
+23765       15.4        00014 string record
+23765       15.4        00014 string record
+23765       15.4        00014 string record
+8758        16.5        00015 string record
+8758        16.5        00015 string record
+18243       17.6        00016 string record
+18243       17.6        00016 string record
+26285       18.7        00017 string record
+26285       18.7        00017 string record
+26285       18.7        00017 string record
+26285       18.7        00017 string record
+26285       18.7        00017 string record
+26285       18.7        00017 string record
+26285       18.7        00017 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+32157       19.8        00018 string record
+21879       20.9        00019 string record
+21879       20.9        00019 string record
+21879       20.9        00019 string record
+21879       20.9        00019 string record
+DA.dkey     DA.dkey     DA.filler          
+----------  ----------  -------------------
+0.0         0.0         00000 string record
+1.1         1.1         00001 string record
+1.1         1.1         00001 string record
+2.2         2.2         00002 string record
+2.2         2.2         00002 string record
+2.2         2.2         00002 string record
+3.3         3.3         00003 string record
+3.3         3.3         00003 string record
+3.3         3.3         00003 string record
+3.3         3.3         00003 string record
+4.4         4.4         00004 string record
+4.4         4.4         00004 string record
+4.4         4.4         00004 string record
+4.4         4.4         00004 string record
+4.4         4.4         00004 string record
+5.5         5.5         00005 string record
+5.5         5.5         00005 string record
+5.5         5.5         00005 string record
+5.5         5.5         00005 string record
+5.5         5.5         00005 string record
+5.5         5.5         00005 string record
+6.6         6.6         00006 string record
+6.6         6.6         00006 string record
+6.6         6.6         00006 string record
+6.6         6.6         00006 string record
+6.6         6.6         00006 string record
+6.6         6.6         00006 string record
+6.6         6.6         00006 string record
+7.7         7.7         00007 string record
+7.7         7.7         00007 string record
+7.7         7.7         00007 string record
+7.7         7.7         00007 string record
+7.7         7.7         00007 string record
+7.7         7.7         00007 string record
+7.7         7.7         00007 string record
+7.7         7.7         00007 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+8.8         8.8         00008 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+9.9         9.9         00009 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+11.0        11.0        00010 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+12.1        12.1        00011 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+13.2        13.2        00012 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+14.3        14.3        00013 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+15.4        15.4        00014 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+16.5        16.5        00015 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+17.6        17.6        00016 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+18.7        18.7        00017 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+19.8        19.8        00018 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+20.9        20.9        00019 string record
+DA.filler            DA.dkey     DA.filler          
+-------------------  ----------  -------------------
+00000 string record  0.0         00000 string record
+00001 string record  1.1         00001 string record
+00001 string record  1.1         00001 string record
+00002 string record  2.2         00002 string record
+00002 string record  2.2         00002 string record
+00002 string record  2.2         00002 string record
+00003 string record  3.3         00003 string record
+00003 string record  3.3         00003 string record
+00003 string record  3.3         00003 string record
+00003 string record  3.3         00003 string record
+00004 string record  4.4         00004 string record
+00004 string record  4.4         00004 string record
+00004 string record  4.4         00004 string record
+00004 string record  4.4         00004 string record
+00004 string record  4.4         00004 string record
+00005 string record  5.5         00005 string record
+00005 string record  5.5         00005 string record
+00005 string record  5.5         00005 string record
+00005 string record  5.5         00005 string record
+00005 string record  5.5         00005 string record
+00005 string record  5.5         00005 string record
+00006 string record  6.6         00006 string record
+00006 string record  6.6         00006 string record
+00006 string record  6.6         00006 string record
+00006 string record  6.6         00006 string record
+00006 string record  6.6         00006 string record
+00006 string record  6.6         00006 string record
+00006 string record  6.6         00006 string record
+00007 string record  7.7         00007 string record
+00007 string record  7.7         00007 string record
+00007 string record  7.7         00007 string record
+00007 string record  7.7         00007 string record
+00007 string record  7.7         00007 string record
+00007 string record  7.7         00007 string record
+00007 string record  7.7         00007 string record
+00007 string record  7.7         00007 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00008 string record  8.8         00008 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00009 string record  9.9         00009 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00010 string record  11.0        00010 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00011 string record  12.1        00011 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00012 string record  13.2        00012 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00013 string record  14.3        00013 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00014 string record  15.4        00014 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00015 string record  16.5        00015 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00016 string record  17.6        00016 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00017 string record  18.7        00017 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00018 string record  19.8        00018 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+00019 string record  20.9        00019 string record
+DB.ikey     DB.dkey     DB.filler          
+----------  ----------  -------------------
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+23798       0.0         00000 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+1440        2.2         00002 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+1440        2.2         00002 string record
+8210        4.4         00004 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+18816       6.6         00006 string record
+DB.ikey     DB.dkey     DB.filler          
+----------  ----------  -------------------
+23798       0.0         00000 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+DB.ikey     DB.dkey     DB.filler          
+----------  ----------  -------------------
+23798       0.0         00000 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+23798       0.0         00000 string record
+24529       1.1         00001 string record
+1440        2.2         00002 string record
+20441       3.3         00003 string record
+8210        4.4         00004 string record
+31830       5.5         00005 string record
+18816       6.6         00006 string record
+22849       7.7         00007 string record
+28448       8.8         00008 string record
+27189       9.9         00009 string record
+DA.serial   DA.dkey     DB.dkey     DA.filler            DB.filler            DA.ikey   
+----------  ----------  ----------  -------------------  -------------------  ----------
+0           0.0         0.0         00000 string record  00000 string record  11618     
+0           0.0         1.1         00000 string record  00001 string record  11618     
+0           0.0         2.2         00000 string record  00002 string record  11618     
+0           0.0         3.3         00000 string record  00003 string record  11618     
+0           0.0         4.4         00000 string record  00004 string record  11618     
+0           0.0         5.5         00000 string record  00005 string record  11618     
+0           0.0         6.6         00000 string record  00006 string record  11618     
+0           0.0         7.7         00000 string record  00007 string record  11618     
+0           0.0         8.8         00000 string record  00008 string record  11618     
+0           0.0         9.9         00000 string record  00009 string record  11618     
+1           1.1         0.0         00001 string record  00000 string record  15378     
+1           1.1         1.1         00001 string record  00001 string record  15378     
+1           1.1         2.2         00001 string record  00002 string record  15378     
+1           1.1         3.3         00001 string record  00003 string record  15378     
+1           1.1         4.4         00001 string record  00004 string record  15378     
+1           1.1         5.5         00001 string record  00005 string record  15378     
+1           1.1         6.6         00001 string record  00006 string record  15378     
+1           1.1         7.7         00001 string record  00007 string record  15378     
+1           1.1         8.8         00001 string record  00008 string record  15378     
+1           1.1         9.9         00001 string record  00009 string record  15378     
+2           2.2         0.0         00002 string record  00000 string record  17233     
+2           2.2         1.1         00002 string record  00001 string record  17233     
+2           2.2         2.2         00002 string record  00002 string record  17233     
+2           2.2         3.3         00002 string record  00003 string record  17233     
+2           2.2         4.4         00002 string record  00004 string record  17233     
+2           2.2         5.5         00002 string record  00005 string record  17233     
+2           2.2         6.6         00002 string record  00006 string record  17233     
+2           2.2         7.7         00002 string record  00007 string record  17233     
+2           2.2         8.8         00002 string record  00008 string record  17233     
+2           2.2         9.9         00002 string record  00009 string record  17233     
+3           3.3         0.0         00003 string record  00000 string record  19052     
+3           3.3         1.1         00003 string record  00001 string record  19052     
+3           3.3         2.2         00003 string record  00002 string record  19052     
+3           3.3         3.3         00003 string record  00003 string record  19052     
+3           3.3         4.4         00003 string record  00004 string record  19052     
+3           3.3         5.5         00003 string record  00005 string record  19052     
+3           3.3         6.6         00003 string record  00006 string record  19052     
+3           3.3         7.7         00003 string record  00007 string record  19052     
+3           3.3         8.8         00003 string record  00008 string record  19052     
+3           3.3         9.9         00003 string record  00009 string record  19052     
+4           4.4         0.0         00004 string record  00000 string record  24069     
+4           4.4         1.1         00004 string record  00001 string record  24069     
+4           4.4         2.2         00004 string record  00002 string record  24069     
+4           4.4         3.3         00004 string record  00003 string record  24069     
+4           4.4         4.4         00004 string record  00004 string record  24069     
+4           4.4         5.5         00004 string record  00005 string record  24069     
+4           4.4         6.6         00004 string record  00006 string record  24069     
+4           4.4         7.7         00004 string record  00007 string record  24069     
+4           4.4         8.8         00004 string record  00008 string record  24069     
+4           4.4         9.9         00004 string record  00009 string record  24069     
+5           5.5         0.0         00005 string record  00000 string record  17188     
+5           5.5         1.1         00005 string record  00001 string record  17188     
+5           5.5         2.2         00005 string record  00002 string record  17188     
+5           5.5         3.3         00005 string record  00003 string record  17188     
+5           5.5         4.4         00005 string record  00004 string record  17188     
+5           5.5         5.5         00005 string record  00005 string record  17188     
+5           5.5         6.6         00005 string record  00006 string record  17188     
+5           5.5         7.7         00005 string record  00007 string record  17188     
+5           5.5         8.8         00005 string record  00008 string record  17188     
+5           5.5         9.9         00005 string record  00009 string record  17188     
+6           6.6         0.0         00006 string record  00000 string record  28769     
+6           6.6         1.1         00006 string record  00001 string record  28769     
+6           6.6         2.2         00006 string record  00002 string record  28769     
+6           6.6         3.3         00006 string record  00003 string record  28769     
+6           6.6         4.4         00006 string record  00004 string record  28769     
+6           6.6         5.5         00006 string record  00005 string record  28769     
+6           6.6         6.6         00006 string record  00006 string record  28769     
+6           6.6         7.7         00006 string record  00007 string record  28769     
+6           6.6         8.8         00006 string record  00008 string record  28769     
+6           6.6         9.9         00006 string record  00009 string record  28769     
+7           7.7         0.0         00007 string record  00000 string record  15168     
+7           7.7         1.1         00007 string record  00001 string record  15168     
+7           7.7         2.2         00007 string record  00002 string record  15168     
+7           7.7         3.3         00007 string record  00003 string record  15168     
+7           7.7         4.4         00007 string record  00004 string record  15168     
+7           7.7         5.5         00007 string record  00005 string record  15168     
+7           7.7         6.6         00007 string record  00006 string record  15168     
+7           7.7         7.7         00007 string record  00007 string record  15168     
+7           7.7         8.8         00007 string record  00008 string record  15168     
+7           7.7         9.9         00007 string record  00009 string record  15168     
+8           8.8         0.0         00008 string record  00000 string record  578       
+8           8.8         1.1         00008 string record  00001 string record  578       
+8           8.8         2.2         00008 string record  00002 string record  578       
+8           8.8         3.3         00008 string record  00003 string record  578       
+8           8.8         4.4         00008 string record  00004 string record  578       
+8           8.8         5.5         00008 string record  00005 string record  578       
+8           8.8         6.6         00008 string record  00006 string record  578       
+8           8.8         7.7         00008 string record  00007 string record  578       
+8           8.8         8.8         00008 string record  00008 string record  578       
+8           8.8         9.9         00008 string record  00009 string record  578       
+9           9.9         0.0         00009 string record  00000 string record  21055     
+9           9.9         1.1         00009 string record  00001 string record  21055     
+9           9.9         2.2         00009 string record  00002 string record  21055     
+9           9.9         3.3         00009 string record  00003 string record  21055     
+9           9.9         4.4         00009 string record  00004 string record  21055     
+9           9.9         5.5         00009 string record  00005 string record  21055     
+9           9.9         6.6         00009 string record  00006 string record  21055     
+9           9.9         7.7         00009 string record  00007 string record  21055     
+9           9.9         8.8         00009 string record  00008 string record  21055     
+9           9.9         9.9         00009 string record  00009 string record  21055     
+10          11.0        0.0         00010 string record  00000 string record  7648      
+10          11.0        1.1         00010 string record  00001 string record  7648      
+10          11.0        2.2         00010 string record  00002 string record  7648      
+10          11.0        3.3         00010 string record  00003 string record  7648      
+10          11.0        4.4         00010 string record  00004 string record  7648      
+10          11.0        5.5         00010 string record  00005 string record  7648      
+10          11.0        6.6         00010 string record  00006 string record  7648      
+10          11.0        7.7         00010 string record  00007 string record  7648      
+10          11.0        8.8         00010 string record  00008 string record  7648      
+10          11.0        9.9         00010 string record  00009 string record  7648      
+11          12.1        0.0         00011 string record  00000 string record  10153     
+11          12.1        1.1         00011 string record  00001 string record  10153     
+11          12.1        2.2         00011 string record  00002 string record  10153     
+11          12.1        3.3         00011 string record  00003 string record  10153     
+11          12.1        4.4         00011 string record  00004 string record  10153     
+11          12.1        5.5         00011 string record  00005 string record  10153     
+11          12.1        6.6         00011 string record  00006 string record  10153     
+11          12.1        7.7         00011 string record  00007 string record  10153     
+11          12.1        8.8         00011 string record  00008 string record  10153     
+11          12.1        9.9         00011 string record  00009 string record  10153     
+12          13.2        0.0         00012 string record  00000 string record  31851     
+12          13.2        1.1         00012 string record  00001 string record  31851     
+12          13.2        2.2         00012 string record  00002 string record  31851     
+12          13.2        3.3         00012 string record  00003 string record  31851     
+12          13.2        4.4         00012 string record  00004 string record  31851     
+12          13.2        5.5         00012 string record  00005 string record  31851     
+12          13.2        6.6         00012 string record  00006 string record  31851     
+12          13.2        7.7         00012 string record  00007 string record  31851     
+12          13.2        8.8         00012 string record  00008 string record  31851     
+12          13.2        9.9         00012 string record  00009 string record  31851     
+13          14.3        0.0         00013 string record  00000 string record  25573     
+13          14.3        1.1         00013 string record  00001 string record  25573     
+13          14.3        2.2         00013 string record  00002 string record  25573     
+13          14.3        3.3         00013 string record  00003 string record  25573     
+13          14.3        4.4         00013 string record  00004 string record  25573     
+13          14.3        5.5         00013 string record  00005 string record  25573     
+13          14.3        6.6         00013 string record  00006 string record  25573     
+13          14.3        7.7         00013 string record  00007 string record  25573     
+13          14.3        8.8         00013 string record  00008 string record  25573     
+13          14.3        9.9         00013 string record  00009 string record  25573     
+14          15.4        0.0         00014 string record  00000 string record  23765     
+14          15.4        1.1         00014 string record  00001 string record  23765     
+14          15.4        2.2         00014 string record  00002 string record  23765     
+14          15.4        3.3         00014 string record  00003 string record  23765     
+14          15.4        4.4         00014 string record  00004 string record  23765     
+14          15.4        5.5         00014 string record  00005 string record  23765     
+14          15.4        6.6         00014 string record  00006 string record  23765     
+14          15.4        7.7         00014 string record  00007 string record  23765     
+14          15.4        8.8         00014 string record  00008 string record  23765     
+14          15.4        9.9         00014 string record  00009 string record  23765     
+15          16.5        0.0         00015 string record  00000 string record  8758      
+15          16.5        1.1         00015 string record  00001 string record  8758      
+15          16.5        2.2         00015 string record  00002 string record  8758      
+15          16.5        3.3         00015 string record  00003 string record  8758      
+15          16.5        4.4         00015 string record  00004 string record  8758      
+15          16.5        5.5         00015 string record  00005 string record  8758      
+15          16.5        6.6         00015 string record  00006 string record  8758      
+15          16.5        7.7         00015 string record  00007 string record  8758      
+15          16.5        8.8         00015 string record  00008 string record  8758      
+15          16.5        9.9         00015 string record  00009 string record  8758      
+16          17.6        0.0         00016 string record  00000 string record  18243     
+16          17.6        1.1         00016 string record  00001 string record  18243     
+16          17.6        2.2         00016 string record  00002 string record  18243     
+16          17.6        3.3         00016 string record  00003 string record  18243     
+16          17.6        4.4         00016 string record  00004 string record  18243     
+16          17.6        5.5         00016 string record  00005 string record  18243     
+16          17.6        6.6         00016 string record  00006 string record  18243     
+16          17.6        7.7         00016 string record  00007 string record  18243     
+16          17.6        8.8         00016 string record  00008 string record  18243     
+16          17.6        9.9         00016 string record  00009 string record  18243     
+17          18.7        0.0         00017 string record  00000 string record  26285     
+17          18.7        1.1         00017 string record  00001 string record  26285     
+17          18.7        2.2         00017 string record  00002 string record  26285     
+17          18.7        3.3         00017 string record  00003 string record  26285     
+17          18.7        4.4         00017 string record  00004 string record  26285     
+17          18.7        5.5         00017 string record  00005 string record  26285     
+17          18.7        6.6         00017 string record  00006 string record  26285     
+17          18.7        7.7         00017 string record  00007 string record  26285     
+17          18.7        8.8         00017 string record  00008 string record  26285     
+17          18.7        9.9         00017 string record  00009 string record  26285     
+18          19.8        0.0         00018 string record  00000 string record  32157     
+18          19.8        1.1         00018 string record  00001 string record  32157     
+18          19.8        2.2         00018 string record  00002 string record  32157     
+18          19.8        3.3         00018 string record  00003 string record  32157     
+18          19.8        4.4         00018 string record  00004 string record  32157     
+18          19.8        5.5         00018 string record  00005 string record  32157     
+18          19.8        6.6         00018 string record  00006 string record  32157     
+18          19.8        7.7         00018 string record  00007 string record  32157     
+18          19.8        8.8         00018 string record  00008 string record  32157     
+18          19.8        9.9         00018 string record  00009 string record  32157     
+19          20.9        0.0         00019 string record  00000 string record  21879     
+19          20.9        1.1         00019 string record  00001 string record  21879     
+19          20.9        2.2         00019 string record  00002 string record  21879     
+19          20.9        3.3         00019 string record  00003 string record  21879     
+19          20.9        4.4         00019 string record  00004 string record  21879     
+19          20.9        5.5         00019 string record  00005 string record  21879     
+19          20.9        6.6         00019 string record  00006 string record  21879     
+19          20.9        7.7         00019 string record  00007 string record  21879     
+19          20.9        8.8         00019 string record  00008 string record  21879     
+19          20.9        9.9         00019 string record  00009 string record  21879     
+DA.serial   DA.ikey     DB.ikey     DA.filler            DB.filler            DA.dkey   
+----------  ----------  ----------  -------------------  -------------------  ----------
+0           11618       24529       00000 string record  00001 string record  0.0       
+0           11618       1440        00000 string record  00002 string record  0.0       
+0           11618       20441       00000 string record  00003 string record  0.0       
+0           11618       8210        00000 string record  00004 string record  0.0       
+0           11618       31830       00000 string record  00005 string record  0.0       
+0           11618       18816       00000 string record  00006 string record  0.0       
+0           11618       22849       00000 string record  00007 string record  0.0       
+0           11618       28448       00000 string record  00008 string record  0.0       
+0           11618       27189       00000 string record  00009 string record  0.0       
+1           15378       23798       00001 string record  00000 string record  1.1       
+1           15378       1440        00001 string record  00002 string record  1.1       
+1           15378       20441       00001 string record  00003 string record  1.1       
+1           15378       8210        00001 string record  00004 string record  1.1       
+1           15378       31830       00001 string record  00005 string record  1.1       
+1           15378       18816       00001 string record  00006 string record  1.1       
+1           15378       22849       00001 string record  00007 string record  1.1       
+1           15378       28448       00001 string record  00008 string record  1.1       
+1           15378       27189       00001 string record  00009 string record  1.1       
+2           17233       23798       00002 string record  00000 string record  2.2       
+2           17233       24529       00002 string record  00001 string record  2.2       
+2           17233       20441       00002 string record  00003 string record  2.2       
+2           17233       8210        00002 string record  00004 string record  2.2       
+2           17233       31830       00002 string record  00005 string record  2.2       
+2           17233       18816       00002 string record  00006 string record  2.2       
+2           17233       22849       00002 string record  00007 string record  2.2       
+2           17233       28448       00002 string record  00008 string record  2.2       
+2           17233       27189       00002 string record  00009 string record  2.2       
+3           19052       23798       00003 string record  00000 string record  3.3       
+3           19052       24529       00003 string record  00001 string record  3.3       
+3           19052       1440        00003 string record  00002 string record  3.3       
+3           19052       8210        00003 string record  00004 string record  3.3       
+3           19052       31830       00003 string record  00005 string record  3.3       
+3           19052       18816       00003 string record  00006 string record  3.3       
+3           19052       22849       00003 string record  00007 string record  3.3       
+3           19052       28448       00003 string record  00008 string record  3.3       
+3           19052       27189       00003 string record  00009 string record  3.3       
+4           24069       23798       00004 string record  00000 string record  4.4       
+4           24069       24529       00004 string record  00001 string record  4.4       
+4           24069       1440        00004 string record  00002 string record  4.4       
+4           24069       20441       00004 string record  00003 string record  4.4       
+4           24069       31830       00004 string record  00005 string record  4.4       
+4           24069       18816       00004 string record  00006 string record  4.4       
+4           24069       22849       00004 string record  00007 string record  4.4       
+4           24069       28448       00004 string record  00008 string record  4.4       
+4           24069       27189       00004 string record  00009 string record  4.4       
+5           17188       23798       00005 string record  00000 string record  5.5       
+5           17188       24529       00005 string record  00001 string record  5.5       
+5           17188       1440        00005 string record  00002 string record  5.5       
+5           17188       20441       00005 string record  00003 string record  5.5       
+5           17188       8210        00005 string record  00004 string record  5.5       
+5           17188       18816       00005 string record  00006 string record  5.5       
+5           17188       22849       00005 string record  00007 string record  5.5       
+5           17188       28448       00005 string record  00008 string record  5.5       
+5           17188       27189       00005 string record  00009 string record  5.5       
+6           28769       23798       00006 string record  00000 string record  6.6       
+6           28769       24529       00006 string record  00001 string record  6.6       
+6           28769       1440        00006 string record  00002 string record  6.6       
+6           28769       20441       00006 string record  00003 string record  6.6       
+6           28769       8210        00006 string record  00004 string record  6.6       
+6           28769       31830       00006 string record  00005 string record  6.6       
+6           28769       22849       00006 string record  00007 string record  6.6       
+6           28769       28448       00006 string record  00008 string record  6.6       
+6           28769       27189       00006 string record  00009 string record  6.6       
+7           15168       23798       00007 string record  00000 string record  7.7       
+7           15168       24529       00007 string record  00001 string record  7.7       
+7           15168       1440        00007 string record  00002 string record  7.7       
+7           15168       20441       00007 string record  00003 string record  7.7       
+7           15168       8210        00007 string record  00004 string record  7.7       
+7           15168       31830       00007 string record  00005 string record  7.7       
+7           15168       18816       00007 string record  00006 string record  7.7       
+7           15168       28448       00007 string record  00008 string record  7.7       
+7           15168       27189       00007 string record  00009 string record  7.7       
+8           578         23798       00008 string record  00000 string record  8.8       
+8           578         24529       00008 string record  00001 string record  8.8       
+8           578         1440        00008 string record  00002 string record  8.8       
+8           578         20441       00008 string record  00003 string record  8.8       
+8           578         8210        00008 string record  00004 string record  8.8       
+8           578         31830       00008 string record  00005 string record  8.8       
+8           578         18816       00008 string record  00006 string record  8.8       
+8           578         22849       00008 string record  00007 string record  8.8       
+8           578         27189       00008 string record  00009 string record  8.8       
+9           21055       23798       00009 string record  00000 string record  9.9       
+9           21055       24529       00009 string record  00001 string record  9.9       
+9           21055       1440        00009 string record  00002 string record  9.9       
+9           21055       20441       00009 string record  00003 string record  9.9       
+9           21055       8210        00009 string record  00004 string record  9.9       
+9           21055       31830       00009 string record  00005 string record  9.9       
+9           21055       18816       00009 string record  00006 string record  9.9       
+9           21055       22849       00009 string record  00007 string record  9.9       
+9           21055       28448       00009 string record  00008 string record  9.9       
+10          7648        23798       00010 string record  00000 string record  11.0      
+10          7648        24529       00010 string record  00001 string record  11.0      
+10          7648        1440        00010 string record  00002 string record  11.0      
+10          7648        20441       00010 string record  00003 string record  11.0      
+10          7648        8210        00010 string record  00004 string record  11.0      
+10          7648        31830       00010 string record  00005 string record  11.0      
+10          7648        18816       00010 string record  00006 string record  11.0      
+10          7648        22849       00010 string record  00007 string record  11.0      
+10          7648        28448       00010 string record  00008 string record  11.0      
+10          7648        27189       00010 string record  00009 string record  11.0      
+11          10153       23798       00011 string record  00000 string record  12.1      
+11          10153       24529       00011 string record  00001 string record  12.1      
+11          10153       1440        00011 string record  00002 string record  12.1      
+11          10153       20441       00011 string record  00003 string record  12.1      
+11          10153       8210        00011 string record  00004 string record  12.1      
+11          10153       31830       00011 string record  00005 string record  12.1      
+11          10153       18816       00011 string record  00006 string record  12.1      
+11          10153       22849       00011 string record  00007 string record  12.1      
+11          10153       28448       00011 string record  00008 string record  12.1      
+11          10153       27189       00011 string record  00009 string record  12.1      
+12          31851       23798       00012 string record  00000 string record  13.2      
+12          31851       24529       00012 string record  00001 string record  13.2      
+12          31851       1440        00012 string record  00002 string record  13.2      
+12          31851       20441       00012 string record  00003 string record  13.2      
+12          31851       8210        00012 string record  00004 string record  13.2      
+12          31851       31830       00012 string record  00005 string record  13.2      
+12          31851       18816       00012 string record  00006 string record  13.2      
+12          31851       22849       00012 string record  00007 string record  13.2      
+12          31851       28448       00012 string record  00008 string record  13.2      
+12          31851       27189       00012 string record  00009 string record  13.2      
+13          25573       23798       00013 string record  00000 string record  14.3      
+13          25573       24529       00013 string record  00001 string record  14.3      
+13          25573       1440        00013 string record  00002 string record  14.3      
+13          25573       20441       00013 string record  00003 string record  14.3      
+13          25573       8210        00013 string record  00004 string record  14.3      
+13          25573       31830       00013 string record  00005 string record  14.3      
+13          25573       18816       00013 string record  00006 string record  14.3      
+13          25573       22849       00013 string record  00007 string record  14.3      
+13          25573       28448       00013 string record  00008 string record  14.3      
+13          25573       27189       00013 string record  00009 string record  14.3      
+14          23765       23798       00014 string record  00000 string record  15.4      
+14          23765       24529       00014 string record  00001 string record  15.4      
+14          23765       1440        00014 string record  00002 string record  15.4      
+14          23765       20441       00014 string record  00003 string record  15.4      
+14          23765       8210        00014 string record  00004 string record  15.4      
+14          23765       31830       00014 string record  00005 string record  15.4      
+14          23765       18816       00014 string record  00006 string record  15.4      
+14          23765       22849       00014 string record  00007 string record  15.4      
+14          23765       28448       00014 string record  00008 string record  15.4      
+14          23765       27189       00014 string record  00009 string record  15.4      
+15          8758        23798       00015 string record  00000 string record  16.5      
+15          8758        24529       00015 string record  00001 string record  16.5      
+15          8758        1440        00015 string record  00002 string record  16.5      
+15          8758        20441       00015 string record  00003 string record  16.5      
+15          8758        8210        00015 string record  00004 string record  16.5      
+15          8758        31830       00015 string record  00005 string record  16.5      
+15          8758        18816       00015 string record  00006 string record  16.5      
+15          8758        22849       00015 string record  00007 string record  16.5      
+15          8758        28448       00015 string record  00008 string record  16.5      
+15          8758        27189       00015 string record  00009 string record  16.5      
+16          18243       23798       00016 string record  00000 string record  17.6      
+16          18243       24529       00016 string record  00001 string record  17.6      
+16          18243       1440        00016 string record  00002 string record  17.6      
+16          18243       20441       00016 string record  00003 string record  17.6      
+16          18243       8210        00016 string record  00004 string record  17.6      
+16          18243       31830       00016 string record  00005 string record  17.6      
+16          18243       18816       00016 string record  00006 string record  17.6      
+16          18243       22849       00016 string record  00007 string record  17.6      
+16          18243       28448       00016 string record  00008 string record  17.6      
+16          18243       27189       00016 string record  00009 string record  17.6      
+17          26285       23798       00017 string record  00000 string record  18.7      
+17          26285       24529       00017 string record  00001 string record  18.7      
+17          26285       1440        00017 string record  00002 string record  18.7      
+17          26285       20441       00017 string record  00003 string record  18.7      
+17          26285       8210        00017 string record  00004 string record  18.7      
+17          26285       31830       00017 string record  00005 string record  18.7      
+17          26285       18816       00017 string record  00006 string record  18.7      
+17          26285       22849       00017 string record  00007 string record  18.7      
+17          26285       28448       00017 string record  00008 string record  18.7      
+17          26285       27189       00017 string record  00009 string record  18.7      
+18          32157       23798       00018 string record  00000 string record  19.8      
+18          32157       24529       00018 string record  00001 string record  19.8      
+18          32157       1440        00018 string record  00002 string record  19.8      
+18          32157       20441       00018 string record  00003 string record  19.8      
+18          32157       8210        00018 string record  00004 string record  19.8      
+18          32157       31830       00018 string record  00005 string record  19.8      
+18          32157       18816       00018 string record  00006 string record  19.8      
+18          32157       22849       00018 string record  00007 string record  19.8      
+18          32157       28448       00018 string record  00008 string record  19.8      
+18          32157       27189       00018 string record  00009 string record  19.8      
+19          21879       23798       00019 string record  00000 string record  20.9      
+19          21879       24529       00019 string record  00001 string record  20.9      
+19          21879       1440        00019 string record  00002 string record  20.9      
+19          21879       20441       00019 string record  00003 string record  20.9      
+19          21879       8210        00019 string record  00004 string record  20.9      
+19          21879       31830       00019 string record  00005 string record  20.9      
+19          21879       18816       00019 string record  00006 string record  20.9      
+19          21879       22849       00019 string record  00007 string record  20.9      
+19          21879       28448       00019 string record  00008 string record  20.9      
+19          21879       27189       00019 string record  00009 string record  20.9      
+DA.serial   DA.ikey     DB.ikey     DA.dkey     DB.dkey     DA.filler          
+----------  ----------  ----------  ----------  ----------  -------------------
+0           11618       24529       0.0         1.1         00000 string record
+0           11618       1440        0.0         2.2         00000 string record
+0           11618       20441       0.0         3.3         00000 string record
+0           11618       8210        0.0         4.4         00000 string record
+0           11618       31830       0.0         5.5         00000 string record
+0           11618       18816       0.0         6.6         00000 string record
+0           11618       22849       0.0         7.7         00000 string record
+0           11618       28448       0.0         8.8         00000 string record
+0           11618       27189       0.0         9.9         00000 string record
+1           15378       23798       1.1         0.0         00001 string record
+1           15378       1440        1.1         2.2         00001 string record
+1           15378       20441       1.1         3.3         00001 string record
+1           15378       8210        1.1         4.4         00001 string record
+1           15378       31830       1.1         5.5         00001 string record
+1           15378       18816       1.1         6.6         00001 string record
+1           15378       22849       1.1         7.7         00001 string record
+1           15378       28448       1.1         8.8         00001 string record
+1           15378       27189       1.1         9.9         00001 string record
+2           17233       23798       2.2         0.0         00002 string record
+2           17233       24529       2.2         1.1         00002 string record
+2           17233       20441       2.2         3.3         00002 string record
+2           17233       8210        2.2         4.4         00002 string record
+2           17233       31830       2.2         5.5         00002 string record
+2           17233       18816       2.2         6.6         00002 string record
+2           17233       22849       2.2         7.7         00002 string record
+2           17233       28448       2.2         8.8         00002 string record
+2           17233       27189       2.2         9.9         00002 string record
+3           19052       23798       3.3         0.0         00003 string record
+3           19052       24529       3.3         1.1         00003 string record
+3           19052       1440        3.3         2.2         00003 string record
+3           19052       8210        3.3         4.4         00003 string record
+3           19052       31830       3.3         5.5         00003 string record
+3           19052       18816       3.3         6.6         00003 string record
+3           19052       22849       3.3         7.7         00003 string record
+3           19052       28448       3.3         8.8         00003 string record
+3           19052       27189       3.3         9.9         00003 string record
+4           24069       23798       4.4         0.0         00004 string record
+4           24069       24529       4.4         1.1         00004 string record
+4           24069       1440        4.4         2.2         00004 string record
+4           24069       20441       4.4         3.3         00004 string record
+4           24069       31830       4.4         5.5         00004 string record
+4           24069       18816       4.4         6.6         00004 string record
+4           24069       22849       4.4         7.7         00004 string record
+4           24069       28448       4.4         8.8         00004 string record
+4           24069       27189       4.4         9.9         00004 string record
+5           17188       23798       5.5         0.0         00005 string record
+5           17188       24529       5.5         1.1         00005 string record
+5           17188       1440        5.5         2.2         00005 string record
+5           17188       20441       5.5         3.3         00005 string record
+5           17188       8210        5.5         4.4         00005 string record
+5           17188       18816       5.5         6.6         00005 string record
+5           17188       22849       5.5         7.7         00005 string record
+5           17188       28448       5.5         8.8         00005 string record
+5           17188       27189       5.5         9.9         00005 string record
+6           28769       23798       6.6         0.0         00006 string record
+6           28769       24529       6.6         1.1         00006 string record
+6           28769       1440        6.6         2.2         00006 string record
+6           28769       20441       6.6         3.3         00006 string record
+6           28769       8210        6.6         4.4         00006 string record
+6           28769       31830       6.6         5.5         00006 string record
+6           28769       22849       6.6         7.7         00006 string record
+6           28769       28448       6.6         8.8         00006 string record
+6           28769       27189       6.6         9.9         00006 string record
+7           15168       23798       7.7         0.0         00007 string record
+7           15168       24529       7.7         1.1         00007 string record
+7           15168       1440        7.7         2.2         00007 string record
+7           15168       20441       7.7         3.3         00007 string record
+7           15168       8210        7.7         4.4         00007 string record
+7           15168       31830       7.7         5.5         00007 string record
+7           15168       18816       7.7         6.6         00007 string record
+7           15168       28448       7.7         8.8         00007 string record
+7           15168       27189       7.7         9.9         00007 string record
+8           578         23798       8.8         0.0         00008 string record
+8           578         24529       8.8         1.1         00008 string record
+8           578         1440        8.8         2.2         00008 string record
+8           578         20441       8.8         3.3         00008 string record
+8           578         8210        8.8         4.4         00008 string record
+8           578         31830       8.8         5.5         00008 string record
+8           578         18816       8.8         6.6         00008 string record
+8           578         22849       8.8         7.7         00008 string record
+8           578         27189       8.8         9.9         00008 string record
+9           21055       23798       9.9         0.0         00009 string record
+9           21055       24529       9.9         1.1         00009 string record
+9           21055       1440        9.9         2.2         00009 string record
+9           21055       20441       9.9         3.3         00009 string record
+9           21055       8210        9.9         4.4         00009 string record
+9           21055       31830       9.9         5.5         00009 string record
+9           21055       18816       9.9         6.6         00009 string record
+9           21055       22849       9.9         7.7         00009 string record
+9           21055       28448       9.9         8.8         00009 string record
+10          7648        23798       11.0        0.0         00010 string record
+10          7648        24529       11.0        1.1         00010 string record
+10          7648        1440        11.0        2.2         00010 string record
+10          7648        20441       11.0        3.3         00010 string record
+10          7648        8210        11.0        4.4         00010 string record
+10          7648        31830       11.0        5.5         00010 string record
+10          7648        18816       11.0        6.6         00010 string record
+10          7648        22849       11.0        7.7         00010 string record
+10          7648        28448       11.0        8.8         00010 string record
+10          7648        27189       11.0        9.9         00010 string record
+11          10153       23798       12.1        0.0         00011 string record
+11          10153       24529       12.1        1.1         00011 string record
+11          10153       1440        12.1        2.2         00011 string record
+11          10153       20441       12.1        3.3         00011 string record
+11          10153       8210        12.1        4.4         00011 string record
+11          10153       31830       12.1        5.5         00011 string record
+11          10153       18816       12.1        6.6         00011 string record
+11          10153       22849       12.1        7.7         00011 string record
+11          10153       28448       12.1        8.8         00011 string record
+11          10153       27189       12.1        9.9         00011 string record
+12          31851       23798       13.2        0.0         00012 string record
+12          31851       24529       13.2        1.1         00012 string record
+12          31851       1440        13.2        2.2         00012 string record
+12          31851       20441       13.2        3.3         00012 string record
+12          31851       8210        13.2        4.4         00012 string record
+12          31851       31830       13.2        5.5         00012 string record
+12          31851       18816       13.2        6.6         00012 string record
+12          31851       22849       13.2        7.7         00012 string record
+12          31851       28448       13.2        8.8         00012 string record
+12          31851       27189       13.2        9.9         00012 string record
+13          25573       23798       14.3        0.0         00013 string record
+13          25573       24529       14.3        1.1         00013 string record
+13          25573       1440        14.3        2.2         00013 string record
+13          25573       20441       14.3        3.3         00013 string record
+13          25573       8210        14.3        4.4         00013 string record
+13          25573       31830       14.3        5.5         00013 string record
+13          25573       18816       14.3        6.6         00013 string record
+13          25573       22849       14.3        7.7         00013 string record
+13          25573       28448       14.3        8.8         00013 string record
+13          25573       27189       14.3        9.9         00013 string record
+14          23765       23798       15.4        0.0         00014 string record
+14          23765       24529       15.4        1.1         00014 string record
+14          23765       1440        15.4        2.2         00014 string record
+14          23765       20441       15.4        3.3         00014 string record
+14          23765       8210        15.4        4.4         00014 string record
+14          23765       31830       15.4        5.5         00014 string record
+14          23765       18816       15.4        6.6         00014 string record
+14          23765       22849       15.4        7.7         00014 string record
+14          23765       28448       15.4        8.8         00014 string record
+14          23765       27189       15.4        9.9         00014 string record
+15          8758        23798       16.5        0.0         00015 string record
+15          8758        24529       16.5        1.1         00015 string record
+15          8758        1440        16.5        2.2         00015 string record
+15          8758        20441       16.5        3.3         00015 string record
+15          8758        8210        16.5        4.4         00015 string record
+15          8758        31830       16.5        5.5         00015 string record
+15          8758        18816       16.5        6.6         00015 string record
+15          8758        22849       16.5        7.7         00015 string record
+15          8758        28448       16.5        8.8         00015 string record
+15          8758        27189       16.5        9.9         00015 string record
+16          18243       23798       17.6        0.0         00016 string record
+16          18243       24529       17.6        1.1         00016 string record
+16          18243       1440        17.6        2.2         00016 string record
+16          18243       20441       17.6        3.3         00016 string record
+16          18243       8210        17.6        4.4         00016 string record
+16          18243       31830       17.6        5.5         00016 string record
+16          18243       18816       17.6        6.6         00016 string record
+16          18243       22849       17.6        7.7         00016 string record
+16          18243       28448       17.6        8.8         00016 string record
+16          18243       27189       17.6        9.9         00016 string record
+17          26285       23798       18.7        0.0         00017 string record
+17          26285       24529       18.7        1.1         00017 string record
+17          26285       1440        18.7        2.2         00017 string record
+17          26285       20441       18.7        3.3         00017 string record
+17          26285       8210        18.7        4.4         00017 string record
+17          26285       31830       18.7        5.5         00017 string record
+17          26285       18816       18.7        6.6         00017 string record
+17          26285       22849       18.7        7.7         00017 string record
+17          26285       28448       18.7        8.8         00017 string record
+17          26285       27189       18.7        9.9         00017 string record
+18          32157       23798       19.8        0.0         00018 string record
+18          32157       24529       19.8        1.1         00018 string record
+18          32157       1440        19.8        2.2         00018 string record
+18          32157       20441       19.8        3.3         00018 string record
+18          32157       8210        19.8        4.4         00018 string record
+18          32157       31830       19.8        5.5         00018 string record
+18          32157       18816       19.8        6.6         00018 string record
+18          32157       22849       19.8        7.7         00018 string record
+18          32157       28448       19.8        8.8         00018 string record
+18          32157       27189       19.8        9.9         00018 string record
+19          21879       23798       20.9        0.0         00019 string record
+19          21879       24529       20.9        1.1         00019 string record
+19          21879       1440        20.9        2.2         00019 string record
+19          21879       20441       20.9        3.3         00019 string record
+19          21879       8210        20.9        4.4         00019 string record
+19          21879       31830       20.9        5.5         00019 string record
+19          21879       18816       20.9        6.6         00019 string record
+19          21879       22849       20.9        7.7         00019 string record
+19          21879       28448       20.9        8.8         00019 string record
+19          21879       27189       20.9        9.9         00019 string record

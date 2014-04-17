@@ -1,0 +1,1420 @@
+Welcome to Minirel
+1 --> Query:  create table da (serial integer, ikey integer, filler char(80), dkey double);
+2 --> Query:  create table db (serial integer, ikey integer, filler char(80), dkey double);
+3 --> Query:  insert into da (serial, ikey, filler, dkey) values (0, 11618, 00000 string record, 0.0);
+4 --> Query:  insert into da (serial, ikey, filler, dkey) values (1, 15378, 00001 string record, 1.1);
+5 --> Query:  insert into da (serial, ikey, filler, dkey) values (2, 17233, 00002 string record, 2.2);
+6 --> Query:  insert into da (serial, ikey, filler, dkey) values (3, 19052, 00003 string record, 3.3);
+7 --> Query:  insert into da (serial, ikey, filler, dkey) values (4, 24069, 00004 string record, 4.4);
+8 --> Query:  insert into da (serial, ikey, filler, dkey) values (5, 17188, 00005 string record, 5.5);
+9 --> Query:  insert into da (serial, ikey, filler, dkey) values (6, 28769, 00006 string record, 6.6);
+10 --> Query:  insert into da (serial, ikey, filler, dkey) values (7, 15168, 00007 string record, 7.7);
+11 --> Query:  insert into da (serial, ikey, filler, dkey) values (8, 578, 00008 string record, 8.8);
+12 --> Query:  insert into da (serial, ikey, filler, dkey) values (9, 21055, 00009 string record, 9.9);
+13 --> Query:  insert into da (serial, ikey, filler, dkey) values (10, 7648, 00010 string record, 11.0);
+14 --> Query:  insert into da (serial, ikey, filler, dkey) values (11, 10153, 00011 string record, 12.1);
+15 --> Query:  insert into da (serial, ikey, filler, dkey) values (12, 31851, 00012 string record, 13.2);
+16 --> Query:  insert into da (serial, ikey, filler, dkey) values (13, 25573, 00013 string record, 14.3);
+17 --> Query:  insert into da (serial, ikey, filler, dkey) values (14, 23765, 00014 string record, 15.4);
+18 --> Query:  insert into da (serial, ikey, filler, dkey) values (15, 8758, 00015 string record, 16.5);
+19 --> Query:  insert into da (serial, ikey, filler, dkey) values (16, 18243, 00016 string record, 17.6);
+20 --> Query:  insert into da (serial, ikey, filler, dkey) values (17, 26285, 00017 string record, 18.7);
+21 --> Query:  insert into da (serial, ikey, filler, dkey) values (18, 32157, 00018 string record, 19.8);
+22 --> Query:  insert into da (serial, ikey, filler, dkey) values (19, 21879, 00019 string record, 20.9);
+23 --> Query:  insert into db (serial, ikey, filler, dkey) values (0, 23798, 00000 string record, 0.0);
+24 --> Query:  insert into db (serial, ikey, filler, dkey) values (1, 24529, 00001 string record, 1.1);
+25 --> Query:  insert into db (serial, ikey, filler, dkey) values (2, 1440, 00002 string record, 2.2);
+26 --> Query:  insert into db (serial, ikey, filler, dkey) values (3, 20441, 00003 string record, 3.3);
+27 --> Query:  insert into db (serial, ikey, filler, dkey) values (4, 8210, 00004 string record, 4.4);
+28 --> Query:  insert into db (serial, ikey, filler, dkey) values (5, 31830, 00005 string record, 5.5);
+29 --> Query:  insert into db (serial, ikey, filler, dkey) values (6, 18816, 00006 string record, 6.6);
+30 --> Query:  insert into db (serial, ikey, filler, dkey) values (7, 22849, 00007 string record, 7.7);
+31 --> Query:  insert into db (serial, ikey, filler, dkey) values (8, 28448, 00008 string record, 8.8);
+32 --> Query:  insert into db (serial, ikey, filler, dkey) values (9, 27189, 00009 string record, 9.9);
+33 --> Query:  select da.serial, da.ikey, db.ikey, da.dkey, db.dkey, da.filler, db.filler from da, db where da.ikey < db.ikey;
+Algorithm: Simple NL Join
+serial.  ikey.1  ikey.2  dkey.3  dkey.4  filler.5         filler.6         
+-------  ------  ------  ------  ------  ---------------  ---------------  
+0        11618   23798   0.00    0.00    00000 string re  00000 string re  
+1        15378   23798   1.10    0.00    00001 string re  00000 string re  
+2        17233   23798   2.20    0.00    00002 string re  00000 string re  
+3        19052   23798   3.30    0.00    00003 string re  00000 string re  
+5        17188   23798   5.50    0.00    00005 string re  00000 string re  
+7        15168   23798   7.70    0.00    00007 string re  00000 string re  
+8        578     23798   8.80    0.00    00008 string re  00000 string re  
+9        21055   23798   9.90    0.00    00009 string re  00000 string re  
+10       7648    23798   11.00   0.00    00010 string re  00000 string re  
+11       10153   23798   12.10   0.00    00011 string re  00000 string re  
+14       23765   23798   15.40   0.00    00014 string re  00000 string re  
+15       8758    23798   16.50   0.00    00015 string re  00000 string re  
+16       18243   23798   17.60   0.00    00016 string re  00000 string re  
+19       21879   23798   20.90   0.00    00019 string re  00000 string re  
+0        11618   24529   0.00    1.10    00000 string re  00001 string re  
+1        15378   24529   1.10    1.10    00001 string re  00001 string re  
+2        17233   24529   2.20    1.10    00002 string re  00001 string re  
+3        19052   24529   3.30    1.10    00003 string re  00001 string re  
+4        24069   24529   4.40    1.10    00004 string re  00001 string re  
+5        17188   24529   5.50    1.10    00005 string re  00001 string re  
+7        15168   24529   7.70    1.10    00007 string re  00001 string re  
+8        578     24529   8.80    1.10    00008 string re  00001 string re  
+9        21055   24529   9.90    1.10    00009 string re  00001 string re  
+10       7648    24529   11.00   1.10    00010 string re  00001 string re  
+11       10153   24529   12.10   1.10    00011 string re  00001 string re  
+14       23765   24529   15.40   1.10    00014 string re  00001 string re  
+15       8758    24529   16.50   1.10    00015 string re  00001 string re  
+16       18243   24529   17.60   1.10    00016 string re  00001 string re  
+19       21879   24529   20.90   1.10    00019 string re  00001 string re  
+8        578     1440    8.80    2.20    00008 string re  00002 string re  
+0        11618   20441   0.00    3.30    00000 string re  00003 string re  
+1        15378   20441   1.10    3.30    00001 string re  00003 string re  
+2        17233   20441   2.20    3.30    00002 string re  00003 string re  
+3        19052   20441   3.30    3.30    00003 string re  00003 string re  
+5        17188   20441   5.50    3.30    00005 string re  00003 string re  
+7        15168   20441   7.70    3.30    00007 string re  00003 string re  
+8        578     20441   8.80    3.30    00008 string re  00003 string re  
+10       7648    20441   11.00   3.30    00010 string re  00003 string re  
+11       10153   20441   12.10   3.30    00011 string re  00003 string re  
+15       8758    20441   16.50   3.30    00015 string re  00003 string re  
+16       18243   20441   17.60   3.30    00016 string re  00003 string re  
+8        578     8210    8.80    4.40    00008 string re  00004 string re  
+10       7648    8210    11.00   4.40    00010 string re  00004 string re  
+0        11618   31830   0.00    5.50    00000 string re  00005 string re  
+1        15378   31830   1.10    5.50    00001 string re  00005 string re  
+2        17233   31830   2.20    5.50    00002 string re  00005 string re  
+3        19052   31830   3.30    5.50    00003 string re  00005 string re  
+4        24069   31830   4.40    5.50    00004 string re  00005 string re  
+5        17188   31830   5.50    5.50    00005 string re  00005 string re  
+6        28769   31830   6.60    5.50    00006 string re  00005 string re  
+7        15168   31830   7.70    5.50    00007 string re  00005 string re  
+8        578     31830   8.80    5.50    00008 string re  00005 string re  
+9        21055   31830   9.90    5.50    00009 string re  00005 string re  
+10       7648    31830   11.00   5.50    00010 string re  00005 string re  
+11       10153   31830   12.10   5.50    00011 string re  00005 string re  
+13       25573   31830   14.30   5.50    00013 string re  00005 string re  
+14       23765   31830   15.40   5.50    00014 string re  00005 string re  
+15       8758    31830   16.50   5.50    00015 string re  00005 string re  
+16       18243   31830   17.60   5.50    00016 string re  00005 string re  
+17       26285   31830   18.70   5.50    00017 string re  00005 string re  
+19       21879   31830   20.90   5.50    00019 string re  00005 string re  
+0        11618   18816   0.00    6.60    00000 string re  00006 string re  
+1        15378   18816   1.10    6.60    00001 string re  00006 string re  
+2        17233   18816   2.20    6.60    00002 string re  00006 string re  
+5        17188   18816   5.50    6.60    00005 string re  00006 string re  
+7        15168   18816   7.70    6.60    00007 string re  00006 string re  
+8        578     18816   8.80    6.60    00008 string re  00006 string re  
+10       7648    18816   11.00   6.60    00010 string re  00006 string re  
+11       10153   18816   12.10   6.60    00011 string re  00006 string re  
+15       8758    18816   16.50   6.60    00015 string re  00006 string re  
+16       18243   18816   17.60   6.60    00016 string re  00006 string re  
+0        11618   22849   0.00    7.70    00000 string re  00007 string re  
+1        15378   22849   1.10    7.70    00001 string re  00007 string re  
+2        17233   22849   2.20    7.70    00002 string re  00007 string re  
+3        19052   22849   3.30    7.70    00003 string re  00007 string re  
+5        17188   22849   5.50    7.70    00005 string re  00007 string re  
+7        15168   22849   7.70    7.70    00007 string re  00007 string re  
+8        578     22849   8.80    7.70    00008 string re  00007 string re  
+9        21055   22849   9.90    7.70    00009 string re  00007 string re  
+10       7648    22849   11.00   7.70    00010 string re  00007 string re  
+11       10153   22849   12.10   7.70    00011 string re  00007 string re  
+15       8758    22849   16.50   7.70    00015 string re  00007 string re  
+16       18243   22849   17.60   7.70    00016 string re  00007 string re  
+19       21879   22849   20.90   7.70    00019 string re  00007 string re  
+0        11618   28448   0.00    8.80    00000 string re  00008 string re  
+1        15378   28448   1.10    8.80    00001 string re  00008 string re  
+2        17233   28448   2.20    8.80    00002 string re  00008 string re  
+3        19052   28448   3.30    8.80    00003 string re  00008 string re  
+4        24069   28448   4.40    8.80    00004 string re  00008 string re  
+5        17188   28448   5.50    8.80    00005 string re  00008 string re  
+7        15168   28448   7.70    8.80    00007 string re  00008 string re  
+8        578     28448   8.80    8.80    00008 string re  00008 string re  
+9        21055   28448   9.90    8.80    00009 string re  00008 string re  
+10       7648    28448   11.00   8.80    00010 string re  00008 string re  
+11       10153   28448   12.10   8.80    00011 string re  00008 string re  
+13       25573   28448   14.30   8.80    00013 string re  00008 string re  
+14       23765   28448   15.40   8.80    00014 string re  00008 string re  
+15       8758    28448   16.50   8.80    00015 string re  00008 string re  
+16       18243   28448   17.60   8.80    00016 string re  00008 string re  
+17       26285   28448   18.70   8.80    00017 string re  00008 string re  
+
+Number of records: 118
+Buf Stats: accesses = 270, disk reads = 35, disk writes = 60
+
+34 --> Query:  select da.serial, da.ikey, db.ikey, da.dkey, db.dkey, da.filler, db.filler from da, db where da.dkey < db.dkey;
+Algorithm: Simple NL Join
+serial.  ikey.1  ikey.2  dkey.3  dkey.4  filler.5         filler.6         
+-------  ------  ------  ------  ------  ---------------  ---------------  
+0        11618   24529   0.00    1.10    00000 string re  00001 string re  
+0        11618   1440    0.00    2.20    00000 string re  00002 string re  
+1        15378   1440    1.10    2.20    00001 string re  00002 string re  
+0        11618   20441   0.00    3.30    00000 string re  00003 string re  
+1        15378   20441   1.10    3.30    00001 string re  00003 string re  
+2        17233   20441   2.20    3.30    00002 string re  00003 string re  
+0        11618   8210    0.00    4.40    00000 string re  00004 string re  
+1        15378   8210    1.10    4.40    00001 string re  00004 string re  
+2        17233   8210    2.20    4.40    00002 string re  00004 string re  
+3        19052   8210    3.30    4.40    00003 string re  00004 string re  
+0        11618   31830   0.00    5.50    00000 string re  00005 string re  
+1        15378   31830   1.10    5.50    00001 string re  00005 string re  
+2        17233   31830   2.20    5.50    00002 string re  00005 string re  
+3        19052   31830   3.30    5.50    00003 string re  00005 string re  
+4        24069   31830   4.40    5.50    00004 string re  00005 string re  
+0        11618   18816   0.00    6.60    00000 string re  00006 string re  
+1        15378   18816   1.10    6.60    00001 string re  00006 string re  
+2        17233   18816   2.20    6.60    00002 string re  00006 string re  
+3        19052   18816   3.30    6.60    00003 string re  00006 string re  
+4        24069   18816   4.40    6.60    00004 string re  00006 string re  
+5        17188   18816   5.50    6.60    00005 string re  00006 string re  
+0        11618   22849   0.00    7.70    00000 string re  00007 string re  
+1        15378   22849   1.10    7.70    00001 string re  00007 string re  
+2        17233   22849   2.20    7.70    00002 string re  00007 string re  
+3        19052   22849   3.30    7.70    00003 string re  00007 string re  
+4        24069   22849   4.40    7.70    00004 string re  00007 string re  
+5        17188   22849   5.50    7.70    00005 string re  00007 string re  
+6        28769   22849   6.60    7.70    00006 string re  00007 string re  
+0        11618   28448   0.00    8.80    00000 string re  00008 string re  
+1        15378   28448   1.10    8.80    00001 string re  00008 string re  
+2        17233   28448   2.20    8.80    00002 string re  00008 string re  
+3        19052   28448   3.30    8.80    00003 string re  00008 string re  
+4        24069   28448   4.40    8.80    00004 string re  00008 string re  
+5        17188   28448   5.50    8.80    00005 string re  00008 string re  
+6        28769   28448   6.60    8.80    00006 string re  00008 string re  
+7        15168   28448   7.70    8.80    00007 string re  00008 string re  
+0        11618   27189   0.00    9.90    00000 string re  00009 string re  
+1        15378   27189   1.10    9.90    00001 string re  00009 string re  
+2        17233   27189   2.20    9.90    00002 string re  00009 string re  
+3        19052   27189   3.30    9.90    00003 string re  00009 string re  
+4        24069   27189   4.40    9.90    00004 string re  00009 string re  
+5        17188   27189   5.50    9.90    00005 string re  00009 string re  
+6        28769   27189   6.60    9.90    00006 string re  00009 string re  
+7        15168   27189   7.70    9.90    00007 string re  00009 string re  
+8        578     27189   8.80    9.90    00008 string re  00009 string re  
+
+Number of records: 45
+Buf Stats: accesses = 168, disk reads = 16, disk writes = 26
+
+35 --> Query:  select da.serial, da.ikey, db.ikey, da.dkey, db.dkey, da.filler, db.filler from da, db where da.filler < db.filler;
+Algorithm: Simple NL Join
+serial.  ikey.1  ikey.2  dkey.3  dkey.4  filler.5         filler.6         
+-------  ------  ------  ------  ------  ---------------  ---------------  
+0        11618   24529   0.00    1.10    00000 string re  00001 string re  
+0        11618   1440    0.00    2.20    00000 string re  00002 string re  
+1        15378   1440    1.10    2.20    00001 string re  00002 string re  
+0        11618   20441   0.00    3.30    00000 string re  00003 string re  
+1        15378   20441   1.10    3.30    00001 string re  00003 string re  
+2        17233   20441   2.20    3.30    00002 string re  00003 string re  
+0        11618   8210    0.00    4.40    00000 string re  00004 string re  
+1        15378   8210    1.10    4.40    00001 string re  00004 string re  
+2        17233   8210    2.20    4.40    00002 string re  00004 string re  
+3        19052   8210    3.30    4.40    00003 string re  00004 string re  
+0        11618   31830   0.00    5.50    00000 string re  00005 string re  
+1        15378   31830   1.10    5.50    00001 string re  00005 string re  
+2        17233   31830   2.20    5.50    00002 string re  00005 string re  
+3        19052   31830   3.30    5.50    00003 string re  00005 string re  
+4        24069   31830   4.40    5.50    00004 string re  00005 string re  
+0        11618   18816   0.00    6.60    00000 string re  00006 string re  
+1        15378   18816   1.10    6.60    00001 string re  00006 string re  
+2        17233   18816   2.20    6.60    00002 string re  00006 string re  
+3        19052   18816   3.30    6.60    00003 string re  00006 string re  
+4        24069   18816   4.40    6.60    00004 string re  00006 string re  
+5        17188   18816   5.50    6.60    00005 string re  00006 string re  
+0        11618   22849   0.00    7.70    00000 string re  00007 string re  
+1        15378   22849   1.10    7.70    00001 string re  00007 string re  
+2        17233   22849   2.20    7.70    00002 string re  00007 string re  
+3        19052   22849   3.30    7.70    00003 string re  00007 string re  
+4        24069   22849   4.40    7.70    00004 string re  00007 string re  
+5        17188   22849   5.50    7.70    00005 string re  00007 string re  
+6        28769   22849   6.60    7.70    00006 string re  00007 string re  
+0        11618   28448   0.00    8.80    00000 string re  00008 string re  
+1        15378   28448   1.10    8.80    00001 string re  00008 string re  
+2        17233   28448   2.20    8.80    00002 string re  00008 string re  
+3        19052   28448   3.30    8.80    00003 string re  00008 string re  
+4        24069   28448   4.40    8.80    00004 string re  00008 string re  
+5        17188   28448   5.50    8.80    00005 string re  00008 string re  
+6        28769   28448   6.60    8.80    00006 string re  00008 string re  
+7        15168   28448   7.70    8.80    00007 string re  00008 string re  
+0        11618   27189   0.00    9.90    00000 string re  00009 string re  
+1        15378   27189   1.10    9.90    00001 string re  00009 string re  
+2        17233   27189   2.20    9.90    00002 string re  00009 string re  
+3        19052   27189   3.30    9.90    00003 string re  00009 string re  
+4        24069   27189   4.40    9.90    00004 string re  00009 string re  
+5        17188   27189   5.50    9.90    00005 string re  00009 string re  
+6        28769   27189   6.60    9.90    00006 string re  00009 string re  
+7        15168   27189   7.70    9.90    00007 string re  00009 string re  
+8        578     27189   8.80    9.90    00008 string re  00009 string re  
+
+Number of records: 45
+Buf Stats: accesses = 168, disk reads = 16, disk writes = 26
+
+36 --> Query:  select da.serial, da.dkey, db.dkey, da.filler, db.filler from da, db where da.ikey <= db.ikey;
+Algorithm: Simple NL Join
+serial.  dkey.1  dkey.2  filler.3         filler.4         
+-------  ------  ------  ---------------  ---------------  
+0        0.00    0.00    00000 string re  00000 string re  
+1        1.10    0.00    00001 string re  00000 string re  
+2        2.20    0.00    00002 string re  00000 string re  
+3        3.30    0.00    00003 string re  00000 string re  
+5        5.50    0.00    00005 string re  00000 string re  
+7        7.70    0.00    00007 string re  00000 string re  
+8        8.80    0.00    00008 string re  00000 string re  
+9        9.90    0.00    00009 string re  00000 string re  
+10       11.00   0.00    00010 string re  00000 string re  
+11       12.10   0.00    00011 string re  00000 string re  
+14       15.40   0.00    00014 string re  00000 string re  
+15       16.50   0.00    00015 string re  00000 string re  
+16       17.60   0.00    00016 string re  00000 string re  
+19       20.90   0.00    00019 string re  00000 string re  
+0        0.00    1.10    00000 string re  00001 string re  
+1        1.10    1.10    00001 string re  00001 string re  
+2        2.20    1.10    00002 string re  00001 string re  
+3        3.30    1.10    00003 string re  00001 string re  
+4        4.40    1.10    00004 string re  00001 string re  
+5        5.50    1.10    00005 string re  00001 string re  
+7        7.70    1.10    00007 string re  00001 string re  
+8        8.80    1.10    00008 string re  00001 string re  
+9        9.90    1.10    00009 string re  00001 string re  
+10       11.00   1.10    00010 string re  00001 string re  
+11       12.10   1.10    00011 string re  00001 string re  
+14       15.40   1.10    00014 string re  00001 string re  
+15       16.50   1.10    00015 string re  00001 string re  
+16       17.60   1.10    00016 string re  00001 string re  
+19       20.90   1.10    00019 string re  00001 string re  
+8        8.80    2.20    00008 string re  00002 string re  
+0        0.00    3.30    00000 string re  00003 string re  
+1        1.10    3.30    00001 string re  00003 string re  
+2        2.20    3.30    00002 string re  00003 string re  
+3        3.30    3.30    00003 string re  00003 string re  
+5        5.50    3.30    00005 string re  00003 string re  
+7        7.70    3.30    00007 string re  00003 string re  
+8        8.80    3.30    00008 string re  00003 string re  
+10       11.00   3.30    00010 string re  00003 string re  
+11       12.10   3.30    00011 string re  00003 string re  
+15       16.50   3.30    00015 string re  00003 string re  
+16       17.60   3.30    00016 string re  00003 string re  
+8        8.80    4.40    00008 string re  00004 string re  
+10       11.00   4.40    00010 string re  00004 string re  
+0        0.00    5.50    00000 string re  00005 string re  
+1        1.10    5.50    00001 string re  00005 string re  
+2        2.20    5.50    00002 string re  00005 string re  
+3        3.30    5.50    00003 string re  00005 string re  
+4        4.40    5.50    00004 string re  00005 string re  
+5        5.50    5.50    00005 string re  00005 string re  
+6        6.60    5.50    00006 string re  00005 string re  
+7        7.70    5.50    00007 string re  00005 string re  
+8        8.80    5.50    00008 string re  00005 string re  
+9        9.90    5.50    00009 string re  00005 string re  
+10       11.00   5.50    00010 string re  00005 string re  
+11       12.10   5.50    00011 string re  00005 string re  
+13       14.30   5.50    00013 string re  00005 string re  
+14       15.40   5.50    00014 string re  00005 string re  
+15       16.50   5.50    00015 string re  00005 string re  
+16       17.60   5.50    00016 string re  00005 string re  
+17       18.70   5.50    00017 string re  00005 string re  
+19       20.90   5.50    00019 string re  00005 string re  
+0        0.00    6.60    00000 string re  00006 string re  
+1        1.10    6.60    00001 string re  00006 string re  
+2        2.20    6.60    00002 string re  00006 string re  
+5        5.50    6.60    00005 string re  00006 string re  
+7        7.70    6.60    00007 string re  00006 string re  
+8        8.80    6.60    00008 string re  00006 string re  
+10       11.00   6.60    00010 string re  00006 string re  
+11       12.10   6.60    00011 string re  00006 string re  
+15       16.50   6.60    00015 string re  00006 string re  
+16       17.60   6.60    00016 string re  00006 string re  
+0        0.00    7.70    00000 string re  00007 string re  
+1        1.10    7.70    00001 string re  00007 string re  
+2        2.20    7.70    00002 string re  00007 string re  
+3        3.30    7.70    00003 string re  00007 string re  
+5        5.50    7.70    00005 string re  00007 string re  
+7        7.70    7.70    00007 string re  00007 string re  
+8        8.80    7.70    00008 string re  00007 string re  
+9        9.90    7.70    00009 string re  00007 string re  
+10       11.00   7.70    00010 string re  00007 string re  
+11       12.10   7.70    00011 string re  00007 string re  
+15       16.50   7.70    00015 string re  00007 string re  
+16       17.60   7.70    00016 string re  00007 string re  
+19       20.90   7.70    00019 string re  00007 string re  
+0        0.00    8.80    00000 string re  00008 string re  
+1        1.10    8.80    00001 string re  00008 string re  
+2        2.20    8.80    00002 string re  00008 string re  
+3        3.30    8.80    00003 string re  00008 string re  
+4        4.40    8.80    00004 string re  00008 string re  
+5        5.50    8.80    00005 string re  00008 string re  
+7        7.70    8.80    00007 string re  00008 string re  
+8        8.80    8.80    00008 string re  00008 string re  
+9        9.90    8.80    00009 string re  00008 string re  
+10       11.00   8.80    00010 string re  00008 string re  
+11       12.10   8.80    00011 string re  00008 string re  
+13       14.30   8.80    00013 string re  00008 string re  
+14       15.40   8.80    00014 string re  00008 string re  
+15       16.50   8.80    00015 string re  00008 string re  
+16       17.60   8.80    00016 string re  00008 string re  
+17       18.70   8.80    00017 string re  00008 string re  
+
+Number of records: 118
+Buf Stats: accesses = 250, disk reads = 34, disk writes = 56
+
+37 --> Query:  select da.serial, da.ikey, db.ikey, da.filler, db.filler from da, db where da.dkey <= db.dkey;
+Algorithm: Simple NL Join
+serial.  ikey.1  ikey.2  filler.3         filler.4         
+-------  ------  ------  ---------------  ---------------  
+0        11618   23798   00000 string re  00000 string re  
+0        11618   24529   00000 string re  00001 string re  
+1        15378   24529   00001 string re  00001 string re  
+0        11618   1440    00000 string re  00002 string re  
+1        15378   1440    00001 string re  00002 string re  
+2        17233   1440    00002 string re  00002 string re  
+0        11618   20441   00000 string re  00003 string re  
+1        15378   20441   00001 string re  00003 string re  
+2        17233   20441   00002 string re  00003 string re  
+3        19052   20441   00003 string re  00003 string re  
+0        11618   8210    00000 string re  00004 string re  
+1        15378   8210    00001 string re  00004 string re  
+2        17233   8210    00002 string re  00004 string re  
+3        19052   8210    00003 string re  00004 string re  
+4        24069   8210    00004 string re  00004 string re  
+0        11618   31830   00000 string re  00005 string re  
+1        15378   31830   00001 string re  00005 string re  
+2        17233   31830   00002 string re  00005 string re  
+3        19052   31830   00003 string re  00005 string re  
+4        24069   31830   00004 string re  00005 string re  
+5        17188   31830   00005 string re  00005 string re  
+0        11618   18816   00000 string re  00006 string re  
+1        15378   18816   00001 string re  00006 string re  
+2        17233   18816   00002 string re  00006 string re  
+3        19052   18816   00003 string re  00006 string re  
+4        24069   18816   00004 string re  00006 string re  
+5        17188   18816   00005 string re  00006 string re  
+6        28769   18816   00006 string re  00006 string re  
+0        11618   22849   00000 string re  00007 string re  
+1        15378   22849   00001 string re  00007 string re  
+2        17233   22849   00002 string re  00007 string re  
+3        19052   22849   00003 string re  00007 string re  
+4        24069   22849   00004 string re  00007 string re  
+5        17188   22849   00005 string re  00007 string re  
+6        28769   22849   00006 string re  00007 string re  
+7        15168   22849   00007 string re  00007 string re  
+0        11618   28448   00000 string re  00008 string re  
+1        15378   28448   00001 string re  00008 string re  
+2        17233   28448   00002 string re  00008 string re  
+3        19052   28448   00003 string re  00008 string re  
+4        24069   28448   00004 string re  00008 string re  
+5        17188   28448   00005 string re  00008 string re  
+6        28769   28448   00006 string re  00008 string re  
+7        15168   28448   00007 string re  00008 string re  
+8        578     28448   00008 string re  00008 string re  
+0        11618   27189   00000 string re  00009 string re  
+1        15378   27189   00001 string re  00009 string re  
+2        17233   27189   00002 string re  00009 string re  
+3        19052   27189   00003 string re  00009 string re  
+4        24069   27189   00004 string re  00009 string re  
+5        17188   27189   00005 string re  00009 string re  
+6        28769   27189   00006 string re  00009 string re  
+7        15168   27189   00007 string re  00009 string re  
+8        578     27189   00008 string re  00009 string re  
+9        21055   27189   00009 string re  00009 string re  
+
+Number of records: 55
+Buf Stats: accesses = 160, disk reads = 18, disk writes = 28
+
+38 --> Query:  select da.serial, da.ikey, db.ikey, da.dkey, db.dkey from da, db where da.filler <= db.filler;
+Algorithm: Simple NL Join
+serial.  ikey.1  ikey.2  dkey.3  dkey.4  
+-------  ------  ------  ------  ------  
+0        11618   23798   0.00    0.00    
+0        11618   24529   0.00    1.10    
+1        15378   24529   1.10    1.10    
+0        11618   1440    0.00    2.20    
+1        15378   1440    1.10    2.20    
+2        17233   1440    2.20    2.20    
+0        11618   20441   0.00    3.30    
+1        15378   20441   1.10    3.30    
+2        17233   20441   2.20    3.30    
+3        19052   20441   3.30    3.30    
+0        11618   8210    0.00    4.40    
+1        15378   8210    1.10    4.40    
+2        17233   8210    2.20    4.40    
+3        19052   8210    3.30    4.40    
+4        24069   8210    4.40    4.40    
+0        11618   31830   0.00    5.50    
+1        15378   31830   1.10    5.50    
+2        17233   31830   2.20    5.50    
+3        19052   31830   3.30    5.50    
+4        24069   31830   4.40    5.50    
+5        17188   31830   5.50    5.50    
+0        11618   18816   0.00    6.60    
+1        15378   18816   1.10    6.60    
+2        17233   18816   2.20    6.60    
+3        19052   18816   3.30    6.60    
+4        24069   18816   4.40    6.60    
+5        17188   18816   5.50    6.60    
+6        28769   18816   6.60    6.60    
+0        11618   22849   0.00    7.70    
+1        15378   22849   1.10    7.70    
+2        17233   22849   2.20    7.70    
+3        19052   22849   3.30    7.70    
+4        24069   22849   4.40    7.70    
+5        17188   22849   5.50    7.70    
+6        28769   22849   6.60    7.70    
+7        15168   22849   7.70    7.70    
+0        11618   28448   0.00    8.80    
+1        15378   28448   1.10    8.80    
+2        17233   28448   2.20    8.80    
+3        19052   28448   3.30    8.80    
+4        24069   28448   4.40    8.80    
+5        17188   28448   5.50    8.80    
+6        28769   28448   6.60    8.80    
+7        15168   28448   7.70    8.80    
+8        578     28448   8.80    8.80    
+0        11618   27189   0.00    9.90    
+1        15378   27189   1.10    9.90    
+2        17233   27189   2.20    9.90    
+3        19052   27189   3.30    9.90    
+4        24069   27189   4.40    9.90    
+5        17188   27189   5.50    9.90    
+6        28769   27189   6.60    9.90    
+7        15168   27189   7.70    9.90    
+8        578     27189   8.80    9.90    
+9        21055   27189   9.90    9.90    
+
+Number of records: 55
+Buf Stats: accesses = 142, disk reads = 9, disk writes = 10
+
+39 --> Query:  select da.ikey, da.dkey, da.filler from da, db where da.ikey >= db.ikey;
+Algorithm: Simple NL Join
+ikey.0  dkey.1  filler.2         
+------  ------  ---------------  
+24069   4.40    00004 string re  
+28769   6.60    00006 string re  
+31851   13.20   00012 string re  
+25573   14.30   00013 string re  
+26285   18.70   00017 string re  
+32157   19.80   00018 string re  
+28769   6.60    00006 string re  
+31851   13.20   00012 string re  
+25573   14.30   00013 string re  
+26285   18.70   00017 string re  
+32157   19.80   00018 string re  
+11618   0.00    00000 string re  
+15378   1.10    00001 string re  
+17233   2.20    00002 string re  
+19052   3.30    00003 string re  
+24069   4.40    00004 string re  
+17188   5.50    00005 string re  
+28769   6.60    00006 string re  
+15168   7.70    00007 string re  
+21055   9.90    00009 string re  
+7648    11.00   00010 string re  
+10153   12.10   00011 string re  
+31851   13.20   00012 string re  
+25573   14.30   00013 string re  
+23765   15.40   00014 string re  
+8758    16.50   00015 string re  
+18243   17.60   00016 string re  
+26285   18.70   00017 string re  
+32157   19.80   00018 string re  
+21879   20.90   00019 string re  
+24069   4.40    00004 string re  
+28769   6.60    00006 string re  
+21055   9.90    00009 string re  
+31851   13.20   00012 string re  
+25573   14.30   00013 string re  
+23765   15.40   00014 string re  
+26285   18.70   00017 string re  
+32157   19.80   00018 string re  
+21879   20.90   00019 string re  
+11618   0.00    00000 string re  
+15378   1.10    00001 string re  
+17233   2.20    00002 string re  
+19052   3.30    00003 string re  
+24069   4.40    00004 string re  
+17188   5.50    00005 string re  
+28769   6.60    00006 string re  
+15168   7.70    00007 string re  
+21055   9.90    00009 string re  
+10153   12.10   00011 string re  
+31851   13.20   00012 string re  
+25573   14.30   00013 string re  
+23765   15.40   00014 string re  
+8758    16.50   00015 string re  
+18243   17.60   00016 string re  
+26285   18.70   00017 string re  
+32157   19.80   00018 string re  
+21879   20.90   00019 string re  
+31851   13.20   00012 string re  
+32157   19.80   00018 string re  
+19052   3.30    00003 string re  
+24069   4.40    00004 string re  
+28769   6.60    00006 string re  
+21055   9.90    00009 string re  
+31851   13.20   00012 string re  
+25573   14.30   00013 string re  
+23765   15.40   00014 string re  
+26285   18.70   00017 string re  
+32157   19.80   00018 string re  
+21879   20.90   00019 string re  
+24069   4.40    00004 string re  
+28769   6.60    00006 string re  
+31851   13.20   00012 string re  
+25573   14.30   00013 string re  
+23765   15.40   00014 string re  
+26285   18.70   00017 string re  
+32157   19.80   00018 string re  
+28769   6.60    00006 string re  
+31851   13.20   00012 string re  
+32157   19.80   00018 string re  
+28769   6.60    00006 string re  
+31851   13.20   00012 string re  
+32157   19.80   00018 string re  
+
+Number of records: 82
+Buf Stats: accesses = 168, disk reads = 16, disk writes = 24
+
+40 --> Query:  select da.dkey, da.dkey, da.filler from da, db where da.dkey >= db.dkey;
+Algorithm: Simple NL Join
+dkey.0  dkey.1  filler.2         
+------  ------  ---------------  
+0.00    0.00    00000 string re  
+1.10    1.10    00001 string re  
+2.20    2.20    00002 string re  
+3.30    3.30    00003 string re  
+4.40    4.40    00004 string re  
+5.50    5.50    00005 string re  
+6.60    6.60    00006 string re  
+7.70    7.70    00007 string re  
+8.80    8.80    00008 string re  
+9.90    9.90    00009 string re  
+11.00   11.00   00010 string re  
+12.10   12.10   00011 string re  
+13.20   13.20   00012 string re  
+14.30   14.30   00013 string re  
+15.40   15.40   00014 string re  
+16.50   16.50   00015 string re  
+17.60   17.60   00016 string re  
+18.70   18.70   00017 string re  
+19.80   19.80   00018 string re  
+20.90   20.90   00019 string re  
+1.10    1.10    00001 string re  
+2.20    2.20    00002 string re  
+3.30    3.30    00003 string re  
+4.40    4.40    00004 string re  
+5.50    5.50    00005 string re  
+6.60    6.60    00006 string re  
+7.70    7.70    00007 string re  
+8.80    8.80    00008 string re  
+9.90    9.90    00009 string re  
+11.00   11.00   00010 string re  
+12.10   12.10   00011 string re  
+13.20   13.20   00012 string re  
+14.30   14.30   00013 string re  
+15.40   15.40   00014 string re  
+16.50   16.50   00015 string re  
+17.60   17.60   00016 string re  
+18.70   18.70   00017 string re  
+19.80   19.80   00018 string re  
+20.90   20.90   00019 string re  
+2.20    2.20    00002 string re  
+3.30    3.30    00003 string re  
+4.40    4.40    00004 string re  
+5.50    5.50    00005 string re  
+6.60    6.60    00006 string re  
+7.70    7.70    00007 string re  
+8.80    8.80    00008 string re  
+9.90    9.90    00009 string re  
+11.00   11.00   00010 string re  
+12.10   12.10   00011 string re  
+13.20   13.20   00012 string re  
+14.30   14.30   00013 string re  
+15.40   15.40   00014 string re  
+16.50   16.50   00015 string re  
+17.60   17.60   00016 string re  
+18.70   18.70   00017 string re  
+19.80   19.80   00018 string re  
+20.90   20.90   00019 string re  
+3.30    3.30    00003 string re  
+4.40    4.40    00004 string re  
+5.50    5.50    00005 string re  
+6.60    6.60    00006 string re  
+7.70    7.70    00007 string re  
+8.80    8.80    00008 string re  
+9.90    9.90    00009 string re  
+11.00   11.00   00010 string re  
+12.10   12.10   00011 string re  
+13.20   13.20   00012 string re  
+14.30   14.30   00013 string re  
+15.40   15.40   00014 string re  
+16.50   16.50   00015 string re  
+17.60   17.60   00016 string re  
+18.70   18.70   00017 string re  
+19.80   19.80   00018 string re  
+20.90   20.90   00019 string re  
+4.40    4.40    00004 string re  
+5.50    5.50    00005 string re  
+6.60    6.60    00006 string re  
+7.70    7.70    00007 string re  
+8.80    8.80    00008 string re  
+9.90    9.90    00009 string re  
+11.00   11.00   00010 string re  
+12.10   12.10   00011 string re  
+13.20   13.20   00012 string re  
+14.30   14.30   00013 string re  
+15.40   15.40   00014 string re  
+16.50   16.50   00015 string re  
+17.60   17.60   00016 string re  
+18.70   18.70   00017 string re  
+19.80   19.80   00018 string re  
+20.90   20.90   00019 string re  
+5.50    5.50    00005 string re  
+6.60    6.60    00006 string re  
+7.70    7.70    00007 string re  
+8.80    8.80    00008 string re  
+9.90    9.90    00009 string re  
+11.00   11.00   00010 string re  
+12.10   12.10   00011 string re  
+13.20   13.20   00012 string re  
+14.30   14.30   00013 string re  
+15.40   15.40   00014 string re  
+
+Number of records: 155
+Buf Stats: accesses = 258, disk reads = 23, disk writes = 38
+
+41 --> Query:  select da.filler, da.dkey, da.filler from da, db where da.filler >= db.filler;
+Algorithm: Simple NL Join
+filler.0         dkey.1  filler.2         
+---------------  ------  ---------------  
+00000 string re  0.00    00000 string re  
+00001 string re  1.10    00001 string re  
+00002 string re  2.20    00002 string re  
+00003 string re  3.30    00003 string re  
+00004 string re  4.40    00004 string re  
+00005 string re  5.50    00005 string re  
+00006 string re  6.60    00006 string re  
+00007 string re  7.70    00007 string re  
+00008 string re  8.80    00008 string re  
+00009 string re  9.90    00009 string re  
+00010 string re  11.00   00010 string re  
+00011 string re  12.10   00011 string re  
+00012 string re  13.20   00012 string re  
+00013 string re  14.30   00013 string re  
+00014 string re  15.40   00014 string re  
+00015 string re  16.50   00015 string re  
+00016 string re  17.60   00016 string re  
+00017 string re  18.70   00017 string re  
+00018 string re  19.80   00018 string re  
+00019 string re  20.90   00019 string re  
+00001 string re  1.10    00001 string re  
+00002 string re  2.20    00002 string re  
+00003 string re  3.30    00003 string re  
+00004 string re  4.40    00004 string re  
+00005 string re  5.50    00005 string re  
+00006 string re  6.60    00006 string re  
+00007 string re  7.70    00007 string re  
+00008 string re  8.80    00008 string re  
+00009 string re  9.90    00009 string re  
+00010 string re  11.00   00010 string re  
+00011 string re  12.10   00011 string re  
+00012 string re  13.20   00012 string re  
+00013 string re  14.30   00013 string re  
+00014 string re  15.40   00014 string re  
+00015 string re  16.50   00015 string re  
+00016 string re  17.60   00016 string re  
+00017 string re  18.70   00017 string re  
+00018 string re  19.80   00018 string re  
+00019 string re  20.90   00019 string re  
+00002 string re  2.20    00002 string re  
+00003 string re  3.30    00003 string re  
+00004 string re  4.40    00004 string re  
+00005 string re  5.50    00005 string re  
+00006 string re  6.60    00006 string re  
+00007 string re  7.70    00007 string re  
+00008 string re  8.80    00008 string re  
+00009 string re  9.90    00009 string re  
+00010 string re  11.00   00010 string re  
+00011 string re  12.10   00011 string re  
+00012 string re  13.20   00012 string re  
+00013 string re  14.30   00013 string re  
+00014 string re  15.40   00014 string re  
+00015 string re  16.50   00015 string re  
+00016 string re  17.60   00016 string re  
+00017 string re  18.70   00017 string re  
+00018 string re  19.80   00018 string re  
+00019 string re  20.90   00019 string re  
+00003 string re  3.30    00003 string re  
+00004 string re  4.40    00004 string re  
+00005 string re  5.50    00005 string re  
+00006 string re  6.60    00006 string re  
+00007 string re  7.70    00007 string re  
+00008 string re  8.80    00008 string re  
+00009 string re  9.90    00009 string re  
+00010 string re  11.00   00010 string re  
+00011 string re  12.10   00011 string re  
+00012 string re  13.20   00012 string re  
+00013 string re  14.30   00013 string re  
+00014 string re  15.40   00014 string re  
+00015 string re  16.50   00015 string re  
+00016 string re  17.60   00016 string re  
+00017 string re  18.70   00017 string re  
+00018 string re  19.80   00018 string re  
+00019 string re  20.90   00019 string re  
+00004 string re  4.40    00004 string re  
+00005 string re  5.50    00005 string re  
+00006 string re  6.60    00006 string re  
+00007 string re  7.70    00007 string re  
+00008 string re  8.80    00008 string re  
+00009 string re  9.90    00009 string re  
+00010 string re  11.00   00010 string re  
+00011 string re  12.10   00011 string re  
+00012 string re  13.20   00012 string re  
+00013 string re  14.30   00013 string re  
+00014 string re  15.40   00014 string re  
+00015 string re  16.50   00015 string re  
+00016 string re  17.60   00016 string re  
+00017 string re  18.70   00017 string re  
+00018 string re  19.80   00018 string re  
+00019 string re  20.90   00019 string re  
+00005 string re  5.50    00005 string re  
+00006 string re  6.60    00006 string re  
+00007 string re  7.70    00007 string re  
+00008 string re  8.80    00008 string re  
+00009 string re  9.90    00009 string re  
+00010 string re  11.00   00010 string re  
+00011 string re  12.10   00011 string re  
+00012 string re  13.20   00012 string re  
+00013 string re  14.30   00013 string re  
+00014 string re  15.40   00014 string re  
+
+Number of records: 155
+Buf Stats: accesses = 288, disk reads = 44, disk writes = 70
+
+42 --> Query:  select db.ikey, db.dkey, db.filler from da, db where da.ikey > db.ikey;
+Algorithm: Simple NL Join
+ikey.0  dkey.1  filler.2         
+------  ------  ---------------  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+18816   6.60    00006 string re  
+22849   7.70    00007 string re  
+22849   7.70    00007 string re  
+22849   7.70    00007 string re  
+22849   7.70    00007 string re  
+22849   7.70    00007 string re  
+22849   7.70    00007 string re  
+22849   7.70    00007 string re  
+28448   8.80    00008 string re  
+28448   8.80    00008 string re  
+28448   8.80    00008 string re  
+27189   9.90    00009 string re  
+27189   9.90    00009 string re  
+27189   9.90    00009 string re  
+
+Number of records: 82
+Buf Stats: accesses = 170, disk reads = 16, disk writes = 24
+
+43 --> Query:  select db.ikey, db.dkey, db.filler from da, db where da.dkey > db.dkey;
+Algorithm: Simple NL Join
+ikey.0  dkey.1  filler.2         
+------  ------  ---------------  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+18816   6.60    00006 string re  
+
+Number of records: 145
+Buf Stats: accesses = 246, disk reads = 22, disk writes = 36
+
+44 --> Query:  select db.ikey, db.dkey, db.filler from da, db where da.filler > db.filler;
+Algorithm: Simple NL Join
+ikey.0  dkey.1  filler.2         
+------  ------  ---------------  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+23798   0.00    00000 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+24529   1.10    00001 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+1440    2.20    00002 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+20441   3.30    00003 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+8210    4.40    00004 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+31830   5.50    00005 string re  
+18816   6.60    00006 string re  
+
+Number of records: 145
+Buf Stats: accesses = 246, disk reads = 22, disk writes = 36
+
+45 --> Query:  select da.serial, da.dkey, db.dkey, da.filler, db.filler, da.ikey from da, db where da.ikey <> db.ikey;
+Algorithm: Simple NL Join
+serial.  dkey.1  dkey.2  filler.3         filler.4         ikey.5  
+-------  ------  ------  ---------------  ---------------  ------  
+0        0.00    0.00    00000 string re  00000 string re  11618   
+1        1.10    0.00    00001 string re  00000 string re  15378   
+2        2.20    0.00    00002 string re  00000 string re  17233   
+3        3.30    0.00    00003 string re  00000 string re  19052   
+4        4.40    0.00    00004 string re  00000 string re  24069   
+5        5.50    0.00    00005 string re  00000 string re  17188   
+6        6.60    0.00    00006 string re  00000 string re  28769   
+7        7.70    0.00    00007 string re  00000 string re  15168   
+8        8.80    0.00    00008 string re  00000 string re  578     
+9        9.90    0.00    00009 string re  00000 string re  21055   
+10       11.00   0.00    00010 string re  00000 string re  7648    
+11       12.10   0.00    00011 string re  00000 string re  10153   
+12       13.20   0.00    00012 string re  00000 string re  31851   
+13       14.30   0.00    00013 string re  00000 string re  25573   
+14       15.40   0.00    00014 string re  00000 string re  23765   
+15       16.50   0.00    00015 string re  00000 string re  8758    
+16       17.60   0.00    00016 string re  00000 string re  18243   
+17       18.70   0.00    00017 string re  00000 string re  26285   
+18       19.80   0.00    00018 string re  00000 string re  32157   
+19       20.90   0.00    00019 string re  00000 string re  21879   
+0        0.00    1.10    00000 string re  00001 string re  11618   
+1        1.10    1.10    00001 string re  00001 string re  15378   
+2        2.20    1.10    00002 string re  00001 string re  17233   
+3        3.30    1.10    00003 string re  00001 string re  19052   
+4        4.40    1.10    00004 string re  00001 string re  24069   
+5        5.50    1.10    00005 string re  00001 string re  17188   
+6        6.60    1.10    00006 string re  00001 string re  28769   
+7        7.70    1.10    00007 string re  00001 string re  15168   
+8        8.80    1.10    00008 string re  00001 string re  578     
+9        9.90    1.10    00009 string re  00001 string re  21055   
+10       11.00   1.10    00010 string re  00001 string re  7648    
+11       12.10   1.10    00011 string re  00001 string re  10153   
+12       13.20   1.10    00012 string re  00001 string re  31851   
+13       14.30   1.10    00013 string re  00001 string re  25573   
+14       15.40   1.10    00014 string re  00001 string re  23765   
+15       16.50   1.10    00015 string re  00001 string re  8758    
+16       17.60   1.10    00016 string re  00001 string re  18243   
+17       18.70   1.10    00017 string re  00001 string re  26285   
+18       19.80   1.10    00018 string re  00001 string re  32157   
+19       20.90   1.10    00019 string re  00001 string re  21879   
+0        0.00    2.20    00000 string re  00002 string re  11618   
+1        1.10    2.20    00001 string re  00002 string re  15378   
+2        2.20    2.20    00002 string re  00002 string re  17233   
+3        3.30    2.20    00003 string re  00002 string re  19052   
+4        4.40    2.20    00004 string re  00002 string re  24069   
+5        5.50    2.20    00005 string re  00002 string re  17188   
+6        6.60    2.20    00006 string re  00002 string re  28769   
+7        7.70    2.20    00007 string re  00002 string re  15168   
+8        8.80    2.20    00008 string re  00002 string re  578     
+9        9.90    2.20    00009 string re  00002 string re  21055   
+10       11.00   2.20    00010 string re  00002 string re  7648    
+11       12.10   2.20    00011 string re  00002 string re  10153   
+12       13.20   2.20    00012 string re  00002 string re  31851   
+13       14.30   2.20    00013 string re  00002 string re  25573   
+14       15.40   2.20    00014 string re  00002 string re  23765   
+15       16.50   2.20    00015 string re  00002 string re  8758    
+16       17.60   2.20    00016 string re  00002 string re  18243   
+17       18.70   2.20    00017 string re  00002 string re  26285   
+18       19.80   2.20    00018 string re  00002 string re  32157   
+19       20.90   2.20    00019 string re  00002 string re  21879   
+0        0.00    3.30    00000 string re  00003 string re  11618   
+1        1.10    3.30    00001 string re  00003 string re  15378   
+2        2.20    3.30    00002 string re  00003 string re  17233   
+3        3.30    3.30    00003 string re  00003 string re  19052   
+4        4.40    3.30    00004 string re  00003 string re  24069   
+5        5.50    3.30    00005 string re  00003 string re  17188   
+6        6.60    3.30    00006 string re  00003 string re  28769   
+7        7.70    3.30    00007 string re  00003 string re  15168   
+8        8.80    3.30    00008 string re  00003 string re  578     
+9        9.90    3.30    00009 string re  00003 string re  21055   
+10       11.00   3.30    00010 string re  00003 string re  7648    
+11       12.10   3.30    00011 string re  00003 string re  10153   
+12       13.20   3.30    00012 string re  00003 string re  31851   
+13       14.30   3.30    00013 string re  00003 string re  25573   
+14       15.40   3.30    00014 string re  00003 string re  23765   
+15       16.50   3.30    00015 string re  00003 string re  8758    
+16       17.60   3.30    00016 string re  00003 string re  18243   
+17       18.70   3.30    00017 string re  00003 string re  26285   
+18       19.80   3.30    00018 string re  00003 string re  32157   
+19       20.90   3.30    00019 string re  00003 string re  21879   
+0        0.00    4.40    00000 string re  00004 string re  11618   
+1        1.10    4.40    00001 string re  00004 string re  15378   
+2        2.20    4.40    00002 string re  00004 string re  17233   
+3        3.30    4.40    00003 string re  00004 string re  19052   
+4        4.40    4.40    00004 string re  00004 string re  24069   
+5        5.50    4.40    00005 string re  00004 string re  17188   
+6        6.60    4.40    00006 string re  00004 string re  28769   
+7        7.70    4.40    00007 string re  00004 string re  15168   
+8        8.80    4.40    00008 string re  00004 string re  578     
+9        9.90    4.40    00009 string re  00004 string re  21055   
+10       11.00   4.40    00010 string re  00004 string re  7648    
+11       12.10   4.40    00011 string re  00004 string re  10153   
+12       13.20   4.40    00012 string re  00004 string re  31851   
+13       14.30   4.40    00013 string re  00004 string re  25573   
+14       15.40   4.40    00014 string re  00004 string re  23765   
+15       16.50   4.40    00015 string re  00004 string re  8758    
+16       17.60   4.40    00016 string re  00004 string re  18243   
+17       18.70   4.40    00017 string re  00004 string re  26285   
+18       19.80   4.40    00018 string re  00004 string re  32157   
+19       20.90   4.40    00019 string re  00004 string re  21879   
+
+Number of records: 200
+Buf Stats: accesses = 375, disk reads = 55, disk writes = 91
+
+46 --> Query:  select da.serial, da.ikey, db.ikey, da.filler, db.filler, da.dkey from da, db where da.dkey <> db.dkey;
+Algorithm: Simple NL Join
+serial.  ikey.1  ikey.2  filler.3         filler.4         dkey.5  
+-------  ------  ------  ---------------  ---------------  ------  
+1        15378   23798   00001 string re  00000 string re  1.10    
+2        17233   23798   00002 string re  00000 string re  2.20    
+3        19052   23798   00003 string re  00000 string re  3.30    
+4        24069   23798   00004 string re  00000 string re  4.40    
+5        17188   23798   00005 string re  00000 string re  5.50    
+6        28769   23798   00006 string re  00000 string re  6.60    
+7        15168   23798   00007 string re  00000 string re  7.70    
+8        578     23798   00008 string re  00000 string re  8.80    
+9        21055   23798   00009 string re  00000 string re  9.90    
+10       7648    23798   00010 string re  00000 string re  11.00   
+11       10153   23798   00011 string re  00000 string re  12.10   
+12       31851   23798   00012 string re  00000 string re  13.20   
+13       25573   23798   00013 string re  00000 string re  14.30   
+14       23765   23798   00014 string re  00000 string re  15.40   
+15       8758    23798   00015 string re  00000 string re  16.50   
+16       18243   23798   00016 string re  00000 string re  17.60   
+17       26285   23798   00017 string re  00000 string re  18.70   
+18       32157   23798   00018 string re  00000 string re  19.80   
+19       21879   23798   00019 string re  00000 string re  20.90   
+0        11618   24529   00000 string re  00001 string re  0.00    
+2        17233   24529   00002 string re  00001 string re  2.20    
+3        19052   24529   00003 string re  00001 string re  3.30    
+4        24069   24529   00004 string re  00001 string re  4.40    
+5        17188   24529   00005 string re  00001 string re  5.50    
+6        28769   24529   00006 string re  00001 string re  6.60    
+7        15168   24529   00007 string re  00001 string re  7.70    
+8        578     24529   00008 string re  00001 string re  8.80    
+9        21055   24529   00009 string re  00001 string re  9.90    
+10       7648    24529   00010 string re  00001 string re  11.00   
+11       10153   24529   00011 string re  00001 string re  12.10   
+12       31851   24529   00012 string re  00001 string re  13.20   
+13       25573   24529   00013 string re  00001 string re  14.30   
+14       23765   24529   00014 string re  00001 string re  15.40   
+15       8758    24529   00015 string re  00001 string re  16.50   
+16       18243   24529   00016 string re  00001 string re  17.60   
+17       26285   24529   00017 string re  00001 string re  18.70   
+18       32157   24529   00018 string re  00001 string re  19.80   
+19       21879   24529   00019 string re  00001 string re  20.90   
+0        11618   1440    00000 string re  00002 string re  0.00    
+1        15378   1440    00001 string re  00002 string re  1.10    
+3        19052   1440    00003 string re  00002 string re  3.30    
+4        24069   1440    00004 string re  00002 string re  4.40    
+5        17188   1440    00005 string re  00002 string re  5.50    
+6        28769   1440    00006 string re  00002 string re  6.60    
+7        15168   1440    00007 string re  00002 string re  7.70    
+8        578     1440    00008 string re  00002 string re  8.80    
+9        21055   1440    00009 string re  00002 string re  9.90    
+10       7648    1440    00010 string re  00002 string re  11.00   
+11       10153   1440    00011 string re  00002 string re  12.10   
+12       31851   1440    00012 string re  00002 string re  13.20   
+13       25573   1440    00013 string re  00002 string re  14.30   
+14       23765   1440    00014 string re  00002 string re  15.40   
+15       8758    1440    00015 string re  00002 string re  16.50   
+16       18243   1440    00016 string re  00002 string re  17.60   
+17       26285   1440    00017 string re  00002 string re  18.70   
+18       32157   1440    00018 string re  00002 string re  19.80   
+19       21879   1440    00019 string re  00002 string re  20.90   
+0        11618   20441   00000 string re  00003 string re  0.00    
+1        15378   20441   00001 string re  00003 string re  1.10    
+2        17233   20441   00002 string re  00003 string re  2.20    
+4        24069   20441   00004 string re  00003 string re  4.40    
+5        17188   20441   00005 string re  00003 string re  5.50    
+6        28769   20441   00006 string re  00003 string re  6.60    
+7        15168   20441   00007 string re  00003 string re  7.70    
+8        578     20441   00008 string re  00003 string re  8.80    
+9        21055   20441   00009 string re  00003 string re  9.90    
+10       7648    20441   00010 string re  00003 string re  11.00   
+11       10153   20441   00011 string re  00003 string re  12.10   
+12       31851   20441   00012 string re  00003 string re  13.20   
+13       25573   20441   00013 string re  00003 string re  14.30   
+14       23765   20441   00014 string re  00003 string re  15.40   
+15       8758    20441   00015 string re  00003 string re  16.50   
+16       18243   20441   00016 string re  00003 string re  17.60   
+17       26285   20441   00017 string re  00003 string re  18.70   
+18       32157   20441   00018 string re  00003 string re  19.80   
+19       21879   20441   00019 string re  00003 string re  20.90   
+0        11618   8210    00000 string re  00004 string re  0.00    
+1        15378   8210    00001 string re  00004 string re  1.10    
+2        17233   8210    00002 string re  00004 string re  2.20    
+3        19052   8210    00003 string re  00004 string re  3.30    
+5        17188   8210    00005 string re  00004 string re  5.50    
+6        28769   8210    00006 string re  00004 string re  6.60    
+7        15168   8210    00007 string re  00004 string re  7.70    
+8        578     8210    00008 string re  00004 string re  8.80    
+9        21055   8210    00009 string re  00004 string re  9.90    
+10       7648    8210    00010 string re  00004 string re  11.00   
+11       10153   8210    00011 string re  00004 string re  12.10   
+12       31851   8210    00012 string re  00004 string re  13.20   
+13       25573   8210    00013 string re  00004 string re  14.30   
+14       23765   8210    00014 string re  00004 string re  15.40   
+15       8758    8210    00015 string re  00004 string re  16.50   
+16       18243   8210    00016 string re  00004 string re  17.60   
+17       26285   8210    00017 string re  00004 string re  18.70   
+18       32157   8210    00018 string re  00004 string re  19.80   
+19       21879   8210    00019 string re  00004 string re  20.90   
+0        11618   31830   00000 string re  00005 string re  0.00    
+1        15378   31830   00001 string re  00005 string re  1.10    
+2        17233   31830   00002 string re  00005 string re  2.20    
+3        19052   31830   00003 string re  00005 string re  3.30    
+4        24069   31830   00004 string re  00005 string re  4.40    
+
+Number of records: 190
+Buf Stats: accesses = 362, disk reads = 53, disk writes = 87
+
+47 --> Query:  select da.serial, da.ikey, db.ikey, da.dkey, db.dkey, da.filler from da, db where da.filler <> db.filler;
+Algorithm: Simple NL Join
+serial.  ikey.1  ikey.2  dkey.3  dkey.4  filler.5         
+-------  ------  ------  ------  ------  ---------------  
+1        15378   23798   1.10    0.00    00001 string re  
+2        17233   23798   2.20    0.00    00002 string re  
+3        19052   23798   3.30    0.00    00003 string re  
+4        24069   23798   4.40    0.00    00004 string re  
+5        17188   23798   5.50    0.00    00005 string re  
+6        28769   23798   6.60    0.00    00006 string re  
+7        15168   23798   7.70    0.00    00007 string re  
+8        578     23798   8.80    0.00    00008 string re  
+9        21055   23798   9.90    0.00    00009 string re  
+10       7648    23798   11.00   0.00    00010 string re  
+11       10153   23798   12.10   0.00    00011 string re  
+12       31851   23798   13.20   0.00    00012 string re  
+13       25573   23798   14.30   0.00    00013 string re  
+14       23765   23798   15.40   0.00    00014 string re  
+15       8758    23798   16.50   0.00    00015 string re  
+16       18243   23798   17.60   0.00    00016 string re  
+17       26285   23798   18.70   0.00    00017 string re  
+18       32157   23798   19.80   0.00    00018 string re  
+19       21879   23798   20.90   0.00    00019 string re  
+0        11618   24529   0.00    1.10    00000 string re  
+2        17233   24529   2.20    1.10    00002 string re  
+3        19052   24529   3.30    1.10    00003 string re  
+4        24069   24529   4.40    1.10    00004 string re  
+5        17188   24529   5.50    1.10    00005 string re  
+6        28769   24529   6.60    1.10    00006 string re  
+7        15168   24529   7.70    1.10    00007 string re  
+8        578     24529   8.80    1.10    00008 string re  
+9        21055   24529   9.90    1.10    00009 string re  
+10       7648    24529   11.00   1.10    00010 string re  
+11       10153   24529   12.10   1.10    00011 string re  
+12       31851   24529   13.20   1.10    00012 string re  
+13       25573   24529   14.30   1.10    00013 string re  
+14       23765   24529   15.40   1.10    00014 string re  
+15       8758    24529   16.50   1.10    00015 string re  
+16       18243   24529   17.60   1.10    00016 string re  
+17       26285   24529   18.70   1.10    00017 string re  
+18       32157   24529   19.80   1.10    00018 string re  
+19       21879   24529   20.90   1.10    00019 string re  
+0        11618   1440    0.00    2.20    00000 string re  
+1        15378   1440    1.10    2.20    00001 string re  
+3        19052   1440    3.30    2.20    00003 string re  
+4        24069   1440    4.40    2.20    00004 string re  
+5        17188   1440    5.50    2.20    00005 string re  
+6        28769   1440    6.60    2.20    00006 string re  
+7        15168   1440    7.70    2.20    00007 string re  
+8        578     1440    8.80    2.20    00008 string re  
+9        21055   1440    9.90    2.20    00009 string re  
+10       7648    1440    11.00   2.20    00010 string re  
+11       10153   1440    12.10   2.20    00011 string re  
+12       31851   1440    13.20   2.20    00012 string re  
+13       25573   1440    14.30   2.20    00013 string re  
+14       23765   1440    15.40   2.20    00014 string re  
+15       8758    1440    16.50   2.20    00015 string re  
+16       18243   1440    17.60   2.20    00016 string re  
+17       26285   1440    18.70   2.20    00017 string re  
+18       32157   1440    19.80   2.20    00018 string re  
+19       21879   1440    20.90   2.20    00019 string re  
+0        11618   20441   0.00    3.30    00000 string re  
+1        15378   20441   1.10    3.30    00001 string re  
+2        17233   20441   2.20    3.30    00002 string re  
+4        24069   20441   4.40    3.30    00004 string re  
+5        17188   20441   5.50    3.30    00005 string re  
+6        28769   20441   6.60    3.30    00006 string re  
+7        15168   20441   7.70    3.30    00007 string re  
+8        578     20441   8.80    3.30    00008 string re  
+9        21055   20441   9.90    3.30    00009 string re  
+10       7648    20441   11.00   3.30    00010 string re  
+11       10153   20441   12.10   3.30    00011 string re  
+12       31851   20441   13.20   3.30    00012 string re  
+13       25573   20441   14.30   3.30    00013 string re  
+14       23765   20441   15.40   3.30    00014 string re  
+15       8758    20441   16.50   3.30    00015 string re  
+16       18243   20441   17.60   3.30    00016 string re  
+17       26285   20441   18.70   3.30    00017 string re  
+18       32157   20441   19.80   3.30    00018 string re  
+19       21879   20441   20.90   3.30    00019 string re  
+0        11618   8210    0.00    4.40    00000 string re  
+1        15378   8210    1.10    4.40    00001 string re  
+2        17233   8210    2.20    4.40    00002 string re  
+3        19052   8210    3.30    4.40    00003 string re  
+5        17188   8210    5.50    4.40    00005 string re  
+6        28769   8210    6.60    4.40    00006 string re  
+7        15168   8210    7.70    4.40    00007 string re  
+8        578     8210    8.80    4.40    00008 string re  
+9        21055   8210    9.90    4.40    00009 string re  
+10       7648    8210    11.00   4.40    00010 string re  
+11       10153   8210    12.10   4.40    00011 string re  
+12       31851   8210    13.20   4.40    00012 string re  
+13       25573   8210    14.30   4.40    00013 string re  
+14       23765   8210    15.40   4.40    00014 string re  
+15       8758    8210    16.50   4.40    00015 string re  
+16       18243   8210    17.60   4.40    00016 string re  
+17       26285   8210    18.70   4.40    00017 string re  
+18       32157   8210    19.80   4.40    00018 string re  
+19       21879   8210    20.90   4.40    00019 string re  
+0        11618   31830   0.00    5.50    00000 string re  
+1        15378   31830   1.10    5.50    00001 string re  
+2        17233   31830   2.20    5.50    00002 string re  
+3        19052   31830   3.30    5.50    00003 string re  
+4        24069   31830   4.40    5.50    00004 string re  
+
+Number of records: 190
+Buf Stats: accesses = 334, disk reads = 35, disk writes = 59
+
+48 --> Query:  drop table da;
+49 --> Query:  drop table db;
+50 --> 

@@ -1,53 +1,53 @@
 --Test simple nested loop join
 
-create table da (id integer, gender integer, name char(20), pts double);
-create table db (id integer, gender integer, name char(20), pts double);
-create table dc (id integer, gender integer, name char(20), pts double);
+create table da (id integer, gender integer, name char(20), ptr double);
+create table db (id integer, gender integer, name char(20), ptr double);
+create table dc (id integer, gender integer, name char(20), ptr double);
 
 --create data
-insert into da (name, id, gender, pts) values ('aaa', 0, 0, 1.8);
-insert into da (name, id, gender, pts) values ('bbb', 1, 0, 1.8);
-insert into da (name, id, gender, pts) values ('ccc', 2, 1, 1.8);
-insert into da (name, id, gender, pts) values ('ddd', 3, 1, 2.1);
-insert into da (name, id, gender, pts) values ('eee', 4, 1, 2.5);
-insert into da (name, id, gender, pts) values ('fff', 5, 0, 1.6);
-insert into da (name, id, gender, pts) values ('ggg', 6, 0, 1.7);
-insert into da (name, id, gender, pts) values ('hhh', 7, 1, 2.3);
-insert into da (name, id, gender, pts) values ('iii', 8, 0, 1.9);
-insert into da (name, id, gender, pts) values ('jjj', 9, 1, 2.3);
-insert into da (name, id, gender, pts) values ('kkk', 10, 0, 1.7);
-insert into da (name, id, gender, pts) values ('lll', 11, 0, 1.8);
-insert into da (name, id, gender, pts) values ('mmm', 12, 1, 2.3);
+insert into da (name, id, gender, ptr) values ('aaa', 0, 0, 1.8);
+insert into da (name, id, gender, ptr) values ('bbb', 1, 0, 1.8);
+insert into da (name, id, gender, ptr) values ('ccc', 2, 1, 1.8);
+insert into da (name, id, gender, ptr) values ('ddd', 3, 1, 2.1);
+insert into da (name, id, gender, ptr) values ('eee', 4, 1, 2.5);
+insert into da (name, id, gender, ptr) values ('fff', 5, 0, 1.6);
+insert into da (name, id, gender, ptr) values ('ggg', 6, 0, 1.7);
+insert into da (name, id, gender, ptr) values ('hhh', 7, 1, 2.3);
+insert into da (name, id, gender, ptr) values ('iii', 8, 0, 1.9);
+insert into da (name, id, gender, ptr) values ('jjj', 9, 1, 2.3);
+insert into da (name, id, gender, ptr) values ('kkk', 10, 0, 1.7);
+insert into da (name, id, gender, ptr) values ('lll', 11, 0, 1.8);
+insert into da (name, id, gender, ptr) values ('mmm', 12, 1, 2.3);
 
-insert into db (name, id, gender, pts) values ('nnn', 0, 0, 1.8);
-insert into db (name, id, gender, pts) values ('ooo', 1, 0, 1.8);
-insert into db (name, id, gender, pts) values ('ppp', 2, 1, 1.8);
-insert into db (name, id, gender, pts) values ('qqq', 3, 1, 2.1);
-insert into db (name, id, gender, pts) values ('rrr', 4, 1, 2.5);
-insert into db (name, id, gender, pts) values ('sss', 5, 0, 1.6);
-insert into db (name, id, gender, pts) values ('ttt', 6, 0, 1.7);
-insert into db (name, id, gender, pts) values ('uuu', 7, 1, 2.3);
-insert into db (name, id, gender, pts) values ('vvv', 8, 0, 1.9);
-insert into db (name, id, gender, pts) values ('www', 9, 1, 2.3);
-insert into db (name, id, gender, pts) values ('xxx', 10, 0, 1.7);
-insert into db (name, id, gender, pts) values ('yyy', 11, 0, 1.8);
-insert into db (name, id, gender, pts) values ('zzz', 12, 1, 2.3);
+insert into db (name, id, gender, ptr) values ('nnn', 0, 0, 1.8);
+insert into db (name, id, gender, ptr) values ('ooo', 1, 0, 1.8);
+insert into db (name, id, gender, ptr) values ('ppp', 2, 1, 1.8);
+insert into db (name, id, gender, ptr) values ('qqq', 3, 1, 2.1);
+insert into db (name, id, gender, ptr) values ('rrr', 4, 1, 2.5);
+insert into db (name, id, gender, ptr) values ('sss', 5, 0, 1.6);
+insert into db (name, id, gender, ptr) values ('ttt', 6, 0, 1.7);
+insert into db (name, id, gender, ptr) values ('uuu', 7, 1, 2.3);
+insert into db (name, id, gender, ptr) values ('vvv', 8, 0, 1.9);
+insert into db (name, id, gender, ptr) values ('www', 9, 1, 2.3);
+insert into db (name, id, gender, ptr) values ('xxx', 10, 0, 1.7);
+insert into db (name, id, gender, ptr) values ('yyy', 11, 0, 1.8);
+insert into db (name, id, gender, ptr) values ('zzz', 12, 1, 2.3);
 
-insert into dc (name, id, gender, pts) values ('nnn', 0, 0, 1.8);
-insert into dc (name, id, gender, pts) values ('ooo', 1, 0, 1.8);
-insert into dc (name, id, gender, pts) values ('ppp', 2, 1, 1.8);
-insert into dc (name, id, gender, pts) values ('qqq', 3, 1, 2.1);
-insert into dc (name, id, gender, pts) values ('rrr', 4, 1, 2.5);
-insert into dc (name, id, gender, pts) values ('sss', 5, 0, 1.6);
-insert into dc (name, id, gender, pts) values ('ttt', 6, 0, 1.7);
-insert into dc (name, id, gender, pts) values ('uuu', 7, 1, 2.3);
-insert into dc (name, id, gender, pts) values ('vvv', 8, 0, 1.9);
-insert into dc (name, id, gender, pts) values ('www', 9, 1, 2.3);
-insert into dc (name, id, gender, pts) values ('xxx', 10, 0, 1.7);
-insert into dc (name, id, gender, pts) values ('yyy', 11, 0, 1.8);
-insert into dc (name, id, gender, pts) values ('zzz', 12, 1, 2.3);
+insert into dc (name, id, gender, ptr) values ('nnn', 0, 0, 1.8);
+insert into dc (name, id, gender, ptr) values ('ooo', 1, 0, 1.8);
+insert into dc (name, id, gender, ptr) values ('ppp', 2, 1, 1.8);
+insert into dc (name, id, gender, ptr) values ('qqq', 3, 1, 2.1);
+insert into dc (name, id, gender, ptr) values ('rrr', 4, 1, 2.5);
+insert into dc (name, id, gender, ptr) values ('sss', 5, 0, 1.6);
+insert into dc (name, id, gender, ptr) values ('ttt', 6, 0, 1.7);
+insert into dc (name, id, gender, ptr) values ('uuu', 7, 1, 2.3);
+insert into dc (name, id, gender, ptr) values ('vvv', 8, 0, 1.9);
+insert into dc (name, id, gender, ptr) values ('www', 9, 1, 2.3);
+insert into dc (name, id, gender, ptr) values ('xxx', 10, 0, 1.7);
+insert into dc (name, id, gender, ptr) values ('yyy', 11, 0, 1.8);
+insert into dc (name, id, gender, ptr) values ('zzz', 12, 1, 2.3);
 
--- Test on joins on unique tuples
+-- Test on joins on duplicate tuples
 -- The result is out of order
 
 -- Project 7 attrs, filter attr appear in projection

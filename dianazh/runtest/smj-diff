@@ -1,0 +1,583 @@
+Welcome to Minirel
+1 --> Query:  create table dda (serial integer, ikey integer, filler char(80), dkey double, unq integer);
+2 --> Query:  create table ddb (serial integer, ikey integer, filler char(80), dkey double, unq integer);
+3 --> Query:  insert into dda (serial, ikey, filler, dkey, unq) values (1, 10, 00000 string record, 0.0, 0);
+4 --> Query:  insert into dda (serial, ikey, filler, dkey, unq) values (1, 11, 00000 string record, 0.0, 1);
+5 --> Query:  insert into dda (serial, ikey, filler, dkey, unq) values (1, 12, 00000 string record, 0.0, 2);
+6 --> Query:  insert into dda (serial, ikey, filler, dkey, unq) values (2, 10, 00000 string record, 0.0, 4);
+7 --> Query:  insert into dda (serial, ikey, filler, dkey, unq) values (3, 10, 00000 string record, 0.0, 8);
+8 --> Query:  insert into dda (serial, ikey, filler, dkey, unq) values (3, 11, 00000 string record, 0.0, 9);
+9 --> Query:  insert into dda (serial, ikey, filler, dkey, unq) values (3, 13, 00000 string record, 0.0, 11);
+10 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (1, 10, 00000 string record, 0.0, 0);
+11 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (1, 11, 00000 string record, 0.0, 1);
+12 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (1, 12, 00000 string record, 0.0, 2);
+13 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (1, 13, 00000 string record, 0.0, 3);
+14 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (2, 10, 00000 string record, 0.0, 4);
+15 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (2, 11, 00000 string record, 0.0, 5);
+16 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (2, 12, 00000 string record, 0.0, 6);
+17 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (2, 13, 00000 string record, 0.0, 7);
+18 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (3, 10, 00000 string record, 0.0, 8);
+19 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (3, 11, 00000 string record, 0.0, 9);
+20 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (3, 12, 00000 string record, 0.0, 10);
+21 --> Query:  insert into ddb (serial, ikey, filler, dkey, unq) values (3, 13, 00000 string record, 0.0, 11);
+22 --> Query:  select dda.serial, ddb.serial, dda.ikey, ddb.ikey, dda.dkey, ddb.filler from dda, ddb where dda.serial = ddb.serial;
+Algorithm: SM Join
+serial.  serial.  ikey.2  ikey.3  dkey.4  filler.5         
+-------  -------  ------  ------  ------  ---------------  
+1        1        10      10      0.00    00000 string re  
+1        1        10      11      0.00    00000 string re  
+1        1        10      12      0.00    00000 string re  
+1        1        10      13      0.00    00000 string re  
+1        1        11      10      0.00    00000 string re  
+1        1        11      11      0.00    00000 string re  
+1        1        11      12      0.00    00000 string re  
+1        1        11      13      0.00    00000 string re  
+1        1        12      10      0.00    00000 string re  
+1        1        12      11      0.00    00000 string re  
+1        1        12      12      0.00    00000 string re  
+1        1        12      13      0.00    00000 string re  
+2        2        10      10      0.00    00000 string re  
+2        2        10      11      0.00    00000 string re  
+2        2        10      12      0.00    00000 string re  
+2        2        10      13      0.00    00000 string re  
+3        3        10      10      0.00    00000 string re  
+3        3        10      11      0.00    00000 string re  
+3        3        10      12      0.00    00000 string re  
+3        3        10      13      0.00    00000 string re  
+3        3        11      10      0.00    00000 string re  
+3        3        11      11      0.00    00000 string re  
+3        3        11      12      0.00    00000 string re  
+3        3        11      13      0.00    00000 string re  
+3        3        13      10      0.00    00000 string re  
+3        3        13      11      0.00    00000 string re  
+3        3        13      12      0.00    00000 string re  
+3        3        13      13      0.00    00000 string re  
+
+Number of records: 28
+Buf Stats: accesses = 162, disk reads = 16, disk writes = 28
+
+23 --> Query:  select dda.serial, ddb.serial, dda.ikey, ddb.ikey, dda.dkey, ddb.filler from dda, ddb where ddb.serial = dda.serial;
+Algorithm: SM Join
+serial.  serial.  ikey.2  ikey.3  dkey.4  filler.5         
+-------  -------  ------  ------  ------  ---------------  
+1        1        10      10      0.00    00000 string re  
+1        1        11      10      0.00    00000 string re  
+1        1        12      10      0.00    00000 string re  
+1        1        10      11      0.00    00000 string re  
+1        1        11      11      0.00    00000 string re  
+1        1        12      11      0.00    00000 string re  
+1        1        10      12      0.00    00000 string re  
+1        1        11      12      0.00    00000 string re  
+1        1        12      12      0.00    00000 string re  
+1        1        10      13      0.00    00000 string re  
+1        1        11      13      0.00    00000 string re  
+1        1        12      13      0.00    00000 string re  
+2        2        10      10      0.00    00000 string re  
+2        2        10      11      0.00    00000 string re  
+2        2        10      12      0.00    00000 string re  
+2        2        10      13      0.00    00000 string re  
+3        3        10      10      0.00    00000 string re  
+3        3        11      10      0.00    00000 string re  
+3        3        13      10      0.00    00000 string re  
+3        3        10      11      0.00    00000 string re  
+3        3        11      11      0.00    00000 string re  
+3        3        13      11      0.00    00000 string re  
+3        3        10      12      0.00    00000 string re  
+3        3        11      12      0.00    00000 string re  
+3        3        13      12      0.00    00000 string re  
+3        3        10      13      0.00    00000 string re  
+3        3        11      13      0.00    00000 string re  
+3        3        13      13      0.00    00000 string re  
+
+Number of records: 28
+Buf Stats: accesses = 157, disk reads = 16, disk writes = 28
+
+24 --> Query:  select dda.serial, ddb.serial, dda.ikey, ddb.ikey, dda.dkey, dda.filler, ddb.filler from dda, ddb where dda.ikey = ddb.ikey;
+Algorithm: SM Join
+serial.  serial.  ikey.2  ikey.3  dkey.4  filler.5         filler.6         
+-------  -------  ------  ------  ------  ---------------  ---------------  
+1        1        10      10      0.00    00000 string re  00000 string re  
+1        2        10      10      0.00    00000 string re  00000 string re  
+1        3        10      10      0.00    00000 string re  00000 string re  
+2        1        10      10      0.00    00000 string re  00000 string re  
+2        2        10      10      0.00    00000 string re  00000 string re  
+2        3        10      10      0.00    00000 string re  00000 string re  
+3        1        10      10      0.00    00000 string re  00000 string re  
+3        2        10      10      0.00    00000 string re  00000 string re  
+3        3        10      10      0.00    00000 string re  00000 string re  
+1        1        11      11      0.00    00000 string re  00000 string re  
+1        2        11      11      0.00    00000 string re  00000 string re  
+1        3        11      11      0.00    00000 string re  00000 string re  
+3        1        11      11      0.00    00000 string re  00000 string re  
+3        2        11      11      0.00    00000 string re  00000 string re  
+3        3        11      11      0.00    00000 string re  00000 string re  
+1        1        12      12      0.00    00000 string re  00000 string re  
+1        2        12      12      0.00    00000 string re  00000 string re  
+1        3        12      12      0.00    00000 string re  00000 string re  
+3        1        13      13      0.00    00000 string re  00000 string re  
+3        2        13      13      0.00    00000 string re  00000 string re  
+3        3        13      13      0.00    00000 string re  00000 string re  
+
+Number of records: 21
+Buf Stats: accesses = 165, disk reads = 17, disk writes = 30
+
+25 --> Query:  select dda.serial, ddb.serial, dda.ikey, ddb.ikey, dda.dkey, dda.filler, ddb.filler from dda, ddb where ddb.ikey = dda.ikey;
+Algorithm: SM Join
+serial.  serial.  ikey.2  ikey.3  dkey.4  filler.5         filler.6         
+-------  -------  ------  ------  ------  ---------------  ---------------  
+1        1        10      10      0.00    00000 string re  00000 string re  
+2        1        10      10      0.00    00000 string re  00000 string re  
+3        1        10      10      0.00    00000 string re  00000 string re  
+1        2        10      10      0.00    00000 string re  00000 string re  
+2        2        10      10      0.00    00000 string re  00000 string re  
+3        2        10      10      0.00    00000 string re  00000 string re  
+1        3        10      10      0.00    00000 string re  00000 string re  
+2        3        10      10      0.00    00000 string re  00000 string re  
+3        3        10      10      0.00    00000 string re  00000 string re  
+1        1        11      11      0.00    00000 string re  00000 string re  
+3        1        11      11      0.00    00000 string re  00000 string re  
+1        2        11      11      0.00    00000 string re  00000 string re  
+3        2        11      11      0.00    00000 string re  00000 string re  
+1        3        11      11      0.00    00000 string re  00000 string re  
+3        3        11      11      0.00    00000 string re  00000 string re  
+1        1        12      12      0.00    00000 string re  00000 string re  
+1        2        12      12      0.00    00000 string re  00000 string re  
+1        3        12      12      0.00    00000 string re  00000 string re  
+3        1        13      13      0.00    00000 string re  00000 string re  
+3        2        13      13      0.00    00000 string re  00000 string re  
+3        3        13      13      0.00    00000 string re  00000 string re  
+
+Number of records: 21
+Buf Stats: accesses = 165, disk reads = 17, disk writes = 30
+
+26 --> Query:  select dda.ikey, dda.dkey, ddb.dkey, dda.filler from dda, ddb where dda.dkey = ddb.dkey;
+Algorithm: SM Join
+ikey.0  dkey.1  dkey.2  filler.3         
+------  ------  ------  ---------------  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+
+Number of records: 84
+Buf Stats: accesses = 223, disk reads = 22, disk writes = 40
+
+27 --> Query:  select dda.ikey, dda.dkey, ddb.dkey, dda.filler from dda, ddb where ddb.dkey = dda.dkey;
+Algorithm: SM Join
+ikey.0  dkey.1  dkey.2  filler.3         
+------  ------  ------  ---------------  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+12      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+10      0.00    0.00    00000 string re  
+11      0.00    0.00    00000 string re  
+13      0.00    0.00    00000 string re  
+
+Number of records: 84
+Buf Stats: accesses = 210, disk reads = 22, disk writes = 40
+
+28 --> Query:  select * from dda, ddb where dda.filler = ddb.filler;
+Algorithm: SM Join
+serial.  ikey.1  filler.2         dkey.3  unq.4  serial.  ikey.6  filler.7         dkey.8  unq.9  
+-------  ------  ---------------  ------  -----  -------  ------  ---------------  ------  -----  
+1        10      00000 string re  0.00    0      1        10      00000 string re  0.00    0      
+1        10      00000 string re  0.00    0      1        11      00000 string re  0.00    1      
+1        10      00000 string re  0.00    0      3        12      00000 string re  0.00    10     
+1        10      00000 string re  0.00    0      3        13      00000 string re  0.00    11     
+1        10      00000 string re  0.00    0      1        12      00000 string re  0.00    2      
+1        10      00000 string re  0.00    0      1        13      00000 string re  0.00    3      
+1        10      00000 string re  0.00    0      2        10      00000 string re  0.00    4      
+1        10      00000 string re  0.00    0      2        11      00000 string re  0.00    5      
+1        10      00000 string re  0.00    0      2        12      00000 string re  0.00    6      
+1        10      00000 string re  0.00    0      2        13      00000 string re  0.00    7      
+1        10      00000 string re  0.00    0      3        10      00000 string re  0.00    8      
+1        10      00000 string re  0.00    0      3        11      00000 string re  0.00    9      
+1        11      00000 string re  0.00    1      1        10      00000 string re  0.00    0      
+1        11      00000 string re  0.00    1      1        11      00000 string re  0.00    1      
+1        11      00000 string re  0.00    1      3        12      00000 string re  0.00    10     
+1        11      00000 string re  0.00    1      3        13      00000 string re  0.00    11     
+1        11      00000 string re  0.00    1      1        12      00000 string re  0.00    2      
+1        11      00000 string re  0.00    1      1        13      00000 string re  0.00    3      
+1        11      00000 string re  0.00    1      2        10      00000 string re  0.00    4      
+1        11      00000 string re  0.00    1      2        11      00000 string re  0.00    5      
+1        11      00000 string re  0.00    1      2        12      00000 string re  0.00    6      
+1        11      00000 string re  0.00    1      2        13      00000 string re  0.00    7      
+1        11      00000 string re  0.00    1      3        10      00000 string re  0.00    8      
+1        11      00000 string re  0.00    1      3        11      00000 string re  0.00    9      
+3        13      00000 string re  0.00    11     1        10      00000 string re  0.00    0      
+3        13      00000 string re  0.00    11     1        11      00000 string re  0.00    1      
+3        13      00000 string re  0.00    11     3        12      00000 string re  0.00    10     
+3        13      00000 string re  0.00    11     3        13      00000 string re  0.00    11     
+3        13      00000 string re  0.00    11     1        12      00000 string re  0.00    2      
+3        13      00000 string re  0.00    11     1        13      00000 string re  0.00    3      
+3        13      00000 string re  0.00    11     2        10      00000 string re  0.00    4      
+3        13      00000 string re  0.00    11     2        11      00000 string re  0.00    5      
+3        13      00000 string re  0.00    11     2        12      00000 string re  0.00    6      
+3        13      00000 string re  0.00    11     2        13      00000 string re  0.00    7      
+3        13      00000 string re  0.00    11     3        10      00000 string re  0.00    8      
+3        13      00000 string re  0.00    11     3        11      00000 string re  0.00    9      
+1        12      00000 string re  0.00    2      1        10      00000 string re  0.00    0      
+1        12      00000 string re  0.00    2      1        11      00000 string re  0.00    1      
+1        12      00000 string re  0.00    2      3        12      00000 string re  0.00    10     
+1        12      00000 string re  0.00    2      3        13      00000 string re  0.00    11     
+1        12      00000 string re  0.00    2      1        12      00000 string re  0.00    2      
+1        12      00000 string re  0.00    2      1        13      00000 string re  0.00    3      
+1        12      00000 string re  0.00    2      2        10      00000 string re  0.00    4      
+1        12      00000 string re  0.00    2      2        11      00000 string re  0.00    5      
+1        12      00000 string re  0.00    2      2        12      00000 string re  0.00    6      
+1        12      00000 string re  0.00    2      2        13      00000 string re  0.00    7      
+1        12      00000 string re  0.00    2      3        10      00000 string re  0.00    8      
+1        12      00000 string re  0.00    2      3        11      00000 string re  0.00    9      
+2        10      00000 string re  0.00    4      1        10      00000 string re  0.00    0      
+2        10      00000 string re  0.00    4      1        11      00000 string re  0.00    1      
+2        10      00000 string re  0.00    4      3        12      00000 string re  0.00    10     
+2        10      00000 string re  0.00    4      3        13      00000 string re  0.00    11     
+2        10      00000 string re  0.00    4      1        12      00000 string re  0.00    2      
+2        10      00000 string re  0.00    4      1        13      00000 string re  0.00    3      
+2        10      00000 string re  0.00    4      2        10      00000 string re  0.00    4      
+2        10      00000 string re  0.00    4      2        11      00000 string re  0.00    5      
+2        10      00000 string re  0.00    4      2        12      00000 string re  0.00    6      
+2        10      00000 string re  0.00    4      2        13      00000 string re  0.00    7      
+2        10      00000 string re  0.00    4      3        10      00000 string re  0.00    8      
+2        10      00000 string re  0.00    4      3        11      00000 string re  0.00    9      
+3        10      00000 string re  0.00    8      1        10      00000 string re  0.00    0      
+3        10      00000 string re  0.00    8      1        11      00000 string re  0.00    1      
+3        10      00000 string re  0.00    8      3        12      00000 string re  0.00    10     
+3        10      00000 string re  0.00    8      3        13      00000 string re  0.00    11     
+3        10      00000 string re  0.00    8      1        12      00000 string re  0.00    2      
+3        10      00000 string re  0.00    8      1        13      00000 string re  0.00    3      
+3        10      00000 string re  0.00    8      2        10      00000 string re  0.00    4      
+3        10      00000 string re  0.00    8      2        11      00000 string re  0.00    5      
+3        10      00000 string re  0.00    8      2        12      00000 string re  0.00    6      
+3        10      00000 string re  0.00    8      2        13      00000 string re  0.00    7      
+3        10      00000 string re  0.00    8      3        10      00000 string re  0.00    8      
+3        10      00000 string re  0.00    8      3        11      00000 string re  0.00    9      
+3        11      00000 string re  0.00    9      1        10      00000 string re  0.00    0      
+3        11      00000 string re  0.00    9      1        11      00000 string re  0.00    1      
+3        11      00000 string re  0.00    9      3        12      00000 string re  0.00    10     
+3        11      00000 string re  0.00    9      3        13      00000 string re  0.00    11     
+3        11      00000 string re  0.00    9      1        12      00000 string re  0.00    2      
+3        11      00000 string re  0.00    9      1        13      00000 string re  0.00    3      
+3        11      00000 string re  0.00    9      2        10      00000 string re  0.00    4      
+3        11      00000 string re  0.00    9      2        11      00000 string re  0.00    5      
+3        11      00000 string re  0.00    9      2        12      00000 string re  0.00    6      
+3        11      00000 string re  0.00    9      2        13      00000 string re  0.00    7      
+3        11      00000 string re  0.00    9      3        10      00000 string re  0.00    8      
+3        11      00000 string re  0.00    9      3        11      00000 string re  0.00    9      
+
+Number of records: 84
+Buf Stats: accesses = 299, disk reads = 36, disk writes = 65
+
+29 --> Query:  select * from dda, ddb where ddb.filler = dda.filler;
+Algorithm: SM Join
+serial.  ikey.1  filler.2         dkey.3  unq.4  serial.  ikey.6  filler.7         dkey.8  unq.9  
+-------  ------  ---------------  ------  -----  -------  ------  ---------------  ------  -----  
+1        10      00000 string re  0.00    0      1        10      00000 string re  0.00    0      
+1        11      00000 string re  0.00    1      1        10      00000 string re  0.00    0      
+3        13      00000 string re  0.00    11     1        10      00000 string re  0.00    0      
+1        12      00000 string re  0.00    2      1        10      00000 string re  0.00    0      
+2        10      00000 string re  0.00    4      1        10      00000 string re  0.00    0      
+3        10      00000 string re  0.00    8      1        10      00000 string re  0.00    0      
+3        11      00000 string re  0.00    9      1        10      00000 string re  0.00    0      
+1        10      00000 string re  0.00    0      1        11      00000 string re  0.00    1      
+1        11      00000 string re  0.00    1      1        11      00000 string re  0.00    1      
+3        13      00000 string re  0.00    11     1        11      00000 string re  0.00    1      
+1        12      00000 string re  0.00    2      1        11      00000 string re  0.00    1      
+2        10      00000 string re  0.00    4      1        11      00000 string re  0.00    1      
+3        10      00000 string re  0.00    8      1        11      00000 string re  0.00    1      
+3        11      00000 string re  0.00    9      1        11      00000 string re  0.00    1      
+1        10      00000 string re  0.00    0      3        12      00000 string re  0.00    10     
+1        11      00000 string re  0.00    1      3        12      00000 string re  0.00    10     
+3        13      00000 string re  0.00    11     3        12      00000 string re  0.00    10     
+1        12      00000 string re  0.00    2      3        12      00000 string re  0.00    10     
+2        10      00000 string re  0.00    4      3        12      00000 string re  0.00    10     
+3        10      00000 string re  0.00    8      3        12      00000 string re  0.00    10     
+3        11      00000 string re  0.00    9      3        12      00000 string re  0.00    10     
+1        10      00000 string re  0.00    0      3        13      00000 string re  0.00    11     
+1        11      00000 string re  0.00    1      3        13      00000 string re  0.00    11     
+3        13      00000 string re  0.00    11     3        13      00000 string re  0.00    11     
+1        12      00000 string re  0.00    2      3        13      00000 string re  0.00    11     
+2        10      00000 string re  0.00    4      3        13      00000 string re  0.00    11     
+3        10      00000 string re  0.00    8      3        13      00000 string re  0.00    11     
+3        11      00000 string re  0.00    9      3        13      00000 string re  0.00    11     
+1        10      00000 string re  0.00    0      1        12      00000 string re  0.00    2      
+1        11      00000 string re  0.00    1      1        12      00000 string re  0.00    2      
+3        13      00000 string re  0.00    11     1        12      00000 string re  0.00    2      
+1        12      00000 string re  0.00    2      1        12      00000 string re  0.00    2      
+2        10      00000 string re  0.00    4      1        12      00000 string re  0.00    2      
+3        10      00000 string re  0.00    8      1        12      00000 string re  0.00    2      
+3        11      00000 string re  0.00    9      1        12      00000 string re  0.00    2      
+1        10      00000 string re  0.00    0      1        13      00000 string re  0.00    3      
+1        11      00000 string re  0.00    1      1        13      00000 string re  0.00    3      
+3        13      00000 string re  0.00    11     1        13      00000 string re  0.00    3      
+1        12      00000 string re  0.00    2      1        13      00000 string re  0.00    3      
+2        10      00000 string re  0.00    4      1        13      00000 string re  0.00    3      
+3        10      00000 string re  0.00    8      1        13      00000 string re  0.00    3      
+3        11      00000 string re  0.00    9      1        13      00000 string re  0.00    3      
+1        10      00000 string re  0.00    0      2        10      00000 string re  0.00    4      
+1        11      00000 string re  0.00    1      2        10      00000 string re  0.00    4      
+3        13      00000 string re  0.00    11     2        10      00000 string re  0.00    4      
+1        12      00000 string re  0.00    2      2        10      00000 string re  0.00    4      
+2        10      00000 string re  0.00    4      2        10      00000 string re  0.00    4      
+3        10      00000 string re  0.00    8      2        10      00000 string re  0.00    4      
+3        11      00000 string re  0.00    9      2        10      00000 string re  0.00    4      
+1        10      00000 string re  0.00    0      2        11      00000 string re  0.00    5      
+1        11      00000 string re  0.00    1      2        11      00000 string re  0.00    5      
+3        13      00000 string re  0.00    11     2        11      00000 string re  0.00    5      
+1        12      00000 string re  0.00    2      2        11      00000 string re  0.00    5      
+2        10      00000 string re  0.00    4      2        11      00000 string re  0.00    5      
+3        10      00000 string re  0.00    8      2        11      00000 string re  0.00    5      
+3        11      00000 string re  0.00    9      2        11      00000 string re  0.00    5      
+1        10      00000 string re  0.00    0      2        12      00000 string re  0.00    6      
+1        11      00000 string re  0.00    1      2        12      00000 string re  0.00    6      
+3        13      00000 string re  0.00    11     2        12      00000 string re  0.00    6      
+1        12      00000 string re  0.00    2      2        12      00000 string re  0.00    6      
+2        10      00000 string re  0.00    4      2        12      00000 string re  0.00    6      
+3        10      00000 string re  0.00    8      2        12      00000 string re  0.00    6      
+3        11      00000 string re  0.00    9      2        12      00000 string re  0.00    6      
+1        10      00000 string re  0.00    0      2        13      00000 string re  0.00    7      
+1        11      00000 string re  0.00    1      2        13      00000 string re  0.00    7      
+3        13      00000 string re  0.00    11     2        13      00000 string re  0.00    7      
+1        12      00000 string re  0.00    2      2        13      00000 string re  0.00    7      
+2        10      00000 string re  0.00    4      2        13      00000 string re  0.00    7      
+3        10      00000 string re  0.00    8      2        13      00000 string re  0.00    7      
+3        11      00000 string re  0.00    9      2        13      00000 string re  0.00    7      
+1        10      00000 string re  0.00    0      3        10      00000 string re  0.00    8      
+1        11      00000 string re  0.00    1      3        10      00000 string re  0.00    8      
+3        13      00000 string re  0.00    11     3        10      00000 string re  0.00    8      
+1        12      00000 string re  0.00    2      3        10      00000 string re  0.00    8      
+2        10      00000 string re  0.00    4      3        10      00000 string re  0.00    8      
+3        10      00000 string re  0.00    8      3        10      00000 string re  0.00    8      
+3        11      00000 string re  0.00    9      3        10      00000 string re  0.00    8      
+1        10      00000 string re  0.00    0      3        11      00000 string re  0.00    9      
+1        11      00000 string re  0.00    1      3        11      00000 string re  0.00    9      
+3        13      00000 string re  0.00    11     3        11      00000 string re  0.00    9      
+1        12      00000 string re  0.00    2      3        11      00000 string re  0.00    9      
+2        10      00000 string re  0.00    4      3        11      00000 string re  0.00    9      
+3        10      00000 string re  0.00    8      3        11      00000 string re  0.00    9      
+3        11      00000 string re  0.00    9      3        11      00000 string re  0.00    9      
+
+Number of records: 84
+Buf Stats: accesses = 286, disk reads = 34, disk writes = 63
+
+30 --> Query:  select dda.serial, dda.dkey, ddb.dkey, dda.filler, ddb.filler, dda.ikey, dda.unq, ddb.unq from dda,ddb where dda.unq = ddb.unq;
+Algorithm: SM Join
+serial.  dkey.1  dkey.2  filler.3         filler.4         ikey.5  unq.6  unq.7  
+-------  ------  ------  ---------------  ---------------  ------  -----  -----  
+1        0.00    0.00    00000 string re  00000 string re  10      0      0      
+1        0.00    0.00    00000 string re  00000 string re  11      1      1      
+1        0.00    0.00    00000 string re  00000 string re  12      2      2      
+2        0.00    0.00    00000 string re  00000 string re  10      4      4      
+3        0.00    0.00    00000 string re  00000 string re  10      8      8      
+3        0.00    0.00    00000 string re  00000 string re  11      9      9      
+3        0.00    0.00    00000 string re  00000 string re  13      11     11     
+
+Number of records: 7
+Buf Stats: accesses = 151, disk reads = 14, disk writes = 24
+
+31 --> Query:  select dda.serial, dda.dkey, ddb.dkey, dda.filler, ddb.filler, dda.ikey, dda.unq, ddb.unq from dda,ddb where ddb.unq = dda.unq;
+Algorithm: SM Join
+serial.  dkey.1  dkey.2  filler.3         filler.4         ikey.5  unq.6  unq.7  
+-------  ------  ------  ---------------  ---------------  ------  -----  -----  
+1        0.00    0.00    00000 string re  00000 string re  10      0      0      
+1        0.00    0.00    00000 string re  00000 string re  11      1      1      
+1        0.00    0.00    00000 string re  00000 string re  12      2      2      
+2        0.00    0.00    00000 string re  00000 string re  10      4      4      
+3        0.00    0.00    00000 string re  00000 string re  10      8      8      
+3        0.00    0.00    00000 string re  00000 string re  11      9      9      
+3        0.00    0.00    00000 string re  00000 string re  13      11     11     
+
+Number of records: 7
+Buf Stats: accesses = 151, disk reads = 14, disk writes = 24
+
+32 --> Query:  select * from dda, ddb where dda.unq = ddb.unq;
+Algorithm: SM Join
+serial.  ikey.1  filler.2         dkey.3  unq.4  serial.  ikey.6  filler.7         dkey.8  unq.9  
+-------  ------  ---------------  ------  -----  -------  ------  ---------------  ------  -----  
+1        10      00000 string re  0.00    0      1        10      00000 string re  0.00    0      
+1        11      00000 string re  0.00    1      1        11      00000 string re  0.00    1      
+1        12      00000 string re  0.00    2      1        12      00000 string re  0.00    2      
+2        10      00000 string re  0.00    4      2        10      00000 string re  0.00    4      
+3        10      00000 string re  0.00    8      3        10      00000 string re  0.00    8      
+3        11      00000 string re  0.00    9      3        11      00000 string re  0.00    9      
+3        13      00000 string re  0.00    11     3        13      00000 string re  0.00    11     
+
+Number of records: 7
+Buf Stats: accesses = 169, disk reads = 14, disk writes = 24
+
+33 --> Query:  select * from dda, ddb where ddb.unq = dda.unq;
+Algorithm: SM Join
+serial.  ikey.1  filler.2         dkey.3  unq.4  serial.  ikey.6  filler.7         dkey.8  unq.9  
+-------  ------  ---------------  ------  -----  -------  ------  ---------------  ------  -----  
+1        10      00000 string re  0.00    0      1        10      00000 string re  0.00    0      
+1        11      00000 string re  0.00    1      1        11      00000 string re  0.00    1      
+1        12      00000 string re  0.00    2      1        12      00000 string re  0.00    2      
+2        10      00000 string re  0.00    4      2        10      00000 string re  0.00    4      
+3        10      00000 string re  0.00    8      3        10      00000 string re  0.00    8      
+3        11      00000 string re  0.00    9      3        11      00000 string re  0.00    9      
+3        13      00000 string re  0.00    11     3        13      00000 string re  0.00    11     
+
+Number of records: 7
+Buf Stats: accesses = 169, disk reads = 14, disk writes = 24
+
+34 --> Query:  drop table dda;
+35 --> Query:  drop table ddb;
+36 --> 

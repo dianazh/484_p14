@@ -7,7 +7,7 @@
 /* Consider using Operators::matchRec() defined in join.cpp
  * to compare records when joining the relations */
 
-//get tuple size in bytes
+//helper function: get tuple size in bytes
 Status get_maxItems(string relName, int& maxItem){
     unsigned int unpin_page = bufMgr->numUnpinnedPages();
     Status status;

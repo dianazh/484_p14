@@ -48,6 +48,7 @@ SELECT * FROM table5, table6 WHERE table5.ikey = table6.ikey;
 SELECT * FROM table6, table5 WHERE table5.dkey = table6.dkey;
 
 
+
 DROP TABLE table5;
 DROP TABLE table6;
 

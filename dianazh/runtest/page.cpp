@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string.h>
 #include "page.h"
+//test
+#include <cassert>
 
 using namespace std;
 
@@ -112,14 +114,14 @@ const Status Page::insertRecord(const Record & rec, RID& rid)
 const Status Page::deleteRecord(const RID & rid)
 {
     /* Solution Here */
-    
     if (rid.pageNo != curPage){
         return INVALIDSLOTNO;
-    }else if (rid.slotNo >= (-slotCnt)){
+    }else if (rid.slotNo >= (-slotCnt)||(rid.slotNo < 0)){
         return INVALIDSLOTNO;
     }  else if (slot[-rid.slotNo].length == -1){
         return INVALIDSLOTNO;
     }
+    //assert(rid.slotNo >= 0); //test
     
     //compact data
     int steplen = slot[-rid.slotNo].length;
@@ -194,9 +196,10 @@ const Status Page::nextRecord (const RID &curRid, RID& nextRid) const
     //check: curRid valid? 
     //in slot[]
     int curslot = curRid.slotNo;
-    if (curRid.slotNo >= (-slotCnt)){
+    if ((curRid.slotNo >= (-slotCnt))||curRid.slotNo < 0){
         return ENDOFPAGE;
     } else {
+        //assert(curRid.slotNo >= 0); //test
         curslot++;
         while (curslot!=(-slotCnt)){
             if (slot[-curslot].length != -1){
@@ -220,11 +223,12 @@ const Status Page::getRecord(const RID & rid, Record & rec)
     //dumpPage();//test
     if (rid.pageNo != curPage){
         return INVALIDSLOTNO;
-    } else if (rid.slotNo >= (-slotCnt)){
+    } else if (rid.slotNo >= (-slotCnt)||(rid.slotNo < 0)){
         return INVALIDSLOTNO;
     } else if (slot[-rid.slotNo].length == -1){
         return INVALIDSLOTNO;
     }
+    //assert(rid.slotNo >= 0); //test
     rec.length = slot[-rid.slotNo].length;
     //memcpy(rec.data, (data+slot[rid.slotNo].offset), rec.length);  //data is not assigned mem
     rec.data = (void*) data+slot[-rid.slotNo].offset;
