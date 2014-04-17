@@ -7,23 +7,6 @@
 /* Consider using Operators::matchRec() defined in join.cpp
  * to compare records when joining the relations */
 
-//helper function: get tuple size in bytes
-Status get_maxItems(string relName, int& maxItem){
-    unsigned int unpin_page = bufMgr->numUnpinnedPages();
-    Status status;
-    RelDesc rel;
-    status = relCat->getInfo(relName, rel);
-    if (status != OK) return status;
-    AttrDesc* attrs;
-    status = attrCat->getRelInfo(relName, rel.attrCnt, attrs);
-    if (status != OK) return status;
-    int tuplelen = 0;
-    for (int i = 0; i<rel.attrCnt; i++){
-        tuplelen += attrs[i].attrLen;
-    }
-    maxItem = ((int)(0.8 * unpin_page))*PAGESIZE /tuplelen;
-    return OK;
-}
   
 Status Operators::SMJ(const string& result,           // Output relation name
                       const int projCnt,              // Number of attributes in the projection

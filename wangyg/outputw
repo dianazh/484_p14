@@ -1,0 +1,22 @@
+Welcome to Minirel
+1 --> Query:  select * from da where da.serial = 11;
+Buf Stats: accesses = 1, disk reads = 1, disk writes = 0
+
+2 --> Query:  create index da (serial);
+3 --> Query:  select * from da where da.serial = 11;
+Buf Stats: accesses = 1, disk reads = 0, disk writes = 0
+
+4 --> Query:  drop index da (serial);
+5 --> Query:  select * from da where da.serial = 11;
+Buf Stats: accesses = 1, disk reads = 0, disk writes = 0
+
+6 --> Query:  select * from da where da.dkey > 100.0;
+Buf Stats: accesses = 1, disk reads = 0, disk writes = 0
+
+7 --> Query:  select * from da where da.dkey >= 106.7;
+Buf Stats: accesses = 1, disk reads = 0, disk writes = 0
+
+8 --> Query:  select * from da where da.filler = 00062 string record;
+Buf Stats: accesses = 1, disk reads = 0, disk writes = 0
+
+9 --> 
