@@ -1,0 +1,26 @@
+Welcome to Minirel
+1 --> Query:  create table dda (serial integer, ikey integer, filler char(80), dkey double);
+2 --> Query:  create table ddb (serial integer, ikey integer, filler char(80), dkey double);
+3 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+4 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+5 --> Query:  insert into dda (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+6 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+7 --> Query:  insert into dda (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+8 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+9 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+10 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+11 --> Query:  insert into dda (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+12 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 10, 00000 string record, 0.0);
+13 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 11, 00000 string record, 0.0);
+14 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 12, 00000 string record, 0.0);
+15 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (1, 13, 00000 string record, 0.0);
+16 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 10, 00000 string record, 0.0);
+17 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 11, 00000 string record, 0.0);
+18 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 12, 00000 string record, 0.0);
+19 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (2, 13, 00000 string record, 0.0);
+20 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 10, 00000 string record, 0.0);
+21 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 11, 00000 string record, 0.0);
+22 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 12, 00000 string record, 0.0);
+23 --> Query:  insert into ddb (serial, ikey, filler, dkey) values (3, 13, 00000 string record, 0.0);
+24 --> Query:  select * from dda, ddb where dda.serial = ddb.serial;
+Algorithm: SM Join

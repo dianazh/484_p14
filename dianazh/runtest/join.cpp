@@ -3,7 +3,7 @@
 #include "sort.h"
 #include "index.h"
 #include <cmath>
-#include <cstring>
+
 
 #define MAX(a,b) ((a) > (b) ? (a) : (b))
 #define DOUBLEERROR 1e-07

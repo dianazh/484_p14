@@ -195,7 +195,7 @@ ikey.0  dkey.1  skey.2
 Number of records: 7
 Buf Stats: accesses = 54, disk reads = 5, disk writes = 7
 
-18 --> Query:  select * from table2 where table1.ikey = 5;
+18 --> Query:  select * from table2 where table2.ikey = 5;
 Algorithm: Index Select
 ikey.0  dkey.1  skey.2           
 ------  ------  ---------------  
@@ -224,13 +224,15 @@ ikey.0  dkey.1  skey.2
 Number of records: 2
 Buf Stats: accesses = 44, disk reads = 5, disk writes = 7
 
-9 --> Query:  select table3.ikey, table3.skey, table3.dkey from table3 where table3.dkey < 3;
+9 --> Query:  select table3.ikey, table3.skey, table3.dkey from table3 where table3.dkey < 3.0;
 Algorithm: File Scan
 ikey.0  skey.1           dkey.2  
 ------  ---------------  ------  
+1       abcd1            1.10    
+2       abcd2            2.20    
 
-Number of records: 0
-Buf Stats: accesses = 40, disk reads = 4, disk writes = 5
+Number of records: 2
+Buf Stats: accesses = 44, disk reads = 5, disk writes = 7
 
 10 --> Query:  select table3.dkey, table3.ikey, table3.skey from table3 where table3.skey < abcd3;
 Algorithm: File Scan
@@ -253,13 +255,15 @@ dkey.0  skey.1           ikey.2
 Number of records: 3
 Buf Stats: accesses = 45, disk reads = 5, disk writes = 7
 
-12 --> Query:  select table3.skey, table3.ikey, table3.dkey from table3 where table3.dkey <= 3;
+12 --> Query:  select table3.skey, table3.ikey, table3.dkey from table3 where table3.dkey <= 3.0;
 Algorithm: File Scan
 skey.0           ikey.1  dkey.2  
 ---------------  ------  ------  
+abcd1            1       1.10    
+abcd2            2       2.20    
 
-Number of records: 0
-Buf Stats: accesses = 40, disk reads = 4, disk writes = 5
+Number of records: 2
+Buf Stats: accesses = 44, disk reads = 5, disk writes = 7
 
 13 --> Query:  select table3.skey, table3.dkey, table3.ikey from table3 where table3.skey <= abcd3;
 Algorithm: File Scan
@@ -281,7 +285,7 @@ ikey.0  dkey.1
 Number of records: 1
 Buf Stats: accesses = 35, disk reads = 5, disk writes = 7
 
-15 --> Query:  select table3.ikey, table3.skey from table3 where table3.dkey = 3;
+15 --> Query:  select table3.ikey, table3.skey from table3 where table3.dkey = 3.0;
 Algorithm: File Scan
 ikey.0  skey.1           
 ------  ---------------  
@@ -310,19 +314,17 @@ dkey.0  skey.1
 Number of records: 4
 Buf Stats: accesses = 40, disk reads = 5, disk writes = 7
 
-18 --> Query:  select table3.skey, table3.ikey from table3 where table3.dkey >= 3;
+18 --> Query:  select table3.skey, table3.ikey from table3 where table3.dkey >= 3.0;
 Algorithm: File Scan
 skey.0           ikey.1  
 ---------------  ------  
-abcd1            1       
-abcd2            2       
 abcd3            3       
 abcd4            4       
 abcd5            5       
 abcd6            6       
 
-Number of records: 6
-Buf Stats: accesses = 42, disk reads = 5, disk writes = 7
+Number of records: 4
+Buf Stats: accesses = 40, disk reads = 5, disk writes = 7
 
 19 --> Query:  select table3.skey, table3.dkey from table3 where table3.skey >= abcd3;
 Algorithm: File Scan
@@ -347,19 +349,17 @@ ikey.0
 Number of records: 3
 Buf Stats: accesses = 31, disk reads = 5, disk writes = 7
 
-21 --> Query:  select table3.ikey from table3 where table3.dkey > 3;
+21 --> Query:  select table3.ikey from table3 where table3.dkey > 3.0;
 Algorithm: File Scan
 ikey.0  
 ------  
-1       
-2       
 3       
 4       
 5       
 6       
 
-Number of records: 6
-Buf Stats: accesses = 34, disk reads = 5, disk writes = 7
+Number of records: 4
+Buf Stats: accesses = 32, disk reads = 5, disk writes = 7
 
 22 --> Query:  select table3.dkey from table3 where table3.skey > abcd3;
 Algorithm: File Scan
@@ -385,7 +385,7 @@ dkey.0
 Number of records: 5
 Buf Stats: accesses = 33, disk reads = 5, disk writes = 7
 
-24 --> Query:  select table3.skey from table3 where table3.dkey <> 3;
+24 --> Query:  select table3.skey from table3 where table3.dkey <> 3.0;
 Algorithm: File Scan
 skey.0           
 ---------------  
@@ -432,7 +432,7 @@ ikey.0  dkey.1  skey.2
 Number of records: 1
 Buf Stats: accesses = 50, disk reads = 7, disk writes = 8
 
-11 --> Query:  select * from table4 where table4.dkey = 4;
+11 --> Query:  select * from table4 where table4.dkey = 4.0;
 Algorithm: Index Select
 ikey.0  dkey.1  skey.2           
 ------  ------  ---------------  
@@ -450,13 +450,15 @@ ikey.0  dkey.1  skey.2
 Number of records: 2
 Buf Stats: accesses = 49, disk reads = 5, disk writes = 7
 
-13 --> Query:  select table4.skey, table4.ikey, table4.dkey from table4 where table4.dkey <= 3;
+13 --> Query:  select table4.skey, table4.ikey, table4.dkey from table4 where table4.dkey <= 3.0;
 Algorithm: File Scan
 skey.0           ikey.1  dkey.2  
 ---------------  ------  ------  
+abcd1            1       1.10    
+abcd2            2       2.20    
 
-Number of records: 0
-Buf Stats: accesses = 45, disk reads = 4, disk writes = 5
+Number of records: 2
+Buf Stats: accesses = 49, disk reads = 5, disk writes = 7
 
 14 --> Query:  select table4.skey, table4.dkey, table4.ikey from table4 where table4.skey <= abcd3;
 Algorithm: File Scan
@@ -481,19 +483,17 @@ dkey.0  skey.1
 Number of records: 4
 Buf Stats: accesses = 43, disk reads = 5, disk writes = 7
 
-16 --> Query:  select table4.ikey from table4 where table4.dkey > 3;
+16 --> Query:  select table4.ikey from table4 where table4.dkey > 3.0;
 Algorithm: File Scan
 ikey.0  
 ------  
-1       
-2       
 3       
 4       
 5       
 6       
 
-Number of records: 6
-Buf Stats: accesses = 37, disk reads = 5, disk writes = 7
+Number of records: 4
+Buf Stats: accesses = 35, disk reads = 5, disk writes = 7
 
 17 --> Query:  select table4.skey from table4 where table4.skey <> abcd3;
 Algorithm: File Scan

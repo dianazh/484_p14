@@ -26,7 +26,7 @@ SELECT * FROM table2;
 SELECT * FROM relcat;
 SELECT * FROM attrcat;
 SELECT * FROM table2 WHERE table2.skey >= 'abcd3';
-SELECT * FROM table2 WHERE table1.ikey = 5;
+SELECT * FROM table2 WHERE table2.ikey = 5;
 
 DROP TABLE table2;
 

@@ -2,9 +2,7 @@
 #include "query.h"
 #include "sort.h"
 #include "index.h"
-#include "string.h"
-//test
-#include "assert.h"
+
 
 /* 
  * Indexed nested loop evaluates joins with an index on the 
@@ -20,7 +18,6 @@ Status Operators::INL(const string& result,           // Name of the output rela
                       const int reclen)               // Length of a tuple in the output relation
 {
     cout << "Algorithm: Indexed NL Join" << endl;
-
     /* Your solution goes here */
     Status status;
     RID rid_old1;
@@ -30,7 +27,6 @@ Status Operators::INL(const string& result,           // Name of the output rela
 
     RID rid_old2;
     Record rec_old2;
-    assert(attrDesc2.indexed == 1); //test
     Index index(attrDesc2.relName, attrDesc2.attrOffset, attrDesc2.attrLen, (Datatype)
             attrDesc2.attrType, 0, status);
     if (status != OK) return status;

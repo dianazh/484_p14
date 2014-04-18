@@ -17,7 +17,7 @@ INSERT INTO table3(skey, dkey, ikey) VALUES ('abcd6', 6.6, 6);
 -- Predicate on int
 SELECT table3.ikey, table3.dkey, table3.skey FROM table3 WHERE table3.ikey < 3;
 -- Predicate on double
-SELECT table3.ikey, table3.skey, table3.dkey FROM table3 WHERE table3.dkey < 3;
+SELECT table3.ikey, table3.skey, table3.dkey FROM table3 WHERE table3.dkey < 3.0;
 -- Predicate on string
 SELECT table3.dkey, table3.ikey, table3.skey FROM table3 WHERE table3.skey < 'abcd3';
 
@@ -25,7 +25,7 @@ SELECT table3.dkey, table3.ikey, table3.skey FROM table3 WHERE table3.skey < 'ab
 -- Predicate on int
 SELECT table3.dkey, table3.skey, table3.ikey FROM table3 WHERE table3.ikey <= 3;
 -- Predicate on double
-SELECT table3.skey, table3.ikey, table3.dkey FROM table3 WHERE table3.dkey <= 3;
+SELECT table3.skey, table3.ikey, table3.dkey FROM table3 WHERE table3.dkey <= 3.0;
 -- Predicate on string
 SELECT table3.skey, table3.dkey, table3.ikey FROM table3 WHERE table3.skey <= 'abcd3';
 
@@ -34,7 +34,7 @@ SELECT table3.skey, table3.dkey, table3.ikey FROM table3 WHERE table3.skey <= 'a
 -- Predicate on int
 SELECT table3.ikey, table3.dkey FROM table3 WHERE table3.ikey = 3;
 -- Predicate on double
-SELECT table3.ikey, table3.skey FROM table3 WHERE table3.dkey = 3;
+SELECT table3.ikey, table3.skey FROM table3 WHERE table3.dkey = 3.0;
 -- Predicate on string
 SELECT table3.dkey, table3.ikey FROM table3 WHERE table3.skey = 'abcd3';
 
@@ -42,7 +42,7 @@ SELECT table3.dkey, table3.ikey FROM table3 WHERE table3.skey = 'abcd3';
 -- Predicate on int
 SELECT table3.dkey, table3.skey FROM table3 WHERE table3.ikey >= 3;
 -- Predicate on double
-SELECT table3.skey, table3.ikey FROM table3 WHERE table3.dkey >= 3;
+SELECT table3.skey, table3.ikey FROM table3 WHERE table3.dkey >= 3.0;
 -- Predicate on string
 SELECT table3.skey, table3.dkey FROM table3 WHERE table3.skey >= 'abcd3';
 
@@ -51,7 +51,7 @@ SELECT table3.skey, table3.dkey FROM table3 WHERE table3.skey >= 'abcd3';
 -- Predicate on int
 SELECT table3.ikey FROM table3 WHERE table3.ikey > 3;
 -- Predicate on double
-SELECT table3.ikey FROM table3 WHERE table3.dkey > 3;
+SELECT table3.ikey FROM table3 WHERE table3.dkey > 3.0;
 -- Predicate on string
 SELECT table3.dkey FROM table3 WHERE table3.skey > 'abcd3';
 
@@ -59,7 +59,7 @@ SELECT table3.dkey FROM table3 WHERE table3.skey > 'abcd3';
 -- Predicate on int
 SELECT table3.dkey FROM table3 WHERE table3.ikey <> 3;
 -- Predicate on double
-SELECT table3.skey FROM table3 WHERE table3.dkey <> 3;
+SELECT table3.skey FROM table3 WHERE table3.dkey <> 3.0;
 -- Predicate on string
 SELECT table3.skey FROM table3 WHERE table3.skey <> 'abcd3';
 

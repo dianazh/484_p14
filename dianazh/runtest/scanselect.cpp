@@ -1,7 +1,6 @@
 #include "catalog.h"
 #include "query.h"
 #include "index.h"
-#include <cstring>
 
 
 /* 
@@ -21,7 +20,7 @@ Status Operators::ScanSelect(const string& result,       // Name of the output r
     RID rid_old;
     Record rec_old;
     string relation(projNames[0].relName);
-    HeapFileScan old_hf(relation, status_old); //constructor w/o filter
+    HeapFileScan old_hf(relation, status_old); 
     if (status_old != OK) return status_old;
     
     Status status_new;

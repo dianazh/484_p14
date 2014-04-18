@@ -1,7 +1,6 @@
 #include "catalog.h"
 #include "query.h"
 #include "index.h"
-#include <cstring>
 
 Status Operators::IndexSelect(const string& result,       // Name of the output relation
                               const int projCnt,          // Number of attributes in the projection

@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string.h>
 #include "page.h"
-//test
-#include <cassert>
 
 using namespace std;
 
@@ -15,9 +13,9 @@ void Page::init(int pageNo)
     /* Solution Here */
     slotCnt = 0;
     freePtr = 0;
-    freeSpace = PAGESIZE - DPFIXED;
-    prevPage = 0; //?
-    nextPage = 0; //?
+    freeSpace = PAGESIZE - DPFIXED + sizeof(slot_t);
+    prevPage = 0; 
+    nextPage = 0; 
     curPage = pageNo;
 }
 
@@ -101,7 +99,6 @@ const Status Page::insertRecord(const Record & rec, RID& rid)
     freePtr += rec.length;
     freeSpace -= rec.length;
     memcpy(data+slot[slot_cand].offset,rec.data, rec.length);
-    //dumpPage(); //test
     return OK;
 }
 
@@ -121,7 +118,6 @@ const Status Page::deleteRecord(const RID & rid)
     }  else if (slot[-rid.slotNo].length == -1){
         return INVALIDSLOTNO;
     }
-    //assert(rid.slotNo >= 0); //test
     
     //compact data
     int steplen = slot[-rid.slotNo].length;
@@ -145,8 +141,7 @@ const Status Page::deleteRecord(const RID & rid)
             slot[i].offset -= steplen;
         }
     }
-    //slotCnt++;  //slot# never decrease
-    
+    //slot# never decrease
     return OK;
 }
 
@@ -155,18 +150,6 @@ const Status Page::deleteRecord(const RID & rid)
 const Status Page::firstRecord(RID& firstRid) const
 {
     /* Solution Here */
-    //dumpPage();  //test
-    //what is first rec? offset = 1? +++ or first slot? 
-    //in page offset
-    /*for (int i=0; i>slotCnt; i--){
-        if ((slot[i].length!=-1)&&(slot[i].offset==0)){
-            firstRid.pageNo = curPage;
-            firstRid.slotNo = -i;
-            return OK;
-        }
-    }*/
-    
-    //in slot[]
     for (int i=0; i>slotCnt; i--){
         if (slot[i].length != -1){
             firstRid.pageNo = curPage;
@@ -182,24 +165,10 @@ const Status Page::firstRecord(RID& firstRid) const
 const Status Page::nextRecord (const RID &curRid, RID& nextRid) const
 {
     /* Solution Here */
-    //dumpPage();  //test
-    //in page offset
-    /*int currOffset = slot[-curRid.slotNo].offset;
-    int steplen = slot[-curRid.slotNo].length;
-    for (int i=0; i>slotCnt; i--){
-        if (slot[i].offset == currOffset + steplen){
-            nextRid.pageNo = curRid.pageNo;
-            nextRid.slotNo = -i;
-            return OK;
-        }
-    }*/
-    //check: curRid valid? 
-    //in slot[]
     int curslot = curRid.slotNo;
     if ((curRid.slotNo >= (-slotCnt))||curRid.slotNo < 0){
         return ENDOFPAGE;
     } else {
-        //assert(curRid.slotNo >= 0); //test
         curslot++;
         while (curslot!=(-slotCnt)){
             if (slot[-curslot].length != -1){
@@ -211,7 +180,6 @@ const Status Page::nextRecord (const RID &curRid, RID& nextRid) const
         }
         return ENDOFPAGE;
     }
-    
     return ENDOFPAGE;
 }
 
@@ -220,7 +188,6 @@ const Status Page::nextRecord (const RID &curRid, RID& nextRid) const
 const Status Page::getRecord(const RID & rid, Record & rec)
 {
     /* Solution Here */
-    //dumpPage();//test
     if (rid.pageNo != curPage){
         return INVALIDSLOTNO;
     } else if (rid.slotNo >= (-slotCnt)||(rid.slotNo < 0)){
@@ -228,9 +195,7 @@ const Status Page::getRecord(const RID & rid, Record & rec)
     } else if (slot[-rid.slotNo].length == -1){
         return INVALIDSLOTNO;
     }
-    //assert(rid.slotNo >= 0); //test
     rec.length = slot[-rid.slotNo].length;
-    //memcpy(rec.data, (data+slot[rid.slotNo].offset), rec.length);  //data is not assigned mem
     rec.data = (void*) data+slot[-rid.slotNo].offset;
     return OK;
 }

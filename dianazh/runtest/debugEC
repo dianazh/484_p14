@@ -461,3 +461,58 @@ Buf Stats: accesses = 218, disk reads = 21, disk writes = 11
 3 --> Query:  drop index da (ikey);
 4 --> Query:  select * from da, db where da.ikey = db.ikey;
 Algorithm: SM Join
+serial.  ikey.1  filler.2         dkey.3  serial.  ikey.5  filler.6         dkey.7  
+-------  ------  ---------------  ------  -------  ------  ---------------  ------  
+64       21711   00064 string re  70.40   94       21711   00094 string re  103.40  
+4        24069   00004 string re  4.40    56       24069   00056 string re  61.60   
+
+Number of records: 2
+Buf Stats: accesses = 564, disk reads = 52, disk writes = 62
+
+5 --> Query:  select da.ikey, db.serial from da, db where da.ikey < db.serial;
+Algorithm: Simple NL Join
+ikey.0  serial.  
+------  -------  
+65      66       
+65      67       
+65      68       
+65      69       
+65      70       
+65      71       
+65      72       
+65      73       
+65      74       
+65      75       
+65      76       
+65      77       
+65      78       
+65      79       
+65      80       
+65      81       
+65      82       
+65      83       
+65      84       
+65      85       
+65      86       
+65      87       
+65      88       
+65      89       
+65      90       
+65      91       
+65      92       
+65      93       
+65      94       
+65      95       
+65      96       
+65      97       
+65      98       
+97      98       
+65      99       
+97      99       
+65      100      
+97      100      
+
+Number of records: 38
+Buf Stats: accesses = 1103, disk reads = 26, disk writes = 8
+
+6 --> 

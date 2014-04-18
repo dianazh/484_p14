@@ -21,14 +21,14 @@ INSERT INTO table4(skey, dkey, ikey) VALUES ('abcd6', 6.6, 6);
 -- Predicate on int
 SELECT * FROM table4 WHERE table4.ikey = 4;
 -- Predicate on double
-SELECT * FROM table4 WHERE table4.dkey = 4;
+SELECT * FROM table4 WHERE table4.dkey = 4.0;
 
 --other selections that should not be index select
 SELECT table4.ikey, table4.dkey, table4.skey FROM table4 WHERE table4.ikey < 3;
-SELECT table4.skey, table4.ikey, table4.dkey FROM table4 WHERE table4.dkey <= 3;
+SELECT table4.skey, table4.ikey, table4.dkey FROM table4 WHERE table4.dkey <= 3.0;
 SELECT table4.skey, table4.dkey, table4.ikey FROM table4 WHERE table4.skey <= 'abcd3';
 SELECT table4.dkey, table4.skey FROM table4 WHERE table4.ikey >= 3;
-SELECT table4.ikey FROM table4 WHERE table4.dkey > 3;
+SELECT table4.ikey FROM table4 WHERE table4.dkey > 3.0;
 SELECT table4.skey FROM table4 WHERE table4.skey <> 'abcd3';
 
 --Test if index select is chosen

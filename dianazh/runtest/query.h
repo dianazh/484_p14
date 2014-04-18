@@ -5,6 +5,7 @@
 #include "index.h"
 //student added
 #include <cstring>
+#include <vector>
 
 //
 // Prototypes for query layer functions

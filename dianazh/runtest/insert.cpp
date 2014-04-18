@@ -1,9 +1,7 @@
 #include "catalog.h"
 #include "query.h"
 #include "index.h"
-//Can I do this?
-#include <string.h>
-#include <vector>
+
 
 /*
  * Inserts a record into the specified relation
@@ -27,7 +25,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
 
     //attr number doesn't match
     if (rel_info.attrCnt != attrCnt){
-        return NOTUSED2; //NOT SURE
+        return NOTUSED2; 
     }
     if (rel_info.indexCnt != 0) has_index = true;
     //lookup attrcat
@@ -40,7 +38,7 @@ Status Updates::Insert(const string& relation,      // Name of the relation
     for (int i = 0; i < attrCnt; i++){
         for (int j = 0; j < attrCnt; j++){
             if (attrList[j].attrValue == NULL){
-                return NOTUSED2; //NOT SURE
+                return NOTUSED2; 
             }
             if (!strcmp((attrs_info+i)->attrName,attrList[j].attrName)){
                 match_num[i] = j;
@@ -77,7 +75,6 @@ Status Updates::Insert(const string& relation,      // Name of the relation
             AttrDesc temp = *(attrs_info+i);
             if (temp.indexed){
                 Index rel_index(relation, temp.attrOffset, temp.attrLen, (Datatype)temp.attrType, 0, status);
-                //should unique?(1) or not?(0)
                 if (status != OK){
                     operator delete (new_rec.data);
                     return status;
